@@ -1,5 +1,6 @@
 package it.generationitaly.game.repository.impl;
 
+
 import java.util.Date;
 import java.util.List;
 
@@ -120,4 +121,33 @@ public class VideogameRepositoryImpl extends JpaRepositoryImpl<Videogame, Long> 
 		return videogames;
 	}
 
+	@Override
+	public List<Videogame> findByGenere(long genere_id){
+		List<Videogame> videogames = null;
+		EntityManager em = null;
+		EntityTransaction tx = null;
+		try {
+			em = emf.createEntityManager();
+			tx = em.getTransaction();
+			tx.begin();
+			
+			TypedQuery<Videogame> query = em.createQuery(
+					"SELECT v FROM videogame v LEFT JOIN videogame_genere vg  WHERE v.id := genere_id",
+					Videogame.class);
+			query.setParameter("genere_id", genere_id);
+			videogames = query.getResultList();
+			tx.commit();
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+			if (tx != null && tx.isActive())
+				tx.rollback();
+		} finally {
+			if (em != null)
+				em.close();
+		}
+		return videogames;
+	}
+
+	
+	
 }
