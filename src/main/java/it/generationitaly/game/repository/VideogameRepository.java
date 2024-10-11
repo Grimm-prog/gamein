@@ -1,3 +1,4 @@
+
 package it.generationitaly.game.repository;
 
 
@@ -16,3 +17,4 @@ public interface VideogameRepository extends JpaRepository<Videogame, Long> {
 	List<Videogame> RicercaPerMultiplayer(boolean multiplayer);
 	
 }
+
