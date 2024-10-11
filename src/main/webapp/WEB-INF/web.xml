@@ -11,12 +11,22 @@
   </welcome-file-list>
   <servlet>
     <description></description>
-    <display-name>RicercaVideogameServlet</display-name>
-    <servlet-name>RicercaVideogameServlet</servlet-name>
-    <servlet-class>it.generationitaly.game.controller.RicercaVideogameServlet</servlet-class>
+    <display-name>RicercaServlet</display-name>
+    <servlet-name>RicercaServlet</servlet-name>
+    <servlet-class>it.generationitaly.game.controller.RicercaServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>RicercaVideogameServlet</servlet-name>
-    <url-pattern>/cerca-videogiochi</url-pattern>
+    <servlet-name>RicercaServlet</servlet-name>
+    <url-pattern>/cerca</url-pattern>
+  </servlet-mapping>
+  <servlet> 
+    <description></description>
+    <display-name>VideogiocoServlet</display-name>
+    <servlet-name>VideogiocoServlet</servlet-name>
+    <servlet-class>it.generationitaly.game.controller.VideogiocoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VideogiocoServlet</servlet-name>
+    <url-pattern>/videogioco</url-pattern>
   </servlet-mapping>
 </web-app>
