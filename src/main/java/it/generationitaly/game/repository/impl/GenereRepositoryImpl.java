@@ -1,5 +1,6 @@
 package it.generationitaly.game.repository.impl;
 
+
 import it.generationitaly.game.entity.Genere;
 import it.generationitaly.game.repository.GenereRepository;
 
