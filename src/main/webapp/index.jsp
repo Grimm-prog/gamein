@@ -49,6 +49,10 @@
                 <div class="card"></div>
             </div>
         </div>
+        <!-- bottone che fa la find all e mostra tutti i videogiochi -->
+        <form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="nome-servlet" method="GET"> <!-- aggiunti action e method -->
+            <button class="btn-search" type="submit">Mostra altro...</button>
+        </form>
     </div>
 
     <!-- Bootstrap JS -->
