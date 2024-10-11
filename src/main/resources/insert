@@ -117,42 +117,47 @@ INSERT INTO videogame_genere VALUES(50,50, 5);
 
 
 
-INSERT INTO sviluppatore VALUE (1, 'FromSoftware');
-INSERT INTO sviluppatore VALUE (2, 'Square Enix');
-INSERT INTO sviluppatore VALUE (3, 'Larian Studios');
-INSERT INTO sviluppatore VALUE (4, 'Portkey Games, Avalanche Software');
-INSERT INTO sviluppatore VALUE (5, 'Luminous Productions');
-INSERT INTO sviluppatore VALUE (6, 'Nintendo');
-INSERT INTO sviluppatore VALUE (7, 'Playground Games');
-INSERT INTO sviluppatore VALUE (8, 'BioWare');
-INSERT INTO sviluppatore VALUE (9, 'Blizzard Entertainment');
-INSERT INTO sviluppatore VALUE (10, 'Spiders');
-INSERT INTO sviluppatore VALUE (11, 'Infinity Ward');
-INSERT INTO sviluppatore VALUE (12, 'Respawn Entertainment');
-INSERT INTO sviluppatore VALUE (13, 'Ubisoft Bordeaux');
-INSERT INTO sviluppatore VALUE (14, 'Insomniac Games');
-INSERT INTO sviluppatore VALUE (15, 'Remedy Entertainment');
-INSERT INTO sviluppatore VALUE (16, 'Neowiz Games');
-INSERT INTO sviluppatore VALUE (17, 'NetherRealm Studios');
-INSERT INTO sviluppatore VALUE (18, 'Capcom');
-INSERT INTO sviluppatore VALUE (19, 'Dambuster Studios');
-INSERT INTO sviluppatore VALUE (20, 'Guerrilla Games');
-INSERT INTO sviluppatore VALUE (21, 'Asobo Studio');
-INSERT INTO sviluppatore VALUE (22, 'Ember Lab');
-INSERT INTO sviluppatore VALUE (23, 'Giant Squid');
-INSERT INTO sviluppatore VALUE (24, 'Hazelight Studios');
-INSERT INTO sviluppatore VALUE (25, 'BlueTwelve Studio');
-INSERT INTO sviluppatore VALUE (26, 'Ubisoft Quebec');
-INSERT INTO sviluppatore VALUE (27, 'Awaceb');
-INSERT INTO sviluppatore VALUE (28, 'Tarsier Studios');
-INSERT INTO sviluppatore VALUE (29, 'CD Projekt Red');
-INSERT INTO sviluppatore VALUE (30, 'Atlus');
-INSERT INTO sviluppatore VALUE (31, 'miHoYo');
-INSERT INTO sviluppatore VALUE (32, 'EA Sports');
-INSERT INTO sviluppatore VALUE (33, 'Visual Concepts');
-INSERT INTO sviluppatore VALUE (34, 'Codemasters');
-INSERT INTO sviluppatore VALUE (35, 'EA Vancouver');
-INSERT INTO sviluppatore VALUE (36, 'Konami');
-INSERT INTO sviluppatore VALUE (37, 'San Diego Studio (Sony Interactive Entertainment)');
-INSERT INTO sviluppatore VALUE (38, 'Ubisoft Annecy');
-INSERT INTO sviluppatore VALUE (39, 'Milestone S.r.l');
+INSERT INTO sviluppatore (id, nome) VALUES (1, 'FromSoftware'); -- Elden Ring
+INSERT INTO sviluppatore (id, nome) VALUES (2, 'Square Enix'); -- Final Fantasy XVI/Final Fantasy VII Remake 
+INSERT INTO sviluppatore (id, nome) VALUES (3, 'Larian Studios'); -- Baldur's Gate III
+INSERT INTO sviluppatore (id, nome) VALUES (4, 'Portkey Games'); -- Hogwarts Legacy
+INSERT INTO sviluppatore (id, nome) VALUES (5, 'Luminous Productions'); -- Forspoken
+INSERT INTO sviluppatore (id, nome) VALUES (6, 'Nintendo'); -- The Legend of Zelda: Tears of the Kingdom
+INSERT INTO sviluppatore (id, nome) VALUES (7, 'Playground Games'); -- Fable
+INSERT INTO sviluppatore (id, nome) VALUES (8, 'BioWare'); -- Dragon Age: Dreadwolf/Mass Effect Legendary Edition
+INSERT INTO sviluppatore (id, nome) VALUES (9, 'Blizzard Entertainment'); -- Diablo IV
+INSERT INTO sviluppatore (id, nome) VALUES (10, 'Spiders'); -- GreedFall 2
+
+INSERT INTO sviluppatore (id, nome) VALUES (11, 'Infinity Ward'); -- Call of Duty: Modern Warfare II
+INSERT INTO sviluppatore (id, nome) VALUES (12, 'Respawn Entertainment'); -- Star Wars Jedi: Survivor
+INSERT INTO sviluppatore (id, nome) VALUES (13, 'Ubisoft'); -- Assassin's Creed Mirage/Immortals Fenyx Rising/Riders Republic 
+INSERT INTO sviluppatore (id, nome) VALUES (14, 'Insomniac Games'); -- Spider-Man 2/ Ratchet & Clank: Rift Apart
+INSERT INTO sviluppatore (id, nome) VALUES (15, 'Remedy Entertainment'); -- Alan Wake II
+INSERT INTO sviluppatore (id, nome) VALUES (16, 'Neowiz Games'); -- Lies of P
+INSERT INTO sviluppatore (id, nome) VALUES (17, 'NetherRealm Studios'); -- Mortal Kombat 1
+INSERT INTO sviluppatore (id, nome) VALUES (18, 'FromSoftware'); -- armored 
+INSERT INTO sviluppatore (id, nome) VALUES (19, 'Capcom'); -- street fighter/Monster Hunter: World 
+INSERT INTO sviluppatore (id, nome) VALUES (20, 'Dambuster Studios'); -- dead island
+
+INSERT INTO sviluppatore (id, nome) VALUES (21, 'Guerrilla Games'); -- Horizon Forbidden West
+INSERT INTO sviluppatore (id, nome) VALUES (22, 'Asobo Studio'); -- A Plague Tale: Requiem
+INSERT INTO sviluppatore (id, nome) VALUES (23, 'Ember Lab'); -- Kena: Bridge of Spirits
+INSERT INTO sviluppatore (id, nome) VALUES (24, 'Giant Squid'); -- the pathless
+INSERT INTO sviluppatore (id, nome) VALUES (25, 'Hazelight Studios'); -- It Takes Two 
+INSERT INTO sviluppatore (id, nome) VALUES (26, 'BlueTwelve Studio'); -- Stray 
+INSERT INTO sviluppatore (id, nome) VALUES (27, 'Awaceb'); -- tchia
+INSERT INTO sviluppatore (id, nome) VALUES (28, 'Tarsier Studios'); -- little nightmare2
+
+INSERT INTO sviluppatore (id, nome) VALUES (29, 'CD Projekt Red'); -- tThe Witcher 3: Wild Hun
+INSERT INTO sviluppatore (id, nome) VALUES (30, ' Atlus'); -- Persona 5
+INSERT INTO sviluppatore (id, nome) VALUES (31, 'Larian Studios'); -- Divinity: Original Sin 2
+INSERT INTO sviluppatore (id, nome) VALUES (32, ' CD Projekt Red'); -- cyberpunk
+INSERT INTO sviluppatore (id, nome) VALUES (33, 'Respawn Entertainment'); -- Star Wars Jedi: Fallen Order
+INSERT INTO sviluppatore (id, nome) VALUES (34, 'miHoYo'); -- Genshin Impact
+
+INSERT INTO sviluppatore (id, nome) VALUES (35, 'EA sport'); -- FIFA 24/Madden NFL 24 /EA Sports UFC 5</NHL 24 
+INSERT INTO sviluppatore (id, nome) VALUES (36, ' Visual Concepts'); -- NBA 2K24
+INSERT INTO sviluppatore (id, nome) VALUES (37, 'Codemasters'); -- f1
+INSERT INTO sviluppatore (id, nome) VALUES (38, 'Konami'); -- efootball
+INSERT INTO sviluppatore (id, nome) VALUES (38, ' San Diego Studio'); -- mbl
+INSERT INTO sviluppatore (id, nome) VALUES (39, 'Milestone'); -- motogp
