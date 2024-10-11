@@ -36,6 +36,7 @@ public class VideogiocoServlet extends HttpServlet {
 			videogame = videogameRepository.RicercaPerTitolo(titolo);
 		}
 		*/
+		//
 		request.setAttribute("videogame", videogame);
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("videogame.jsp");
 		requestDispatcher.forward(request, response);
