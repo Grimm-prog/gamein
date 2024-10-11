@@ -10,6 +10,8 @@ public interface UtenteRepository extends JpaRepository<Utente, Long> {
 
 
 	List<Videogame> preferiti(Utente utente, Preferito preferito);
+	
+	Utente findByUsername (String username);
 
 	
 
