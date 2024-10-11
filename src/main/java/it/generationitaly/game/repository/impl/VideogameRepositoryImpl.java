@@ -106,7 +106,7 @@ public class VideogameRepositoryImpl extends JpaRepositoryImpl<Videogame, Long> 
 			tx = em.getTransaction();
 			tx.begin();
 			TypedQuery<Videogame> query = em.createQuery(
-					"SELECT vid FROM Videogame  WHERE vid.multiplayer=:multiplayer",
+					"SELECT vid FROM Videogame vid WHERE vid.multiplayer=:multiplayer",
 					Videogame.class);
 			query.setParameter("multiplayer", multiplayer);
 			videogames = query.getResultList();
@@ -136,6 +136,35 @@ public class VideogameRepositoryImpl extends JpaRepositoryImpl<Videogame, Long> 
 					"SELECT v FROM videogame v LEFT JOIN videogame_genere vg  WHERE v.id := genere_id",
 					Videogame.class);
 			query.setParameter("genere_id", genere_id);
+			videogames = query.getResultList();
+			tx.commit();
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+			if (tx != null && tx.isActive())
+				tx.rollback();
+		} finally {
+			if (em != null)
+				em.close();
+		}
+		return videogames;
+	}
+
+	@Override
+	public List<Videogame> findByTitoloGenereSviluppatore(String titolo, String nomeGenere, String nomeSviluppatore) {
+		List<Videogame> videogames=null;
+		EntityManager em = null;
+		EntityTransaction tx = null;
+		try {
+			em = emf.createEntityManager();
+			tx = em.getTransaction();
+			tx.begin();
+			TypedQuery<Videogame> query = em.createQuery(
+					"SELECT vid FROM Videogame vid INNER JOIN VideogameGenere vg INNER JOIN Genere g"
+					+ "INNER JOIN VideogameSviluppatore vs INNER JOIN Sviluppatore WHERE vid.titolo=:titolo AND g.name=:nomeGenere AND s.name=:nomeSviluppatore",
+					Videogame.class);
+			query.setParameter("titolo",titolo);
+			query.setParameter("nomeGenere",nomeGenere);
+			query.setParameter("nomeSviluppatore",nomeSviluppatore);
 			videogames = query.getResultList();
 			tx.commit();
 		} catch (Exception e) {
