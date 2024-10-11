@@ -40,7 +40,7 @@ public class UtenteRepositoryImpl extends JpaRepositoryImpl<Utente, Long> implem
 			if (em != null)
 				em.close();
 		}
-
+		System.out.println("ciao");
 		return preferiti;
 	}
 
