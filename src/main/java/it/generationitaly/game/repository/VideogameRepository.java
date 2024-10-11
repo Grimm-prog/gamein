@@ -10,7 +10,6 @@ import it.generationitaly.game.entity.Videogame;
 public interface VideogameRepository extends JpaRepository<Videogame, Long> {
 
 	List<Videogame> findByGenere(long genere_id);
-	List<Videogame> findByNome(String nome);
 	List<Videogame> RicercaPerTitolo(String titolo);
 	List<Videogame> RicercaPerData(Date dataUscita);
 	List<Videogame> RicercaPerPegi(String classificazionePegi);
