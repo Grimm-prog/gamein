@@ -22,11 +22,12 @@ public class RicercaServlet extends HttpServlet {
 		System.out.println("In servlet ricerca, doGet");
 		String titolo = request.getParameter("titolo");
 		// System.out.println("annuncio.id="+id);
+		System.out.println(titolo);
 		List<Videogame> videogames = null;
-		if(titolo != null && !videogames.isEmpty()) {
-			videogames = videogameRepository.findAll();
-		} else {
+		if(titolo != null) {
 			videogames = videogameRepository.RicercaPerTitolo(titolo);
+		} else {
+			videogames = videogameRepository.findAll();
 		}
 		request.setAttribute("videogames", videogames);
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("videogiochi.jsp");
