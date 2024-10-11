@@ -44,4 +44,5 @@ public class UtenteRepositoryImpl extends JpaRepositoryImpl<Utente, Long> implem
 		return preferiti;
 	}
 
+	
 }
