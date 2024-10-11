@@ -15,6 +15,7 @@ public interface VideogameRepository extends JpaRepository<Videogame, Long> {
 	List<Videogame> RicercaPerData(Date dataUscita);
 	List<Videogame> RicercaPerPegi(String classificazionePegi);
 	List<Videogame> RicercaPerMultiplayer(boolean multiplayer);
+	List<Videogame> findByTitoloGenereSviluppatore(String titolo,String nomeGenere,String nomeSviluppatore);
 	
 }
 
