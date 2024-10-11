@@ -13,7 +13,7 @@ import it.generationitaly.game.entity.Videogame;
 import it.generationitaly.game.repository.VideogameRepository;
 import it.generationitaly.game.repository.impl.VideogameRepositoryImpl;
 
-public class VideogamesServlet extends HttpServlet {
+public class VideogiocoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 

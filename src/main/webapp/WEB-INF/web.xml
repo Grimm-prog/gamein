@@ -9,14 +9,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
+  <servlet> 
     <description></description>
-    <display-name>VideogamesServlet</display-name>
-    <servlet-name>VideogamesServlet</servlet-name>
-    <servlet-class>it.generationitaly.game.controller.VideogamesServlet</servlet-class>
+    <display-name>VideogiocoServlet</display-name>
+    <servlet-name>VideogiocoServlet</servlet-name>
+    <servlet-class>it.generationitaly.game.controller.VideogiocoServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>VideogamesServlet</servlet-name>
-    <url-pattern>/VideogamesServlet</url-pattern>
+    <servlet-name>VideogiocoServlet</servlet-name>
+    <url-pattern>/VideogiocoServlet</url-pattern>
   </servlet-mapping>
 </web-app>
