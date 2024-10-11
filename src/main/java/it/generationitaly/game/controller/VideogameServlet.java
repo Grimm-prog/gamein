@@ -19,6 +19,7 @@ public class VideogameServlet extends HttpServlet {
    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		System.out.println("In servlet doGet");
 		String titolo = request.getParameter("titolo");
 		// System.out.println("annuncio.id="+id);
 		List<Videogame> videogames = null;
