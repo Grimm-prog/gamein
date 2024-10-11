@@ -17,6 +17,6 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>RicercaVideogameServlet</servlet-name>
-    <url-pattern>/cerca_videogiochi</url-pattern>
+    <url-pattern>/cerca-videogiochi</url-pattern>
   </servlet-mapping>
 </web-app>
