@@ -20,6 +20,7 @@ public class Preferito {
 	@Column(name = "id", nullable = false)
 	private long id;
 	
+	
 	@ManyToOne
 	@JoinColumn(name="utente_id",nullable=false)
 	private Utente utente;
