@@ -11,8 +11,8 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 
-@Table
-@Entity(name="preferito")
+@Entity
+@Table(name="preferito")
 public class Preferito {
 	
 	@Id

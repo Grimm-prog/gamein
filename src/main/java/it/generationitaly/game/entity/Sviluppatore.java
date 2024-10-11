@@ -12,8 +12,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
-@Table
-@Entity(name="sviluppatore")
+@Entity
+@Table(name="sviluppatore")
 public class Sviluppatore {
 
 	@Id

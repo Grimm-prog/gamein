@@ -9,8 +9,8 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
-@Table
-@Entity(name="videogame_genere")
+@Entity
+@Table(name="videogame_genere")
 public class VideogameGenere {
 	
 	@Id

@@ -16,8 +16,8 @@ import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
 
-@Table
-@Entity(name="videogame")
+@Entity
+@Table(name="videogame")
 public class Videogame {
 	
 	@Id

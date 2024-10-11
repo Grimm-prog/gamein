@@ -12,8 +12,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
-@Table
-@Entity(name="genere")
+@Entity
+@Table(name="genere")
 public class Genere {
 	
 	@Id
