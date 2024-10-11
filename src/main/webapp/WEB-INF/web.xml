@@ -9,4 +9,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>RicercaVideogameServlet</display-name>
+    <servlet-name>RicercaVideogameServlet</servlet-name>
+    <servlet-class>it.generationitaly.game.controller.RicercaVideogameServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RicercaVideogameServlet</servlet-name>
+    <url-pattern>/cerca_videogiochi</url-pattern>
+  </servlet-mapping>
 </web-app>
