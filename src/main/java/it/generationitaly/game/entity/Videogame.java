@@ -32,7 +32,7 @@ public class Videogame {
 	private String descrizione;
 	
 	@Temporal(TemporalType.DATE)
-	@Column(name = "anno_uscita",nullable=false)
+	@Column(name = "data_uscita",nullable=false)
 	private Date annoUscita;
 	
 	@Column(name = "classificazione_pegi", length=3)

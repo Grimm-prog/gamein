@@ -8,7 +8,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 @Entity
@@ -22,6 +21,7 @@ public class Recensione {
 	
 	@Column(name = "commento", nullable = false,length=2048)
 	private String commento;
+	
 	@Column(name = "voto", nullable = false)
 	private int voto;
 	
@@ -33,11 +33,12 @@ public class Recensione {
 	
 	@ManyToOne
 	@JoinColumn(name="videogame_id",nullable=false)
-	private List<Videogame> videogames=new ArrayList<Videogame>();
+	private Videogame videogame;
 	
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name="utente_id",nullable=false,unique=true)
 	private Utente utente;
+	
 	public long getId() {
 		return id;
 	}
@@ -68,11 +69,12 @@ public class Recensione {
 	public void setTempoDiGioco(int tempoDiGioco) {
 		this.tempoDiGioco = tempoDiGioco;
 	}
-	public List<Videogame> getVideogames() {
-		return videogames;
+	
+	public Videogame getVideogame() {
+		return videogame;
 	}
-	public void setVideogames(List<Videogame> videogames) {
-		this.videogames = videogames;
+	public void setVideogame(Videogame videogame) {
+		this.videogame = videogame;
 	}
 	public Utente getUtente() {
 		return utente;

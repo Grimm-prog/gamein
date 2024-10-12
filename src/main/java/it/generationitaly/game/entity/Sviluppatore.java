@@ -21,7 +21,7 @@ public class Sviluppatore {
 	@Column(name = "id", nullable = false)
 	private long id;
 	
-	@Column(name = "name", nullable = false,length=255)
+	@Column(name = "nome", nullable = false,length=255)
 	private String name;
 	
 	@OneToMany(mappedBy="sviluppatore",fetch=FetchType.EAGER)
