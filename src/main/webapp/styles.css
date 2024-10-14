@@ -61,6 +61,12 @@ body {
     border-radius: 10px;
     height: 150px;
     margin-bottom: 20px;
+ 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra per la card */
+    transition: transform 0.3s; /* Transizione per l'hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Effetto zoom al passaggio del mouse */
 }
 
 
@@ -153,6 +159,7 @@ body {
     max-width: 900px; /* Imposta la larghezza massima del carosello */
     margin: 0 auto; /* Centra il carosello */
 }
+
 
 
 
