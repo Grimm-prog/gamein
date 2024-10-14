@@ -160,7 +160,8 @@ INSERT INTO sviluppatore (id, nome) VALUES (35, 'EA sport'); -- FIFA 24/Madden N
 INSERT INTO sviluppatore (id, nome) VALUES (36, ' Visual Concepts'); -- NBA 2K24
 INSERT INTO sviluppatore (id, nome) VALUES (37, 'Codemasters'); -- f1
 INSERT INTO sviluppatore (id, nome) VALUES (38, 'Konami'); -- efootball
-INSERT INTO sviluppatore (id, nome) VALUES (38, ' San Diego Studio'); -- mbl
-INSERT INTO sviluppatore (id, nome) VALUES (39, 'Milestone'); -- motogp
-INSERT INTO svuluppatore (id, nome) VALUES (40, 'Spike Chunsoft'); -- Dragon Ball: Sparking! Zero
+INSERT INTO sviluppatore (id, nome) VALUES (39, ' San Diego Studio'); -- mbl
+INSERT INTO sviluppatore (id, nome) VALUES (40, 'Milestone'); -- motogp
+INSERT INTO sviluppatore (id, nome) VALUES (41, 'Spike Chunsoft'); -- Dragon Ball: Sparking! Zero
+
 
