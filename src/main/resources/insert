@@ -63,6 +63,7 @@ INSERT INTO genere VALUES(2, 'Azione');
 INSERT INTO genere VALUES(3, 'Avventura');
 INSERT INTO genere VALUES(4, 'RPG');
 INSERT INTO genere VALUES(5, 'Sport');
+INSERT INTO genere VALUES(6, 'Picchiaduro');
 
 INSERT INTO videogame_genere VALUES(1,1, 1);
 INSERT INTO videogame_genere VALUES(2,2, 1);
@@ -99,7 +100,7 @@ INSERT INTO videogame_genere VALUES(32,32, 4);
 INSERT INTO videogame_genere VALUES(33,33, 4);
 INSERT INTO videogame_genere VALUES(34,34, 4);
 INSERT INTO videogame_genere VALUES(35,35, 4);
-INSERT INTO videogame_genere VALUES(36,36, 4);
+INSERT INTO videogame_genere VALUES(36,36, 6);
 INSERT INTO videogame_genere VALUES(37,37, 4);
 INSERT INTO videogame_genere VALUES(38,38, 4);
 INSERT INTO videogame_genere VALUES(39,39, 4);
@@ -161,3 +162,5 @@ INSERT INTO sviluppatore (id, nome) VALUES (37, 'Codemasters'); -- f1
 INSERT INTO sviluppatore (id, nome) VALUES (38, 'Konami'); -- efootball
 INSERT INTO sviluppatore (id, nome) VALUES (38, ' San Diego Studio'); -- mbl
 INSERT INTO sviluppatore (id, nome) VALUES (39, 'Milestone'); -- motogp
+INSERT INTO svuluppatore (id, nome) VALUES (40, 'Spike Chunsoft'); -- Dragon Ball: Sparking! Zero
+
