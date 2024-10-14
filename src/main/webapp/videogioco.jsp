@@ -67,13 +67,17 @@
         <!-- introduco le icone -->
         <div class="row justify-content-center mt-4">
             <div class="col-6 col-md-2">
-                <div class="card"></div>
+                <div class="card">
+                	<h4>Prova</h4>
+                </div>
             </div>
             <div class="col-6 col-md-2">
                 <div class="card"></div>
             </div>
             <div class="col-6 col-md-2">
-                <div class="card"></div>
+                <div class="card" style="background-color: #7851a9; border-radius: 10px; height: 150px; transition: transform 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+			    <h4>Prova</h4>
+			</div>
             </div>
             <div class="col-6 col-md-2">
                 <div class="card"></div>

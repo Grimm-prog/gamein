@@ -57,11 +57,12 @@ body {
 }
 
 .card {
-    background-color: #7851a9; /* Secondary color */
+    background-color: #7851a9;
     border-radius: 10px;
     height: 150px;
     margin-bottom: 20px;
 }
+
 
 .account-icon {
     border-radius: 50%;
@@ -86,9 +87,6 @@ body {
     outline: none; /* Rimuove anche l'outline, se presente */
 }
 
-.custom-margin {
-    margin-top: 300px; /* Aumenta il valore per spostarlo più in basso */
-}
 
 /* Searchbar */
 .search-form {
@@ -139,6 +137,21 @@ body {
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+/* classe del carosello */
+
+.carousel-inner img {
+    border-radius: 15px;
+    width: 100%; /* Fa sì che l'immagine riempia tutto il container */
+    height: 350px; /* Altezza personalizzata del carosello */
+    object-fit: cover; /* Adatta l'immagine senza deformarla */
+}
+
+.carousel {
+    border-radius: 15px;
+    max-width: 900px; /* Imposta la larghezza massima del carosello */
+    margin: 0 auto; /* Centra il carosello */
 }
 
 
