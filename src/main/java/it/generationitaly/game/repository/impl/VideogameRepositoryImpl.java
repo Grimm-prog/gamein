@@ -28,9 +28,9 @@ public class VideogameRepositoryImpl extends JpaRepositoryImpl<Videogame, Long> 
 			tx = em.getTransaction();
 			tx.begin();
 			TypedQuery<Videogame> query = em.createQuery(
-					"SELECT vid FROM Videogame vid WHERE vid.titolo=:titolo",
+					"SELECT vid FROM Videogame vid WHERE vid.titolo LIKE :titolo",
 					Videogame.class);
-			query.setParameter("titolo", titolo);
+			query.setParameter("titolo", "%"+titolo+"%");
 			videogames = query.getResultList();
 			tx.commit();
 		} catch (Exception e) {
@@ -160,9 +160,9 @@ public class VideogameRepositoryImpl extends JpaRepositoryImpl<Videogame, Long> 
 			tx.begin();
 			TypedQuery<Videogame> query = em.createQuery(
 					"SELECT vid FROM Videogame vid INNER JOIN vid.generi vg  INNER JOIN vid.generi.genere g"
-					+ "INNER JOIN vid.sviluppatori vs INNER JOIN vid.sviluppatori.sviluppatore s WHERE vid.titolo LIKE '%?%' AND g.name=:nomeGenere AND s.name=:nomeSviluppatore",
+					+ "INNER JOIN vid.sviluppatori vs INNER JOIN vid.sviluppatori.sviluppatore s WHERE vid.titolo LIKE ? AND g.name=:nomeGenere AND s.name=:nomeSviluppatore",
 					Videogame.class);
-			query.setParameter(1,titolo);
+			query.setParameter(1,"%"+titolo+"%");
 			query.setParameter("nomeGenere",nomeGenere);
 			query.setParameter("nomeSviluppatore",nomeSviluppatore);
 			videogames = query.getResultList();
@@ -189,9 +189,9 @@ public class VideogameRepositoryImpl extends JpaRepositoryImpl<Videogame, Long> 
 			tx.begin();
 			TypedQuery<Videogame> query = em.createQuery(
 					"SELECT vid FROM Videogame vid "
-					+ "INNER JOIN vid.sviluppatori vs INNER JOIN v.sviluppatori.sviluppatore s WHERE vid.titolo LIKE '%?%'  AND s.name=:nomeSviluppatore",
+					+ "INNER JOIN vid.sviluppatori vs INNER JOIN v.sviluppatori.sviluppatore s WHERE vid.titolo LIKE ?  AND s.name=:nomeSviluppatore",
 					Videogame.class);
-			query.setParameter(1,titolo);
+			query.setParameter(1,"%"+titolo+"%");
 			query.setParameter("nomeSviluppatore",nomeSviluppatore);
 			videogames = query.getResultList();
 			tx.commit();
@@ -272,9 +272,9 @@ public class VideogameRepositoryImpl extends JpaRepositoryImpl<Videogame, Long> 
 			tx.begin();
 			TypedQuery<Videogame> query = em.createQuery(
 					"SELECT vid FROM Videogame vid "
-					+ "INNER JOIN v.generi vg INNER JOIN v.generi.genere g  WHERE vid.titolo LIKE '%?%'  AND g.name=:nomeGenere",
+					+ "INNER JOIN v.generi vg INNER JOIN v.generi.genere g  WHERE vid.titolo LIKE ? AND g.name=:nomeGenere",
 					Videogame.class);
-			query.setParameter(1,titolo);
+			query.setParameter(1,"%"+titolo+"%");
 			query.setParameter("nomeGenere",nomeGenere);
 			videogames = query.getResultList();
 			tx.commit();
