@@ -19,13 +19,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- Creazione lista videogame -->
-	<%List<Videogame> videogiochi = (List<Videogame>) request.getAttribute("videogame"); %>
+
 
 <!-- Navbar -->
     <%@include file ="nav.jsp" %>
 
 		
+	<!-- Creazione lista videogame -->
+	<%List<Videogame> videogiochi = (List<Videogame>) request.getAttribute("videogames"); %>
+	
     <!-- contenuto principale -->
     <div class="container pt-5">
 
@@ -38,7 +40,7 @@
 								<%
 								if (request.getParameter("titolo") != null) {
 								%> 
-								<h1>Nessun risultato per il videogame:" <b><%=request.getParameter("titolo")%></b>"</h1>
+								<h1>Nessun risultato per il videogame:"<b><%=request.getParameter("titolo")%></b>"</h1>
 								<%
 								} else {
 								%> 
@@ -68,7 +70,7 @@
            		 <a href="info-videogioco?id=<%= videogioco.getId() %>">
                     <div class="card">
 
-                        <img src="https://cdn1.epicgames.com/offer/0460f46401ae4bdcadbc931d30028015/EGS_MaddenNFL24_Tiburon_S2_1200x1600-257b71373343e3630860289a12ce93f4"
+                        <img src="<%= videogioco.getFoto() %>"
                             alt="Descrizione dell'immagine" class="img-fluid"
                             style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
 
