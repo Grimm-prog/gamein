@@ -34,42 +34,16 @@
 
         <!-- introduco le immagini -->
         <div class="row justify-content-center mt-3">
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <!-- altre 6 immgini -->
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
+           <div class="col-6 col-md-2">
+                <a href="videogioco.html">
+                    <div class="card">
+
+                        <img src="https://cdn1.epicgames.com/offer/0460f46401ae4bdcadbc931d30028015/EGS_MaddenNFL24_Tiburon_S2_1200x1600-257b71373343e3630860289a12ce93f4"
+                            alt="Descrizione dell'immagine" class="img-fluid"
+                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+
+                    </div>
+                </a>
             </div>
         </div>
     </div>
