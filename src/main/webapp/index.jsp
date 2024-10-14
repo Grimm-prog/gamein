@@ -33,29 +33,71 @@
         <div class="row justify-content-center">
             <!-- introduco l'immagine principale o il possibile carosello-->
             <div class="col-lg-8">
+            <a href="videogioco?id=<%= videogiochi.get(1).getId() %>">
                 <div class="content-box">
                    <img src="<%= videogiochi.get(0).getFoto() %>"
                         alt="Descrizione dell'immagine" class="img-fluid"
                         style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
                 </div>
+             </a>
             </div>
         </div>
         <!-- introduco le immagini -->
         <div class="row justify-content-center mt-4">
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
+           <div class="col-6 col-md-2">
+           		 <a href="videogioco?id=<%= videogiochi.get(1).getId() %>">
+                    <div class="card">
+
+                        <img src="<%= videogiochi.get(1).getFoto() %>"
+                             class="img-fluid"
+                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+
+                    </div>
+                </a>
             </div>
             <div class="col-6 col-md-2">
-                <div class="card"></div>
+           		 <a href="videogioco?id=<%= videogiochi.get(2).getId() %>">
+                    <div class="card">
+
+                        <img src="<%= videogiochi.get(2).getFoto() %>"
+                             class="img-fluid"
+                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+
+                    </div>
+                </a>
             </div>
             <div class="col-6 col-md-2">
-                <div class="card"></div>
+           		 <a href="videogioco?id=<%= videogiochi.get(3).getId() %>">
+                    <div class="card">
+
+                        <img src="<%= videogiochi.get(3).getFoto() %>"
+                             class="img-fluid"
+                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+
+                    </div>
+                </a>
+            </div>
+           <div class="col-6 col-md-2">
+           		 <a href="videogioco?id=<%= videogiochi.get(4).getId() %>">
+                    <div class="card">
+
+                        <img src="<%= videogiochi.get(4).getFoto() %>"
+                             class="img-fluid"
+                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+
+                    </div>
+                </a>
             </div>
             <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
+           		 <a href="videogioco?id=<%= videogiochi.get(5).getId() %>">
+                    <div class="card">
+
+                        <img src="<%= videogiochi.get(5).getFoto() %>"
+                             class="img-fluid"
+                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+
+                    </div>
+                </a>
             </div>
         </div>
         <!-- bottone che fa la find all e mostra tutti i videogiochi -->

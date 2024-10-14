@@ -40,7 +40,7 @@
 								<%
 								if (request.getParameter("titolo") != null) {
 								%> 
-								<h1>Nessun risultato per il videogame:"<b><%=request.getParameter("titolo")%></b>"</h1>
+								<h1 class="mt-3 pt-5">Nessun risultato per il videogame:'<b><span style="color:#652c9b;"><%=request.getParameter("titolo")%></span></b>'</h1>
 								<%
 								} else {
 								%> 

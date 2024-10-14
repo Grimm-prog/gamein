@@ -25,19 +25,19 @@
     <%@include file ="nav.jsp" %>
 
 	<!-- Creazione lista videogame -->
-	<%List<Videogame> videogiochi = (List<Videogame>) request.getAttribute("videogames"); %>
+	<%Videogame videogioco = (Videogame) request.getAttribute("videogame"); %>
 	
     <!-- contenuto principale -->
     <div class="container pt-5">
         <!-- titolo del gioco ricercato in un h1 -->
         <div class="row justify-content-center pt-5 mb-2">
-            <h1 style="text-align: center;">FIFA 24</h1>
+            <h1 style="text-align: center;"><%= videogioco.getTitolo() %></h1>
         </div>
         <div class="row justify-content-center">
             <!-- introduco l'immagine principale o il possibile carosello-->
             <div class="col-lg-8">
                 <div class="content-box">
-                    <img src="https://cdn1.epicgames.com/offer/0460f46401ae4bdcadbc931d30028015/EGS_MaddenNFL24_Tiburon_S2_1200x1600-257b71373343e3630860289a12ce93f4"
+                    <img src="<%= videogioco.getFoto() %>"
                         alt="Descrizione dell'immagine" class="img-fluid"
                         style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
                 </div>
@@ -50,12 +50,8 @@
         <div class="row justify-content-center pt-5 mb-2">
             <p
                 style="text-align: center;color: #652c9b; border: 2px solid #7851a9; padding: 50px; border-radius: 10px;">
-                FIFA 24 porta il calcio virtuale a un nuovo livello con
-                miglioramenti nel gameplay, animazioni fluide e una fisica della palla più realistica. Le modalità
-                Ultimate Team, Carriera e Volta Football continuano a evolversi, offrendo nuove opzioni di
-                personalizzazione e tornei. Con licenze ufficiali delle squadre, campionati e stadi, il gioco garantisce
-                un' esperienza autentica e coinvolgente per i fan del calcio. Le nuove funzionalità tattiche permettono
-                maggiore controllo nelle partite.</p>
+                <%= videogioco.getDescrizione() %>
+             </p>
         </div>
         <!-- dettagli -->
         <div class="row justify-content-center pt-5 mb-3">
