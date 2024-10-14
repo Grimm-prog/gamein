@@ -47,9 +47,9 @@
                                 class="d-block w-100" alt="...">
                         </div>
                         </a>
-                        <a href="videogioco?id=<%= videogiochi.get(8).getId() %>">
+                        <a href="videogioco?id=<%= videogiochi.get(6).getId() %>">
                         <div class="carousel-item">
-                            <img src="<%= videogiochi.get(8).getFoto() %>"
+                            <img src="<%= videogiochi.get(6).getFoto() %>"
                                 class="d-block w-100" alt="...">
                         </div>
                         </a>
