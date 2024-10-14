@@ -67,21 +67,21 @@
 	     %>
 
            <div class="col-6 col-md-2">
-           		 <a href="info-videogioco?id=<%= videogioco.getId() %>">
+           		 <a href="videogioco?id=<%= videogioco.getId() %>">
                     <div class="card">
 
                         <img src="<%= videogioco.getFoto() %>"
-                            alt="Descrizione dell'immagine" class="img-fluid"
+                             class="img-fluid"
                             style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
 
                     </div>
                 </a>
             </div>
-        </div>
-        <%
+          <%
 	         }
 		}
         %>
+        </div>
     </div>
 
     <!-- Bootstrap JS -->
