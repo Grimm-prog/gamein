@@ -48,22 +48,24 @@
 								%>
 	
         </div>
-        <!-- aggiungere un bottone sulla sinistra con il selettore alle categorie-->
-        <div class="pt-5 mb-2">
-            <button class="btn-search" type="submit">categoria</button>
-        </div>
 
 		      
         <!-- introduco le immagini -->
         
-		<% } else {
+		<% } else { %>
+		
+		<!-- aggiungere un bottone sulla sinistra con il selettore alle categorie-->
+        <div class="pt-5 mb-2">
+            <button class="btn-search" type="submit">categoria</button>
+        </div>
+		
+		<%
 	         for (Videogame videogioco : videogiochi){
 	     %>
 	   
         <div class="row justify-content-center mt-3">
            <div class="col-6 col-md-2">
-           		 <!-- <a href="info-videogioco?id=<%= videogioco.getId() %>"> -->
-                <a href="videogioco.html">
+           		 <a href="info-videogioco?id=<%= videogioco.getId() %>">
                     <div class="card">
 
                         <img src="https://cdn1.epicgames.com/offer/0460f46401ae4bdcadbc931d30028015/EGS_MaddenNFL24_Tiburon_S2_1200x1600-257b71373343e3630860289a12ce93f4"
