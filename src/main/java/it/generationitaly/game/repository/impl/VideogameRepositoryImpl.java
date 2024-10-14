@@ -1,4 +1,5 @@
 
+
 package it.generationitaly.game.repository.impl;
 
 
@@ -290,4 +291,5 @@ public class VideogameRepositoryImpl extends JpaRepositoryImpl<Videogame, Long> 
 	}
 	
 }
+
 
