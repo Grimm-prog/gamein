@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="it.generationitaly.game.entity.Videogame" %>
+<%@ page import="java.util.List"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +21,9 @@
 <body>
     <!-- Navbar -->
     <%@ include file="nav.jsp" %>	
+    
+    <!-- Creazione lista videogame -->
+	<%List<Videogame> videogiochi = (List<Videogame>) request.getAttribute("videogames"); %>
 
     <!-- contenuto principale -->
     <div class="container pt-5">
@@ -28,7 +33,11 @@
         <div class="row justify-content-center">
             <!-- introduco l'immagine principale o il possibile carosello-->
             <div class="col-lg-8">
-                <div class="content-box"></div>
+                <div class="content-box">
+                   <img src="<%= videogiochi.get(0).getFoto() %>"
+                        alt="Descrizione dell'immagine" class="img-fluid"
+                        style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+                </div>
             </div>
         </div>
         <!-- introduco le immagini -->

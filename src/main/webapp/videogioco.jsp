@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="it.generationitaly.game.entity.Videogame" %>
+<%@ page import="java.util.List"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +24,9 @@
     <!-- Navbar -->
     <%@include file ="nav.jsp" %>
 
+	<!-- Creazione lista videogame -->
+	<%List<Videogame> videogiochi = (List<Videogame>) request.getAttribute("videogames"); %>
+	
     <!-- contenuto principale -->
     <div class="container pt-5">
         <!-- titolo del gioco ricercato in un h1 -->
