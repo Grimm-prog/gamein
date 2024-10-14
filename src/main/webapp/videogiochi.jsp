@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="it.generationitaly.game.entity.Videogame" %>
+<%@ page import="java.util.List"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,61 +19,69 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<!-- Navbar -->
-    <%@ include file="nav.jsp" %>	
 
+
+<!-- Navbar -->
+    <%@include file ="nav.jsp" %>
+
+		
+	<!-- Creazione lista videogame -->
+	<%List<Videogame> videogiochi = (List<Videogame>) request.getAttribute("videogames"); %>
+	
     <!-- contenuto principale -->
     <div class="container pt-5">
 
         <!-- aggingi il collegamento al filtro che cerca per categoria sulla ricerca già fatta dall'utente -->
         <div class="row justify-content-center pt-5 mb-2" style="text-align: center;">
-            <h1>'Silent Hill'</h1>
+
+								<%
+									if (videogiochi.isEmpty()) {
+								%>
+								<%
+								if (request.getParameter("titolo") != null) {
+								%> 
+								<h1>Nessun risultato per il videogame:"<b><%=request.getParameter("titolo")%></b>"</h1>
+								<%
+								} else {
+								%> 
+								<h1>Nessun videogame presente in archivio </h1>
+								<%
+								}
+								%>
+	
         </div>
-        <!-- aggiungere un bottone sulla sinistra con il selettore alle categorie-->
+
+		      
+        <!-- introduco le immagini -->
+        
+		<% } else { %>
+		
+		<!-- aggiungere un bottone sulla sinistra con il selettore alle categorie-->
         <div class="pt-5 mb-2">
             <button class="btn-search" type="submit">categoria</button>
         </div>
-
-        <!-- introduco le immagini -->
+		
+		<%
+	         for (Videogame videogioco : videogiochi){
+	     %>
+	   
         <div class="row justify-content-center mt-3">
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <!-- altre 6 immgini -->
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
+           <div class="col-6 col-md-2">
+           		 <a href="info-videogioco?id=<%= videogioco.getId() %>">
+                    <div class="card">
+
+                        <img src="<%= videogioco.getFoto() %>"
+                            alt="Descrizione dell'immagine" class="img-fluid"
+                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+
+                    </div>
+                </a>
             </div>
         </div>
+        <%
+	         }
+		}
+        %>
     </div>
 
     <!-- Bootstrap JS -->
