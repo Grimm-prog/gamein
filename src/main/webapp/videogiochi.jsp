@@ -58,7 +58,16 @@
 		
 		<!-- aggiungere un bottone sulla sinistra con il selettore alle categorie-->
         <div class="pt-5 mb-2">
-            <button class="btn-search" type="submit">categoria</button>
+            <div class="dropdown">
+			  <button class="btn btn-search dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+			    categoria
+			  </button>
+			  <ul class="dropdown-menu">
+			    <li><a class="dropdown-item" href="cerca?titolo=<%= request.getParameter("titolo") %>&genere=Fantasy">Fantasy</a></li>
+			    <li><a class="dropdown-item" href="#">RPG</a></li>
+			    <li><a class="dropdown-item" href="#">FPS</a></li>
+			  </ul>
+			</div>
         </div>
 		
 		<div class="row justify-content-center mt-3">

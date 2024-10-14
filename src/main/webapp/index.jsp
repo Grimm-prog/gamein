@@ -33,7 +33,7 @@
         <div class="row justify-content-center">
             <!-- introduco l'immagine principale o il possibile carosello-->
             <div class="col-lg-8">
-            <a href="videogioco?id=<%= videogiochi.get(1).getId() %>">
+            <a href="videogioco?id=<%= videogiochi.get(0).getId() %>">
                 <div class="content-box">
                    <img src="<%= videogiochi.get(0).getFoto() %>"
                         alt="Descrizione dell'immagine" class="img-fluid"

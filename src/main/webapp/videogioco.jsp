@@ -1,10 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="it.generationitaly.game.entity.Videogame" %>
-<<<<<<< HEAD
-<%@ page import="java.util.List"%>
-=======
->>>>>>> refs/heads/front-end3
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,14 +25,11 @@
     <!-- Navbar -->
     <%@include file ="nav.jsp" %>
 
-<<<<<<< HEAD
+
 	<!-- Creazione lista videogame -->
 	<%Videogame videogioco = (Videogame) request.getAttribute("videogame"); %>
 	
-=======
-	
 
->>>>>>> refs/heads/front-end3
     <!-- contenuto principale -->
     <div class="container pt-5">
         <!-- titolo del gioco ricercato in un h1 -->
