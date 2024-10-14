@@ -70,3 +70,6 @@ CREATE TABLE preferito (
 );
 
 
+INSERT INTO utente VALUES (1,'utente1', 'password1', 'utente1@example.com', '');
+INSERT INTO utente VALUES (2,'utente2', 'password2', 'utente2@example.com', '');
+INSERT INTO utente VALUES (3,'utente3', 'password3', 'utente3@example.com', '');
