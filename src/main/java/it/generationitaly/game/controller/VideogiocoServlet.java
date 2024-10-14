@@ -25,7 +25,7 @@ public class VideogiocoServlet extends HttpServlet {
 		long id = Long.parseLong(request.getParameter("id"));
 		Videogame videogame = videogameRepository.findById(id);
 		request.setAttribute("videogame", videogame);
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("videogame.jsp");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("videogioco.jsp");
 		requestDispatcher.forward(request, response);
 	}
  
