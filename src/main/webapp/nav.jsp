@@ -9,7 +9,7 @@
             <!-- Contenuto della navbar -->
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <!-- searchbar -->
-                <form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="nome-servlet" method="GET"> <!-- aggiunti action e method -->
+                <form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="cerca" method="GET"> <!-- aggiunti action e method -->
                     <input class="form-control search-input" type="search" name="titolo" placeholder="Silent Hill..." aria-label="Search">
                     <button class="btn-search" type="submit">cerca</button>
                 </form>
