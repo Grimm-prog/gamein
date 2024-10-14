@@ -27,7 +27,7 @@ public class UtenteRepositoryImpl extends JpaRepositoryImpl<Utente, Long> implem
 			tx = em.getTransaction();
 			tx.begin();
 			TypedQuery<Videogame> query = em.createQuery(
-					"SELECT v FROM videogame v JOIN preferito p ON v.id = :preferito.videogame_id JOIN utente u ON preferito.utente_id = :utente.id;",
+					"SELECT v FROM Videogame v JOIN v.preferiti p  JOIN v.preferiti.utente u ",
 					Videogame.class);
 			query.setParameter("preferito.videogame_id", preferito);
 			query.setParameter("utente.id;", utente);
@@ -41,20 +41,21 @@ public class UtenteRepositoryImpl extends JpaRepositoryImpl<Utente, Long> implem
 			if (em != null)
 				em.close();
 		}
-		System.out.println("ciao");
+		// System.out.println("ciao");
 		return preferiti;
 	}
 
 	@Override
 	public Utente findByUsername(String username) {
-		Utente utente=null;
+		Utente utente = null;
 		EntityManager em = null;
 		EntityTransaction tx = null;
 		try {
 			em = emf.createEntityManager();
 			tx = em.getTransaction();
 			tx.begin();
-			 TypedQuery<Utente> query = em.createQuery("SELECT u FROM Utente u WHERE u.username=:username", Utente.class);
+			TypedQuery<Utente> query = em.createQuery("SELECT u FROM Utente u WHERE u.username=:username",
+					Utente.class);
 			query.setParameter("username", username);
 			utente = query.getSingleResult();
 			tx.commit();
@@ -69,5 +70,4 @@ public class UtenteRepositoryImpl extends JpaRepositoryImpl<Utente, Long> implem
 		return utente;
 	}
 
-	
 }
