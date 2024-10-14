@@ -61,11 +61,11 @@
             <button class="btn-search" type="submit">categoria</button>
         </div>
 		
+		<div class="row justify-content-center mt-3">
 		<%
 	         for (Videogame videogioco : videogiochi){
 	     %>
-	   
-        <div class="row justify-content-center mt-3">
+
            <div class="col-6 col-md-2">
            		 <a href="info-videogioco?id=<%= videogioco.getId() %>">
                     <div class="card">
