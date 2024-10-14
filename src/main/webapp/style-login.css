@@ -87,3 +87,12 @@
     background-color: white;   /* Cambia il colore di sfondo al passaggio del mouse */
     color: #ff4b5c;            /* Cambia il colore del testo al passaggio del mouse */
 }
+
+.avatar-box {
+    width: 120px;  /* Larghezza fissa */
+    height: 120px; /* Altezza fissa */
+    object-fit: cover; /* Adatta l'immagine per riempire la box senza distorcerla */
+    border-radius: 50%; /* Arrotonda i bordi per creare un effetto circolare */
+    border: 2px solid #652c9b; /* Aggiunge un bordo visibile */
+}
+

@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Insert title here</title>
+		<title>Registrazione</title>
 		
 		<!-- Bootstrap CSS -->
    		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -20,43 +20,49 @@
 
 	<body class="d-flex justify-content-center align-items-center min-vh-100 py-4 bg-dark text-light">
 	<main class="form-signin w-100 m-auto" style="max-width: 400px;">
-		<form action="login" method="post">
-		<nav class="navbar navbar-expand-lg bg-trasparent">
+		<form action="register" method="post">
+		<nav class="navbar navbar-expand-lg bg-transparent">
 	    	<div class="container-fluid d-flex justify-content-center">
-	        	<h1 class="navbar-brand fs-1" style="font-size: 3rem;"> <span style="color: white;">LOG</span><span style="color:#652c9b;">IN</span> </h1>
+	        	<h1 class="navbar-brand fs-1" style="font-size: 3rem;"> <span style="color: white;">SIGN</span><span style="color:#652c9b;">IN</span> </h1>
 	   		</div>
 		</nav>
 
-			
 			<div class="input-group mb-3"> 
 	  			<span class="input-group-text" id="basic-addon1">Username</span>
-	 			<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1 "id="username" name="username">
+	 			<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" id="username" name="username" required>
 			</div>
 			
 			<div class="input-group mb-3">
 	 			<span class="input-group-text" id="basic-addon1">Password</span>
-	 			<input type="password" class="form-control" placeholder="Username" aria-label="Password" aria-describedby="basic-addon1 id="password" name="password">
+	 			<input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" id="password" name="password" required>
 			</div>
 			
 			<div class="input-group mb-3">
 	  			<span class="input-group-text" id="basic-addon1">Email</span>
-	 			<input type="text" class="form-control" placeholder="email" aria-label="email" aria-describedby="basic-addon1 "id="email" name="email">
+	 			<input type="email" class="form-control" placeholder="Email" aria-label="email" aria-describedby="basic-addon1" id="email" name="email" required>
 			</div>
 			
+			<!-- Avatar selection -->
+			<div class="mb-3">
+			    <label class="form-label">Seleziona il tuo avatar:</label>
+			    <div class="d-flex justify-content-around">
+			        <div>
+			            <input type="radio" id="avatar1" name="avatar" value="avatar1.png" required>
+			            <label for="avatar1">
+			                <img src="https://img.freepik.com/vettori-premium/ritratto-di-un-cane-alla-moda-generativo-ai-occhiali-stile-avatar-moda-animale-domestico-design-elegante-moderno-carattere-avatar-trendy-adolescente-razza-tendenza-concetto-artistico-illustrazione-vettoriale_579956-3458.jpg?w=360" alt="Avatar 1" class="img-thumbnail" style="width: 100px;">
+			            </label>
+			        </div>
+			        <div>
+			            <input type="radio" id="avatar2" name="avatar" value="avatar2.png" required>
+			            <label for="avatar2">
+			                <img src="https://st2.depositphotos.com/2800301/46357/v/450/depositphotos_463575770-stock-illustration-horse-head-horse-portrait-animal.jpg" alt="Avatar 2" class="img-thumbnail" style="width: 100px;">
+			            </label>
+			        </div>
+			    </div>
 			</div>
-				<button class="btn btn-bd-primary  w-100 py-2 fw-bold text-uppercase" type="submit">Login</button>
-				<% if(request.getParameter("erroreCredenziali") != null){ %>
-				<div class="alert alert-danger mt-3" role="alert">
-					<p class="text-center">Credenziali errate!</p>
-				</div>
-				<% } %>
-			<div class="mt-1">
-				<p>Don't have an account?</p>
-			</div>
-			<div class="mt-10">
-				<a href="signin.jsp" class="btn btn-outline-danger custom-danger-btn">Sign in</a>
-				<button class="btn btn-outline-danger custom-danger-btn">Sign in</button>
-			</div>
+
+			<button class="btn btn-bd-primary  w-100 py-2 fw-bold text-uppercase" type="submit">Sign in</button>
+
 		</form>
 	</main>
 	

@@ -63,10 +63,19 @@
         <!-- introduco le icone -->
         <div class="row justify-content-center mt-4">
             <div class="col-6 col-md-2">
-                <div class="card"></div>
+                <div class="card">
+                
+                <button class="btn btn-purple d-flex flex-column align-items-center">
+    			<img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon2.svg" alt="Icon" class="img-fluid" style="width: 50px;">
+    			<span>SinglePlayer</span>
+				</button>
+
+                </div>
             </div>
             <div class="col-6 col-md-2">
-                <div class="card"></div>
+            
+          
+				
             </div>
             <div class="col-6 col-md-2">
                 <div class="card"></div>
