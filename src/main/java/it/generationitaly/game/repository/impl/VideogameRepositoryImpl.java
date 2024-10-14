@@ -292,7 +292,7 @@ public class VideogameRepositoryImpl extends JpaRepositoryImpl<Videogame, Long> 
 			em = emf.createEntityManager();
 			tx = em.getTransaction();
 			tx.begin();
-			TypedQuery<Videogame> query = em.createQuery("SELECT v FROM Videogame v order by annoUscita desc;",
+			TypedQuery<Videogame> query = em.createQuery("SELECT v FROM Videogame v ORDER BY v.annoUscita desc;",
 					Videogame.class);
 			videogames = query.getResultList();
 			tx.commit();
