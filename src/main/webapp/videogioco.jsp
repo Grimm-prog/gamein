@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="it.generationitaly.game.entity.Videogame" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,6 +22,8 @@
 <body>
     <!-- Navbar -->
     <%@include file ="nav.jsp" %>
+
+	
 
     <!-- contenuto principale -->
     <div class="container pt-5">
