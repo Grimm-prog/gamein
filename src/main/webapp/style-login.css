@@ -74,3 +74,16 @@
 .bd-mode-toggle .dropdown-menu .active .bi {
 	display: block !important;
 }
+.custom-danger-btn {
+    background-color: #ff4b5c; /* Cambia il colore di sfondo */
+    border-color:#5a23c8;     /* Cambia il colore del bordo */
+    color: white;              /* Cambia il colore del testo */
+    font-weight: bold;         /* Rende il testo più spesso */
+    padding: 10px 20px;        /* Aggiunge imbottitura */
+    border-radius: 10px;       /* Arrotonda gli angoli */
+}
+
+.custom-danger-btn:hover {
+    background-color: white;   /* Cambia il colore di sfondo al passaggio del mouse */
+    color: #ff4b5c;            /* Cambia il colore del testo al passaggio del mouse */
+}

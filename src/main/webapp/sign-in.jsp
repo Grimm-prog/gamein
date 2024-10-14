@@ -22,36 +22,40 @@
 	<main class="form-signin w-100 m-auto" style="max-width: 400px;">
 		<form action="login" method="post">
 		<nav class="navbar navbar-expand-lg bg-trasparent">
-    	<div class="container-fluid d-flex justify-content-center">
-        <h1 class="navbar-brand fs-1" style="font-size: 3rem;"> <span style="color: white;">LOG</span><span style="color:#652c9b;">IN</span> </h1>
-    </div>
-</nav>
+	    	<div class="container-fluid d-flex justify-content-center">
+	        	<h1 class="navbar-brand fs-1" style="font-size: 3rem;"> <span style="color: white;">LOG</span><span style="color:#652c9b;">IN</span> </h1>
+	   		</div>
+		</nav>
 
 			
 			<div class="input-group mb-3">
-  			<span class="input-group-text" id="basic-addon1">Username</span>
- 			<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1 "id="username" name="username">
+	  			<span class="input-group-text" id="basic-addon1">Username</span>
+	 			<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1 "id="username" name="username">
 			</div>
 			
 			<div class="input-group mb-3">
- 			<span class="input-group-text" id="basic-addon1">Password</span>
- 			<input type="password" class="form-control" placeholder="Username" aria-label="Password" aria-describedby="basic-addon1 id="password" name="password">
+	 			<span class="input-group-text" id="basic-addon1">Password</span>
+	 			<input type="password" class="form-control" placeholder="Username" aria-label="Password" aria-describedby="basic-addon1 id="password" name="password">
+			</div>
+			
+			<div class="input-group mb-3">
+	  			<span class="input-group-text" id="basic-addon1">Email</span>
+	 			<input type="text" class="form-control" placeholder="email" aria-label="email" aria-describedby="basic-addon1 "id="email" name="email">
 			</div>
 			
 			</div>
-			<button class="btn btn-bd-primary  w-100 py-2 fw-bold text-uppercase" type="submit">Login</button>
-			<% if(request.getParameter("erroreCredenziali") != null){ %>
-			<div class="alert alert-danger mt-3" role="alert">
-				<p class="text-center">Credenziali errate!</p>
-			</div>
-			<% } %>
+				<button class="btn btn-bd-primary  w-100 py-2 fw-bold text-uppercase" type="submit">Login</button>
+				<% if(request.getParameter("erroreCredenziali") != null){ %>
+				<div class="alert alert-danger mt-3" role="alert">
+					<p class="text-center">Credenziali errate!</p>
+				</div>
+				<% } %>
 			<div class="mt-1">
 				<p>Don't have an account?</p>
 			</div>
 			<div class="mt-10">
 				<a href="signin.jsp" class="btn btn-outline-danger custom-danger-btn">Sign in</a>
 				<button class="btn btn-outline-danger custom-danger-btn">Sign in</button>
-				
 			</div>
 		</form>
 	</main>
