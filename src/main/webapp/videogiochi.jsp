@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="it.generationitaly.game.entity.Videogame" %>
+<%@ page import="java.util.List"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,9 +19,58 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<!-- Navbar -->
-    <%@ include file="nav.jsp" %>	
+<!-- Creazione lista videogame -->
+	<%List<Videogame> videogiochi = (List<Videogame>) request.getAttribute("videogame"); %>
 
+<!-- Navbar -->
+    <%@include file ="nav.jsp" %>
+
+		<!-- 	<%
+              if(request.getParameter("titolo") != null) {
+              %>
+              <h1>'<%= request.getParameter("titolo") %>' non presente in archivio</h1>
+              <%
+                } else {
+                %>
+                <h1>Nessun gioco in archivio</h1>
+                <%
+                }
+                %>
+ -->
+
+	<%
+		if (videogiochi.isEmpty()) {
+	%>
+	<%
+								if (request.getParameter("titolo") != null) {
+								%> 
+								<h1>Nessun risultato per il videogame:" <b><%=request.getParameter("titolo")%></b>"</h1>
+								<%
+								} else {
+								%> 
+								<h1>Nessun videogame presente in archivio </h1>
+								<%
+								}
+								%>
+	
+	<%} else {
+	         for (Videogame videogioco : videogiochi){%>
+	<div class="row justify-content-center mt-3">
+            <div class="col-6 col-md-2">
+                <a href="info-videogioco?id=<%= videogioco.getId() %>">
+                <div class="card">
+                    <img src="<%=videogioco.getFoto() %>"
+                        alt="Descrizione dell'immagine" class="img-fluid"
+                        style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                </a>
+            </div>
+        </div>
+        <!--
+        <% 
+    }
+    }
+        %>   
     <!-- contenuto principale -->
     <div class="container pt-5">
 
