@@ -67,41 +67,41 @@
         <!-- introduco le icone -->
         <div class="row justify-content-center mt-4">
             <div class="col-6 col-md-2">
-				 <div class="card text-center" style="border-radius: 10px; padding: 20px; background-color: #7851a9; width: 150px;">
+				 <div class="card">
 		        <button class="btn btn-purple d-flex flex-column align-items-center">
-		            <img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon2.svg" alt="Icon" class="img-fluid" style="width: 50px;">
+		            <img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon2.svg" alt="Icon" class="img-fluid" style="width: 50%; max-width: 80px;">
 		            <span>SinglePlayer</span>
 		        </button>
 		    </div>
 		    </div>
             <div class="col-6 col-md-2">
-				<div class="card text-center" style="border-radius: 10px; padding: 20px; background-color: #7851a9; width: 150px;">
+				<div class="card">
 						<button class="btn btn-purple d-flex flex-column align-items-center">
-						<img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon36.svg" alt="Icon" class="img-fluid" style="width: 50px;">
+						<img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon36.svg" alt="Icon" class="img-fluid" style="width: 50%; max-width: 80px;">
 						<span>Multiplayer</span>
 						</button>
 					</div>
 				</div>
              <div class="col-6 col-md-2">
-				 <div class="card text-center" style="border-radius: 10px; padding: 20px; background-color: #7851a9; width: 150px;">
+				<div class="card">
 		        <button class="btn btn-purple d-flex flex-column align-items-center">
-		            <img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon2.svg" alt="Icon" class="img-fluid" style="width: 50px;">
+		            <img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon2.svg" alt="Icon" class="img-fluid" style="width: 50%; max-width: 80px;">
 		            <span>SinglePlayer</span>
 		        </button>
 		    </div>
 		    </div>
             <div class="col-6 col-md-2">
-				<div class="card text-center" style="border-radius: 10px; padding: 20px; background-color: #7851a9; width: 150px;">
+				<div class="card">
 						        <button class="btn btn-purple d-flex flex-column align-items-center">
-						            <img src="	https://cdn.mashthosebuttons.com/assets/images/2011/08/PEGI.jpg" alt="Icon" class="img-fluid" style="width: 50px;">
+						            <img src="	https://cdn.mashthosebuttons.com/assets/images/2011/08/PEGI.jpg" alt="Icon" class="img-fluid" style="width: 50%; max-width: 80px;">
 						            <span>SinglePlayer</span>
 						        </button>
 						    </div>
 						    </div>
              <div class="col-6 col-md-2">
-				 <div class="card text-center" style="border-radius: 10px; padding: 20px; background-color: #7851a9; width: 150px;">
+				 <div class="card">
 		        <button class="btn btn-purple d-flex flex-column align-items-center">
-		            <img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon2.svg" alt="Icon" class="img-fluid" style="width: 50px;">
+		            <img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon2.svg" alt="Icon" class="img-fluid" style="width: 50%; max-width: 80px;">
 		            <span>SinglePlayer</span>
 		        </button>
 		    </div>
