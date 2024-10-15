@@ -72,7 +72,7 @@
             <div class="col-6 col-md-2">
 				 <div class="card">
 			        <button class="btn btn-purple d-flex flex-column align-items-center">
-			            <img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon2.svg" alt="Icon" class="img-fluid" style="width: 50%; max-width: 80px;">
+			            <img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon2.svg" alt="Icon" class="img-fluid" style="width: 40%; max-width: 60px;">
 			            <span>SinglePlayer</span>
 			        </button>
 				</div>
@@ -90,7 +90,7 @@
              <div class="col-6 col-md-2">
 				<div class="card">
 			        <button class="btn btn-purple d-flex flex-column align-items-center">
-			            <img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon2.svg" alt="Icon" class="img-fluid" style="width: 50%; max-width: 80px;">
+			            <img src="${pageContext.request.contextPath}/img/GENERE.png" alt="Icon" class="img-fluid" style="width: 50%; max-width: 80px;">
 			            <span><%= videogioco.getGeneri().getFirst().getGenere().getName() %></span>
 			        </button>
 		   		</div>
@@ -99,7 +99,7 @@
 	        <div class="col-6 col-md-2">
 				<div class="card">
 					<button class="btn btn-purple d-flex flex-column align-items-center">
-						<img src="${pageContext.request.contextPath}/img/sviluppatore.png" alt="Icon"   class="img-fluid" style="width: 50px ">
+						<img src="${pageContext.request.contextPath}/img/sviluppatore.png" alt="Icon" class="img-fluid mb-2" style="width: 60%; max-width: 220px;">	
 						<span><%= videogioco.getSviluppatori().getFirst().getSviluppatore().getName() %></span>
 					</button>
 				 </div>
@@ -108,7 +108,7 @@
 	        <div class="col-6 col-md-2">
 				<div class="card">
 					<button class="btn btn-purple d-flex flex-column align-items-center">
-						<img src="${pageContext.request.contextPath}/img/PEGI2.png" alt="Icon" class="img-fluid" style="width: 100px;">
+						<img src="${pageContext.request.contextPath}/img/PEGI.png" alt="Icon" class="img-fluid" style="width: 350px;">
 						<span><%= videogioco.getClassificazionePegi() %></span>
 					</button>
 				</div>
@@ -117,7 +117,7 @@
 		    <div class="col-6 col-md-2">
 				 <div class="card">
 		        <button class="btn btn-purple d-flex flex-column align-items-center">
-		            <img src="${pageContext.request.contextPath}/img/PEGI2.png" alt="Icon" class="img-fluid" style="width: 100px;">
+		            <img src="${pageContext.request.contextPath}/img/ANNOUSCITA.png" alt="Icon" class="img-fluid" style="width: 350px;">
 		            <span><%= videogioco.getAnnoUscita() %></span>
 		        </button>
 		    </div>
