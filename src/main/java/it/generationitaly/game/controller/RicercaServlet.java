@@ -1,10 +1,15 @@
 package it.generationitaly.game.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
+import it.generationitaly.game.entity.Genere;
 import it.generationitaly.game.entity.Videogame;
+import it.generationitaly.game.entity.VideogameGenere;
+import it.generationitaly.game.repository.GenereRepository;
 import it.generationitaly.game.repository.VideogameRepository;
+import it.generationitaly.game.repository.impl.GenereRepositoryImpl;
 import it.generationitaly.game.repository.impl.VideogameRepositoryImpl;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -15,78 +20,42 @@ import jakarta.servlet.http.HttpServletResponse;
 public class RicercaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private VideogameRepository videogameRepository = new VideogameRepositoryImpl();
-
+	private GenereRepository genereRepository  = new  GenereRepositoryImpl();
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println("In servlet ricerca, doGet");
 		String titolo = request.getParameter("titolo");
-		String genereName = request.getParameter("genere");
-		String sviluppatoreName = request.getParameter("sviluppatore");
-		System.out.println(titolo);
-		System.out.println(genereName);
-		System.out.println(sviluppatoreName);
-		int choice = 0;
-		if (titolo != null) {
-			if (genereName != null) {
-				if (sviluppatoreName != null) {
-					choice = 3;
-				}
-			} else {
-				if (sviluppatoreName != null) {
-					choice = 5;
-				} else {
-					choice = 1;
-				}
-			}
-		} else {
-			if (genereName != null) {
-				if (sviluppatoreName != null) {
-					choice = 4;
-				} else {
-					choice = 7;
-				}
-			} else {
-				if (sviluppatoreName != null) {
-					choice = 6;
-				} else {
-					choice = 0;
-				}
-			}
+		String genere = request.getParameter("genere");
+		String annoUscita = request.getParameter("annoUscita");
+		
+		List<Videogame> videogames = videogameRepository.RicercaPerTitolo(titolo);
+		List<Genere> generi = genereRepository.findAll(); 
+		
+		if(videogames!=null && genere!=null) {
+			videogames =RicercaGenere(genere,videogames);
 		}
-		List<Videogame> videogames = null;
-		switch (choice) {
-		case 0:
-			videogames = videogameRepository.findAll();
-			break;
-		case 1:
-			videogames = videogameRepository.RicercaPerTitolo(titolo);
-			break;
-		case 2:
-			videogames = videogameRepository.findByTitoloGenere(titolo, genereName);
-			break;
-		case 3:
-			videogames = videogameRepository.findByTitoloGenereSviluppatore(titolo, genereName, sviluppatoreName);
-			break;
-		case 4:
-			videogames = videogameRepository.findByGenereSviluppatore(genereName, sviluppatoreName);
-			break;
-		case 5:
-			videogames = videogameRepository.findByTitoloSviluppatore(titolo, sviluppatoreName);
-			break;
-		case 6:
-			videogames = videogameRepository.findBySviluppatore(sviluppatoreName);
-			break;
-		case 7:
-			videogames = videogameRepository.findByGenere(genereName);
-			break;
-		default:
-			throw new IllegalArgumentException("Unexpected value: " + choice);
-		}
-
+		
+		request.setAttribute("generi", generi);
 		request.setAttribute("videogames", videogames);
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("videogiochi.jsp");
 		requestDispatcher.forward(request, response);
 
 	}
+	
+	private List<Videogame> RicercaGenere(String genere,List<Videogame> videogames){
+		List<Videogame> tmp=new ArrayList<Videogame>();
+		for (Videogame videogame : videogames) {
+			List<VideogameGenere> generi = videogame.getGeneri();
+			for (VideogameGenere collegamentogenere : generi) {
+				Genere generegioco = collegamentogenere.getGenere();
+				if(generegioco.getName().equals(genere)) {
+					tmp.add(videogame);
+				}
+			}
+		}
+		
+		return tmp;
+	}
 
+	
 }
