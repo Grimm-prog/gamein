@@ -100,7 +100,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card review-card">
-                        <div class="card-body">
+                        <div class="card-body" style="text-align: center;">
                             <h5 class="card-title">User123</h5>
                             <h6 class="card-subtitle mb-2 ">★★★★☆</h6>
                             <p class="card-text pb-2">This game is fantastic! The storyline is engaging, and the graphics are out of this world. Highly recommend!</p>
@@ -109,7 +109,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card review-card">
-                        <div class="card-body">
+                        <div class="card-body" style="text-align: center;">
                             <h5 class="card-title">GamerX</h5>
                             <h6 class="card-subtitle mb-2 ">★★★☆☆</h6>
                             <p class="card-text">Good game, but could use some improvements in mechanics. Graphics are great though!</p>
@@ -118,7 +118,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card review-card">
-                        <div class="card-body">
+                        <div class="card-body" style="text-align: center;">
                             <h5 class="card-title">PlayerY</h5>
                             <h6 class="card-subtitle mb-2 ">★★★★★</h6>
                             <p class="card-text">Amazing! One of the best games I’ve played. Highly recommend it for any fan of the genre!</p>

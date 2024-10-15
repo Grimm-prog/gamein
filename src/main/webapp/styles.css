@@ -173,6 +173,7 @@ body {
 .review-card .card-title {
     color: #ffffff;
     font-size: 1.2rem;
+    background-color: #141414;
 }
 
 .review-card .card-subtitle {
