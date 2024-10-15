@@ -1,3 +1,5 @@
+<%@page import="it.generationitaly.game.entity.Recensione"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="it.generationitaly.game.entity.Videogame" %>
@@ -66,7 +68,7 @@
         </div>
         <!-- introduco le icone -->
         <div class="row justify-content-center mt-4">
-        
+        	<% if(!videogioco.isMultiplayer()){ %>
             <div class="col-6 col-md-2">
 				 <div class="card">
 			        <button class="btn btn-purple d-flex flex-column align-items-center">
@@ -75,7 +77,7 @@
 			        </button>
 				</div>
 		    </div>
-		    
+		    <% }else{ %>
             <div class="col-6 col-md-2">
 				<div class="card">
 					<button class="btn btn-purple d-flex flex-column align-items-center">
@@ -84,12 +86,12 @@
 					</button>
 				</div>
 			</div>
-			
+			<% }  %>
              <div class="col-6 col-md-2">
 				<div class="card">
 			        <button class="btn btn-purple d-flex flex-column align-items-center">
 			            <img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon2.svg" alt="Icon" class="img-fluid" style="width: 50%; max-width: 80px;">
-			            <span>Genere</span>
+			            <span><%= videogioco.getGeneri().getFirst().getGenere().getName() %></span>
 			        </button>
 		   		</div>
 		    </div>
@@ -98,7 +100,7 @@
 				<div class="card">
 					<button class="btn btn-purple d-flex flex-column align-items-center">
 						<img src="${pageContext.request.contextPath}/img/sviluppatore.png" alt="Icon"   class="img-fluid" style="width: 50px ">
-						<span>Sviluppatore</span>
+						<span><%= videogioco.getSviluppatori().getFirst().getSviluppatore().getName() %></span>
 					</button>
 				 </div>
 			</div>
@@ -107,7 +109,7 @@
 				<div class="card">
 					<button class="btn btn-purple d-flex flex-column align-items-center">
 						<img src="${pageContext.request.contextPath}/img/PEGI2.png" alt="Icon" class="img-fluid" style="width: 100px;">
-						<span>VALORE PEGI</span>
+						<span><%= videogioco.getClassificazionePegi() %></span>
 					</button>
 				</div>
 			</div>
@@ -116,7 +118,7 @@
 				 <div class="card">
 		        <button class="btn btn-purple d-flex flex-column align-items-center">
 		            <img src="${pageContext.request.contextPath}/img/PEGI2.png" alt="Icon" class="img-fluid" style="width: 100px;">
-		            <span>DATA PUBLICAZIONE</span>
+		            <span><%= videogioco.getAnnoUscita() %></span>
 		        </button>
 		    </div>
 		    </div>
@@ -129,37 +131,32 @@
             <br>
         </div>
     </div>
+    <% List<Recensione> recensioni= videogioco.getRecensioni();
+    %>
     <!-- qui andranno le card con le recensioni -->
     <div class="container-fluid" style="background-color: #652c9b;">
         <div class="container pt-5">
             <div class="row">
+            <% for(Recensione recensione: recensioni){ %>
+            	<% String stelle="";
+            	for(int i=0;i<5;i++){
+            		if(i<recensione.getVoto()){
+            			stelle+="★";
+            		}else{
+            			stelle="☆";
+            		}
+            	} %>
                 <div class="col-md-4">
                     <div class="card review-card">
                         <div class="card-body" style="text-align: center;">
-                            <h5 class="card-title">User123</h5>
-                            <h6 class="card-subtitle mb-2 ">★★★★☆</h6>
-                            <p class="card-text pb-2">This game is fantastic! The storyline is engaging, and the graphics are out of this world. Highly recommend!</p>
+                            <h5 class="card-title"><%= recensione.getUtente().getUsername() %></h5>
+                            <h6 class="card-subtitle mb-2 "><%= stelle %></h6>
+                            <p class="card-text pb-2"><%= recensione.getCommento() %></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card review-card">
-                        <div class="card-body" style="text-align: center;">
-                            <h5 class="card-title">GamerX</h5>
-                            <h6 class="card-subtitle mb-2 ">★★★☆☆</h6>
-                            <p class="card-text">Good game, but could use some improvements in mechanics. Graphics are great though!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card review-card">
-                        <div class="card-body" style="text-align: center;">
-                            <h5 class="card-title">PlayerY</h5>
-                            <h6 class="card-subtitle mb-2 ">★★★★★</h6>
-                            <p class="card-text">Amazing! One of the best games I’ve played. Highly recommend it for any fan of the genre!</p>
-                        </div>
-                    </div>
-                </div>
+                <% } %>
+               
             </div>
         </div>
     </div>
