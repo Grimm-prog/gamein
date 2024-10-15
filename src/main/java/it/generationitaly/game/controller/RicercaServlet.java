@@ -1,7 +1,11 @@
 package it.generationitaly.game.controller;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import it.generationitaly.game.entity.Genere;
@@ -54,6 +58,20 @@ public class RicercaServlet extends HttpServlet {
 			}
 		}
 		
+		return tmp;
+	}
+	
+	private List<Videogame> RicercaPerData(String data,List<Videogame>videogames ){
+		List<Videogame> tmp=new ArrayList<Videogame>();
+		SimpleDateFormat sdf=new SimpleDateFormat("yyyy");
+		
+		for (Videogame videogame : videogames) {
+			String year = sdf.format(videogame.getAnnoUscita());
+			if(year.equals(data)) {
+				tmp.add(videogame);
+			}
+			
+		}
 		return tmp;
 	}
 
