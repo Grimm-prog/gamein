@@ -67,21 +67,32 @@
         <!-- introduco le icone -->
         <div class="row justify-content-center mt-4">
             <div class="col-6 col-md-2">
-                <div class="card">
-                	<h4>Prova</h4>
-                </div>
+				<div class="card text-center" style="border-radius: 10px; padding: 20px; background-color: #7851a9; width: 150px;">
+					<button class="btn btn-purple d-flex flex-column align-items-center">
+						 <img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon2.svg" alt="Icon" class="img-fluid" style="width: 50px;">
+						 <span>SinglePlayer</span>
+					</button>
+				</div>
             </div>
             <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
+				<div class="card text-center" style="border-radius: 10px; padding: 20px; background-color: #7851a9; width: 150px;">
+						        <button class="btn btn-purple d-flex flex-column align-items-center">
+						            <img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon36.svg" alt="Icon" class="img-fluid" style="width: 50px;">
+						            <span>Multiplayer</span>
+						        </button>
+						    </div>
             <div class="col-6 col-md-2">
                 <div class="card" style="background-color: #7851a9; border-radius: 10px; height: 150px; transition: transform 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
 			    <h4>Prova</h4>
 			</div>
             </div>
             <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
+				<div class="card text-center" style="border-radius: 10px; padding: 20px; background-color: #7851a9; width: 150px;">
+						        <button class="btn btn-purple d-flex flex-column align-items-center">
+						            <img src="	https://cdn.mashthosebuttons.com/assets/images/2011/08/PEGI.jpg" alt="Icon" class="img-fluid" style="width: 50px;">
+						            <span>SinglePlayer</span>
+						        </button>
+						    </div>
             <div class="col-6 col-md-2">
                 <div class="card"></div>
             </div>

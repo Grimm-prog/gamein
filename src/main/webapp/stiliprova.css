@@ -1,0 +1,60 @@
+
+.btn-bd-primary {
+	--bd-violet-bg: rgb(0, 0, 0);
+	--bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+	--bs-btn-font-weight: 600;
+	--bs-btn-color: var(--bs-white);
+	--bs-btn-bg: var(--bd-violet-bg);
+	--bs-btn-border-color: var(--bd-violet-bg);
+	--bs-btn-hover-color: var(--bs-white);
+	--bs-btn-hover-bg: #6528e0;
+	--bs-btn-hover-border-color: #6528e0;
+	--bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+	--bs-btn-active-color: var(--bs-btn-hover-color);
+	--bs-btn-active-bg: #5a23c8;
+	--bs-btn-active-border-color: #5a23c8;
+}
+
+
+body {
+    background-color: #282c34; /* Sfondo della pagina */
+    color: white; /* Colore del testo della pagina */
+}
+
+.btn-bd-primary2 {
+    --bd-violet-bg: rgba(0, 0, 0, 0); /* Sfondo trasparente */
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white); /* Colore del testo */
+    --bs-btn-bg: transparent; /* Sfondo trasparente */
+    --bs-btn-border-color: #5a23c8; /* Colore del bordo viola */
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #6528e0; /* Colore di sfondo al passaggio del mouse */
+    --bs-btn-hover-border-color: #6528e0; /* Colore del bordo al passaggio del mouse */
+    --bs-btn-focus-shadow-rgb: 112.520718, 44.062154, 249.437846; /* RGB per il focus */
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #5a23c8; /* Colore di sfondo attivo */
+    --bs-btn-active-border-color: #5a23c8; /* Colore del bordo attivo */
+    
+    background-color: var(--bs-btn-bg); /* Usa lo sfondo trasparente */
+    color: var(--bs-btn-color); /* Colore del testo bianco */
+    border: 2px solid var(--bs-btn-border-color); /* Bordo viola */
+    border-radius: 5px; /* Aggiungi un raggio di bordi se necessario */
+    font-family: 'Roboto Mono', monospace; /* Usa il font Roboto Mono */
+}
+
+
+.btn-bd-primary2:hover {
+    color: var(--bs-btn-hover-color); /* Colore del testo al passaggio del mouse */
+    background-color: var(--bs-btn-hover-bg); /* Colore di sfondo al passaggio del mouse */
+    border-color: var(--bs-btn-hover-border-color); /* Colore del bordo al passaggio del mouse */
+}
+
+.btn-bd-primary2:focus {
+    box-shadow: 0 0 0 0.2rem rgba(var(--bs-btn-focus-shadow-rgb), 0.5); /* Ombra al focus */
+}
+
+.btn-bd-primary2:active {
+    color: var(--bs-btn-active-color); /* Colore del testo attivo */
+    background-color: var(--bs-btn-active-bg); /* Colore di sfondo attivo */
+    border-color: var(--bs-btn-active-border-color); /* Colore del bordo attivo */
+}
