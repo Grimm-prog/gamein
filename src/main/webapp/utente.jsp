@@ -35,7 +35,7 @@
 				</div>
 				<div class="col">
 					  <form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="logout" method="post"> <!-- aggiunti action e method -->
-			            <button class="btn-search" type="submit">Mostra altro...</button>
+			            <button class="btn-search" type="submit">logout</button>
 			        </form>
 				</div>
 			</div>
