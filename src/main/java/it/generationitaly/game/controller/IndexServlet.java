@@ -1,32 +1,30 @@
 package it.generationitaly.game.controller;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
-/**
- * Servlet implementation class IndexServlet
- */
+import it.generationitaly.game.entity.Videogame;
+import it.generationitaly.game.repository.VideogameRepository;
+import it.generationitaly.game.repository.impl.VideogameRepositoryImpl;
+
+
 public class IndexServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
+	private VideogameRepository videogameRepository = new VideogameRepositoryImpl();
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		List<Videogame> videogames = videogameRepository.OrderByDataDesc();
+		request.setAttribute("videogames", videogames);
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
+		requestDispatcher.forward(request, response);
 	}
 
 }
