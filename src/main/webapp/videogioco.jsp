@@ -95,13 +95,37 @@
         </div>
     </div>
     <!-- qui andranno le card con le recensioni -->
-    <div class="container-fluid" style="background-color: #7851a9;">
+    <div class="container-fluid" style="background-color: #652c9b;">
         <div class="container pt-5">
-            <h1 style="text-align: center;">RECENSIONI</h1>
-            <br>
-            <br>
-            <br>
-            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card review-card">
+                        <div class="card-body">
+                            <h5 class="card-title">User123</h5>
+                            <h6 class="card-subtitle mb-2 ">★★★★☆</h6>
+                            <p class="card-text pb-2">This game is fantastic! The storyline is engaging, and the graphics are out of this world. Highly recommend!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card review-card">
+                        <div class="card-body">
+                            <h5 class="card-title">GamerX</h5>
+                            <h6 class="card-subtitle mb-2 ">★★★☆☆</h6>
+                            <p class="card-text">Good game, but could use some improvements in mechanics. Graphics are great though!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card review-card">
+                        <div class="card-body">
+                            <h5 class="card-title">PlayerY</h5>
+                            <h6 class="card-subtitle mb-2 ">★★★★★</h6>
+                            <p class="card-text">Amazing! One of the best games I’ve played. Highly recommend it for any fan of the genre!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
