@@ -31,8 +31,10 @@ public class RicercaServlet extends HttpServlet {
 		String titolo = request.getParameter("titolo");
 		String genere = request.getParameter("genere");
 		String annoUscita = request.getParameter("annoUscita");
-		
-		List<Videogame> videogames = videogameRepository.RicercaPerTitolo(titolo);
+		List<Videogame> videogames=null;
+		if(titolo!=null) {
+		videogames = videogameRepository.RicercaPerTitolo(titolo);
+		}
 		List<Genere> generi = genereRepository.findAll(); 
 		
 		if(videogames!=null && genere!=null) {
@@ -40,6 +42,10 @@ public class RicercaServlet extends HttpServlet {
 		}
 		if(videogames!=null && annoUscita!=null) {
 			videogames =RicercaPerData(annoUscita, videogames);
+		}
+		
+		if(titolo==null) {
+			videogames = videogameRepository.findAll();
 		}
 		
 		request.setAttribute("generi", generi);
