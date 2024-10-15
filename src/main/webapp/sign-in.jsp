@@ -89,6 +89,11 @@
         </div>
 
         <button class="btn btn-bd-primary2  w-100 py-2 fw-bold text-uppercase" type="submit">Sign in</button>
+        <% if(request.getParameter("errore") != null){ %>
+			<div class="alert alert-danger mt-3" role="alert">
+				<p class="text-center">Username già presente in archivio!</p>
+				</div>
+			<% } %>
     </form>
 </main>
  

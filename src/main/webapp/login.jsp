@@ -54,7 +54,7 @@
                 <p>Don't have an account?</p>
             </div>
             <div class="mt-10">
-                <button class="btn btn-bd-primary2 py-2 fw-bold text-uppercase" type="submit"><span style="color: white;">SIGN</span><span style="color:#652c9b;">IN</span></button>
+                <a class="btn btn-bd-primary2 py-2 fw-bold text-uppercase" href="sign-in.jsp"><span style="color: white;">SIGN</span><span style="color:#652c9b;">IN</span></a>
             </div>
         </form>
     </main>
