@@ -27,13 +27,19 @@
 	<p>Email:((Utente) request.getAttribute("utente")).getEmail()l() %>
 	 -->
 	<div class="container">
-		<img alt="" 
-			src="<%=((Utente) request.getAttribute("utente")).getFoto()%>" class="account-icon">
-		<!-- Bootstrap JS -->
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-			crossorigin="anonymous"></script>
+		<div class="row">
+			<div class="col mt-3 pt-5">
+			<img alt="" 
+				src="<%=((Utente) request.getAttribute("utente")).getFoto()%>" class="account-icon">
+			<!-- Bootstrap JS -->
+			<script
+				src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+				integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+				crossorigin="anonymous"></script>
+			</div>
+			
+		</div>	
+		
 	</div>
 </body>
 </html>
