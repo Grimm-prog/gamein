@@ -13,8 +13,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
-@Table
-@Entity(name="utente")
+@Entity
+@Table(name="utente")
 public class Utente {
 	
 	@Id

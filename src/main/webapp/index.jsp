@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="it.generationitaly.game.entity.Videogame" %>
+<%@ page import="java.util.List"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,30 +20,10 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
-        <div class="container-fluid">
-            <a class="navbar-brand d-none d-lg-block" href="#">GAME<span style="color:#652c9b;">IN</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <!-- Contenuto della navbar -->
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <!-- searchbar -->
-                <form class="d-flex search-form mt-4 mb-3 mb-lg-0">
-                    <input class="form-control search-input" type="search" placeholder="Silent Hill..." aria-label="Search">
-                    <button class="btn-search" type="submit">Cerca</button>
-                </form>
-            </div>
-            
-            <!-- il mio account e immagine utente -->
-            <div class="d-flex align-items-center">
-                <a href="#" class="me-3 nav-link">My Account</a>
-                <!-- immagine dell'utente-->
-                <img src="https://lh3.googleusercontent.com/BbWEstIBHVTP0Tna_AdcGTx_Rm1g9TDDNHAhETnZ8za0YCruvGw6ihuHlqL0BCOqJkq-rWoufanOwRJxm7op_H2q=s1280-w1280-h800" alt="User" class="account-icon">
-            </div>
-        </div>
-    </nav>
+    <%@ include file="nav.jsp" %>	
+    
+    <!-- Creazione lista videogame -->
+	<%List<Videogame> videogiochi = (List<Videogame>) request.getAttribute("videogames"); %>
 
     <!-- contenuto principale -->
     <div class="container pt-5">
@@ -50,28 +32,103 @@
         </div>
         <div class="row justify-content-center">
             <!-- introduco l'immagine principale o il possibile carosello-->
-            <div class="col-lg-8">
-                <div class="content-box"></div>
+            <div class="col-lg-8 mt-3 mb-3">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <a href="videogioco?id=<%= videogiochi.get(0).getId() %>">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="<%= videogiochi.get(0).getFoto() %>"
+                                class="d-block w-100" alt="...">
+                        </div>
+                        </a>
+                        <a href="videogioco?id=<%= videogiochi.get(7).getId() %>">
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="<%= videogiochi.get(7).getFoto() %>"
+                                class="d-block w-100" alt="...">
+                        </div>
+                        </a>
+                        <a href="videogioco?id=<%= videogiochi.get(6).getId() %>">
+                        <div class="carousel-item">
+                            <img src="<%= videogiochi.get(6).getFoto() %>"
+                                class="d-block w-100" alt="...">
+                        </div>
+                        </a>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
         <!-- introduco le immagini -->
         <div class="row justify-content-center mt-4">
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
+           <div class="col-6 col-md-2">
+           		 <a href="videogioco?id=<%= videogiochi.get(1).getId() %>">
+                    <div class="card">
+
+                        <img src="<%= videogiochi.get(1).getFoto() %>"
+                             class="img-fluid"
+                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+
+                    </div>
+                </a>
             </div>
             <div class="col-6 col-md-2">
-                <div class="card"></div>
+           		 <a href="videogioco?id=<%= videogiochi.get(2).getId() %>">
+                    <div class="card">
+
+                        <img src="<%= videogiochi.get(2).getFoto() %>"
+                             class="img-fluid"
+                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+
+                    </div>
+                </a>
             </div>
             <div class="col-6 col-md-2">
-                <div class="card"></div>
+           		 <a href="videogioco?id=<%= videogiochi.get(3).getId() %>">
+                    <div class="card">
+
+                        <img src="<%= videogiochi.get(3).getFoto() %>"
+                             class="img-fluid"
+                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+
+                    </div>
+                </a>
+            </div>
+           <div class="col-6 col-md-2">
+           		 <a href="videogioco?id=<%= videogiochi.get(4).getId() %>">
+                    <div class="card">
+
+                        <img src="<%= videogiochi.get(4).getFoto() %>"
+                             class="img-fluid"
+                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+
+                    </div>
+                </a>
             </div>
             <div class="col-6 col-md-2">
-                <div class="card"></div>
-            </div>
-            <div class="col-6 col-md-2">
-                <div class="card"></div>
+           		 <a href="videogioco?id=<%= videogiochi.get(5).getId() %>">
+                    <div class="card">
+
+                        <img src="<%= videogiochi.get(5).getFoto() %>"
+                             class="img-fluid"
+                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+
+                    </div>
+                </a>
             </div>
         </div>
+        <!-- bottone che fa la find all e mostra tutti i videogiochi -->
+        <form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="cerca" method="GET"> <!-- aggiunti action e method -->
+            <button class="btn-search" type="submit">Mostra altro...</button>
+        </form>
     </div>
 
     <!-- Bootstrap JS -->

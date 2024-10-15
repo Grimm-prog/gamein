@@ -9,8 +9,8 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
-@Table
-@Entity(name="videogame_sviluppatore")
+@Entity
+@Table(name="videogame_sviluppatore")
 public class VideogameSviluppatore {
 	
 	@Id

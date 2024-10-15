@@ -11,14 +11,15 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 
-@Table
-@Entity(name="preferito")
+@Entity
+@Table(name="preferito")
 public class Preferito {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", nullable = false)
 	private long id;
+	
 	
 	@ManyToOne
 	@JoinColumn(name="utente_id",nullable=false)

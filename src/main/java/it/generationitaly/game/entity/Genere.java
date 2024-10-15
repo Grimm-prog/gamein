@@ -12,8 +12,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
-@Table
-@Entity(name="genere")
+@Entity
+@Table(name="genere")
 public class Genere {
 	
 	@Id
@@ -21,7 +21,7 @@ public class Genere {
 	@Column(name = "id", nullable = false)
 	private long id;
 	
-	@Column(name = "name", nullable = false,length=100)
+	@Column(name = "nome", nullable = false,length=100)
 	private String name;
 	
 	@OneToMany(mappedBy="genere",fetch=FetchType.EAGER)
