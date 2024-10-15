@@ -63,4 +63,36 @@
             <input type="email" class="form-control" placeholder="Email" aria-label="email" aria-describedby="basic-addon1" id="email" name="email" required>
         </div>
         <% if(request.getParameter("erroreEmail") != null){ %>
-     
+            <div class="text-danger mb-3">Inserisci la tua email!</div>
+        <% } %>
+
+        <!-- Avatar selection -->
+        <div class="mb-3">
+            <label class="form-label">Seleziona il tuo avatar:</label>
+            <div class="d-flex justify-content-around">
+                <div>
+                    <input type="radio" id="avatar1" name="avatar" value="avatar1.png" required>
+                    <label for="avatar1">
+                        <img src="https://img.freepik.com/vettori-premium/ritratto-di-un-cane-alla-moda-generativo-ai-occhiali-stile-avatar-moda-animale-domestico-design-elegante-moderno-carattere-avatar-trendy-adolescente-razza-tendenza-concetto-artistico-illustrazione-vettoriale_579956-3458.jpg?w=360" alt="Avatar 1" class="img-thumbnail" style="width: 100px;">
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" id="avatar2" name="avatar" value="avatar2.png" required>
+                    <label for="avatar2">
+                        <img src="https://st2.depositphotos.com/2800301/46357/v/450/depositphotos_463575770-stock-illustration-horse-head-horse-portrait-animal.jpg" alt="Avatar 2" class="img-thumbnail" style="width: 100px;">
+                    </label>
+                </div>
+            </div>
+            <% if(request.getParameter("erroreAvatar") != null){ %>
+                <div class="text-danger mb-3">Seleziona un avatar!</div>
+            <% } %>
+        </div>
+
+        <button class="btn btn-bd-primary2  w-100 py-2 fw-bold text-uppercase" type="submit">Sign in</button>
+    </form>
+</main>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
