@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="it.generationitaly.game.entity.Videogame" %>
+<%@ page import="it.generationitaly.game.entity.Genere" %>
 <%@ page import="java.util.List"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +28,7 @@
 		
 	<!-- Creazione lista videogame -->
 	<%List<Videogame> videogiochi = (List<Videogame>) request.getAttribute("videogames"); %>
+	<% List<Genere> generi = (List<Genere>) request.getAttribute("generi"); %>
 	
     <!-- contenuto principale -->
     <div class="container pt-5">
@@ -63,9 +65,10 @@
 			    categoria
 			  </button>
 			  <ul class="dropdown-menu">
-			    <li><a class="dropdown-item" href="cerca?titolo=<%= request.getParameter("titolo") %>&genere=Fantasy">Fantasy</a></li>
-			    <li><a class="dropdown-item" href="#">RPG</a></li>
-			    <li><a class="dropdown-item" href="#">FPS</a></li>
+			  <!--  qui inizio a iterare la lista di generi e al posto di fantasy passerò il nome del genere -->
+			  <% for(Genere genere : generi){ %>
+			    <li><a class="dropdown-item" href="cerca?titolo=<%= request.getParameter("titolo") %>&genere=<%= genere.getName() %>"><%= genere.getName() %></a></li>
+				<% } %>
 			  </ul>
 			</div>
         </div>

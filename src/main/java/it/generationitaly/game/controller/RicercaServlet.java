@@ -35,7 +35,12 @@ public class RicercaServlet extends HttpServlet {
 		if(titolo!=null) {
 		videogames = videogameRepository.RicercaPerTitolo(titolo);
 		}
+		
 		List<Genere> generi = genereRepository.findAll(); 
+		
+		if(titolo==null) {
+			videogames = videogameRepository.findAll();
+		}
 		
 		if(videogames!=null && genere!=null) {
 			videogames =RicercaGenere(genere,videogames);
@@ -44,9 +49,6 @@ public class RicercaServlet extends HttpServlet {
 			videogames =RicercaPerData(annoUscita, videogames);
 		}
 		
-		if(titolo==null) {
-			videogames = videogameRepository.findAll();
-		}
 		
 		request.setAttribute("generi", generi);
 		request.setAttribute("videogames", videogames);

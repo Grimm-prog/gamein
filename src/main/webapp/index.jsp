@@ -127,7 +127,7 @@
         </div>
         <!-- bottone che fa la find all e mostra tutti i videogiochi -->
         <form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="cerca" method="get"> <!-- aggiunti action e method -->
-            <button class="btn-search" type="submit">Mostra altro...</button>
+            <button class="btn-search" name="titolo" type="submit">Mostra altro...</button>
         </form>
     </div>
 
