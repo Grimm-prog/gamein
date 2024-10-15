@@ -305,4 +305,4 @@ INSERT INTO recensione VALUES (40, 19, 2, 'Un picchiaduro che combina accessibil
 
 INSERT INTO recensione VALUES (41, 20, 1, 'Dead Island 2 offre un’ottima esperienza di zombi, con azione frenetica e ambienti dettagliati.', 4, 3, 42);
 INSERT INTO recensione VALUES (42, 20, 2, 'Un buon gioco di zombi, anche se non rivoluziona il genere.', 4, 3, 42); 
--- Dead Island 2
+-- Dead Island 
