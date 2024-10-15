@@ -1,0 +1,189 @@
+/*
+colore primario: #652c9b;
+colore secondario: #7851a9;
+colore sfondo: #141414;
+colore scritta: #FFFFFF;
+*/
+
+
+/*font per tutto l'html Roboto Mono */
+body {
+    background-color: #141414; 
+    color: #ffffff; 
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-custom {
+    background-color: transparent;
+    padding: 1rem;position: fixed; /* Rende la navbar fissa */
+    top: 0;
+    left: 0;
+    width: 100%; /* Assicura che la navbar occupi tutta la larghezza */
+    z-index: 1000; /* Assicura che la navbar rimanga sopra altri elementi */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease; /* Aggiungi una transizione per il colore */
+}
+
+.nav-link:hover {
+    color: #652c9b; /* Cambia il colore quando l'utente passa sopra il link */
+}
+
+/*
+.btn-search {
+    background-color: #652c9b; 
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+*/
+
+.content-box {
+    background-color: #652c9b; /* Primary color */
+    border-radius: 15px;
+    width: 100%;
+    height: 300px;
+}
+
+.card {
+    background-color: #7851a9;
+    border-radius: 10px;
+    height: 150px;
+    margin-bottom: 20px;
+ 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra per la card */
+    transition: transform 0.3s; /* Transizione per l'hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Effetto zoom al passaggio del mouse */
+}
+
+
+.account-icon {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+/* personalizzazione della searchbar */
+
+/* Stile per la navbar */
+.navbar-custom {
+    background-color: transparent;
+    padding: 1rem;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(101,44,155, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler {
+    border: none; /* Rimuove il bordo intorno al pulsante */
+    outline: none; /* Rimuove anche l'outline, se presente */
+}
+
+
+/* Searchbar */
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input {
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    width: 200px;
+    background-color: #7851a9; /* Primary color */
+    color: #ffffff; /* Text color */
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    outline: none;
+    transition: width 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: #ffffff; /* Placeholder color */
+}
+
+.search-input:focus {
+    width: 300px; /* Espandi il campo di ricerca al focus */
+}
+
+.btn-search {
+    background-color: #652c9b; /* Secondary color */
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    margin-left: 0.5rem;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+}
+
+.btn-search:hover {
+    background-color: #7851a9;
+}
+
+.account-icon {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* classe del carosello */
+
+.carousel-inner img {
+    border-radius: 15px;
+    width: 100%; /* Fa sì che l'immagine riempia tutto il container */
+    height: 350px; /* Altezza personalizzata del carosello */
+    object-fit: cover; /* Adatta l'immagine senza deformarla */
+}
+
+.carousel {
+    border-radius: 15px;
+    max-width: 900px; /* Imposta la larghezza massima del carosello */
+    margin: 0 auto; /* Centra il carosello */
+}
+
+
+/* stile delle card di recensione */
+
+.review-card {
+    background-color: #652c9b;
+    color: #ffffff;
+    border: 1px solid #141414;
+    margin-bottom: 20px;
+}
+
+.review-card .card-title {
+    color: #ffffff;
+    font-size: 1.2rem;
+    background-color: #141414;
+}
+
+.review-card .card-subtitle {
+    color: #ffffff;
+}
+
+.review-card .card-text {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+
