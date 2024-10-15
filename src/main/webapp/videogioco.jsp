@@ -93,16 +93,16 @@
             <div class="col-6 col-md-2">
 				<div class="card text-center" style="border-radius: 10px; padding: 20px; background-color: #7851a9; width: 150px;">
 						        <button class="btn btn-purple d-flex flex-column align-items-center">
-						            <img src="	https://cdn.mashthosebuttons.com/assets/images/2011/08/PEGI.jpg" alt="Icon" class="img-fluid" style="width: 50px;">
-						            <span>SinglePlayer</span>
+						            <img src="" alt="Icon" class="img-fluid" style="width: 50px;">
+						            <span>Sviluppatore</span>
 						        </button>
 						    </div>
 						    </div>
              <div class="col-6 col-md-2">
 				 <div class="card text-center" style="border-radius: 10px; padding: 20px; background-color: #7851a9; width: 150px;">
 		        <button class="btn btn-purple d-flex flex-column align-items-center">
-		            <img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon2.svg" alt="Icon" class="img-fluid" style="width: 50px;">
-		            <span>SinglePlayer</span>
+		            <img src="${pageContext.request.contextPath}/img/PEGI2.png" alt="Icon" class="img-fluid" style="width: 100px;">
+		            <span>PEGI</span>
 		        </button>
 		    </div>
 		    </div>
