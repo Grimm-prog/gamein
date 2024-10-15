@@ -66,48 +66,57 @@
         </div>
         <!-- introduco le icone -->
         <div class="row justify-content-center mt-4">
+        
             <div class="col-6 col-md-2">
 				 <div class="card">
-		        <button class="btn btn-purple d-flex flex-column align-items-center">
-		            <img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon2.svg" alt="Icon" class="img-fluid" style="width: 50%; max-width: 80px;">
-		            <span>SinglePlayer</span>
-		        </button>
+			        <button class="btn btn-purple d-flex flex-column align-items-center">
+			            <img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon2.svg" alt="Icon" class="img-fluid" style="width: 50%; max-width: 80px;">
+			            <span>SinglePlayer</span>
+			        </button>
+				</div>
 		    </div>
-		    </div>
+		    
             <div class="col-6 col-md-2">
 				<div class="card">
-						<button class="btn btn-purple d-flex flex-column align-items-center">
+					<button class="btn btn-purple d-flex flex-column align-items-center">
 						<img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon36.svg" alt="Icon" class="img-fluid" style="width: 50%; max-width: 80px;">
 						<span>Multiplayer</span>
-						</button>
-					</div>
+					</button>
 				</div>
+			</div>
+			
              <div class="col-6 col-md-2">
 				<div class="card">
-		        <button class="btn btn-purple d-flex flex-column align-items-center">
-		            <img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon2.svg" alt="Icon" class="img-fluid" style="width: 50%; max-width: 80px;">
-		            <span>SinglePlayer</span>
-		        </button>
+			        <button class="btn btn-purple d-flex flex-column align-items-center">
+			            <img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon2.svg" alt="Icon" class="img-fluid" style="width: 50%; max-width: 80px;">
+			            <span>Genere</span>
+			        </button>
+		   		</div>
 		    </div>
-		    </div>
-            <div class="col-6 col-md-2">
+		    
+	        <div class="col-6 col-md-2">
 				<div class="card">
-						      <button class="btn btn-purple d-flex flex-column align-items-center">
-						            <img src="" alt="Icon" class="img-fluid" style="width: 50px;">
-						            <span>Sviluppatore</span>
-						            <img src="	https://cdn.mashthosebuttons.com/assets/images/2011/08/PEGI.jpg" alt="Icon" class="img-fluid" style="width: 50%; max-width: 80px;">
-						            <span>SinglePlayer</span>
-
-						        </button>
-						    </div>
-						    </div>
-             <div class="col-6 col-md-2">
+					<button class="btn btn-purple d-flex flex-column align-items-center">
+						<img src="${pageContext.request.contextPath}/img/sviluppatore.png" alt="Icon"   class="img-fluid" style="width: 50px ">
+						<span>Sviluppatore</span>
+					</button>
+				 </div>
+			</div>
+			
+	        <div class="col-6 col-md-2">
+				<div class="card">
+					<button class="btn btn-purple d-flex flex-column align-items-center">
+						<img src="${pageContext.request.contextPath}/img/PEGI2.png" alt="Icon" class="img-fluid" style="width: 100px;">
+						<span>VALORE PEGI</span>
+					</button>
+				</div>
+			</div>
+			
+		    <div class="col-6 col-md-2">
 				 <div class="card">
 		        <button class="btn btn-purple d-flex flex-column align-items-center">
-
 		            <img src="${pageContext.request.contextPath}/img/PEGI2.png" alt="Icon" class="img-fluid" style="width: 100px;">
-		            <img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon2.svg" alt="Icon" class="img-fluid" style="width: 50%; max-width: 80px;">
-		            <span>SinglePlayer</span>
+		            <span>DATA PUBLICAZIONE</span>
 		        </button>
 		    </div>
 		    </div>
