@@ -30,9 +30,9 @@ public class SignInServlet extends HttpServlet {
 		utente.setEmail(email);
 		utente.setFoto(foto);
 		
-		if(!utente.getUsername().equals(utenteRepository.findByUsername(username).getUsername())) {
+		if(utenteRepository.findByUsername(username) == null) {
 			utenteRepository.save(utente);
-			response.sendRedirect("index.jsp");
+			response.sendRedirect("index");
 		}else {
 			response.sendRedirect("sign-in.jsp?errore");
 		}
