@@ -143,7 +143,7 @@
             		if(i<recensione.getVoto()){
             			stelle+="★";
             		}else{
-            			stelle="☆";
+            			stelle+="☆";
             		}
             	} %>
                 <div class="col-md-4">
