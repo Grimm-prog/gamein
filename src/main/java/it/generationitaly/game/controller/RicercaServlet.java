@@ -38,6 +38,9 @@ public class RicercaServlet extends HttpServlet {
 		if(videogames!=null && genere!=null) {
 			videogames =RicercaGenere(genere,videogames);
 		}
+		if(videogames!=null && annoUscita!=null) {
+			videogames =RicercaPerData(annoUscita, videogames);
+		}
 		
 		request.setAttribute("generi", generi);
 		request.setAttribute("videogames", videogames);
