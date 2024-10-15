@@ -3,7 +3,6 @@
   <display-name>game</display-name>
   <welcome-file-list>
     <welcome-file>index</welcome-file>
-    
   </welcome-file-list>
   <servlet>
     <description></description>
@@ -15,7 +14,7 @@
     <servlet-name>RicercaServlet</servlet-name>
     <url-pattern>/cerca</url-pattern>
   </servlet-mapping>
-  <servlet> 
+  <servlet>
     <description></description>
     <display-name>VideogiocoServlet</display-name>
     <servlet-name>VideogiocoServlet</servlet-name>
@@ -24,5 +23,15 @@
   <servlet-mapping>
     <servlet-name>VideogiocoServlet</servlet-name>
     <url-pattern>/videogioco</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UtenteServlet</display-name>
+    <servlet-name>UtenteServlet</servlet-name>
+    <servlet-class>it.generationitaly.game.controller.UtenteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UtenteServlet</servlet-name>
+    <url-pattern>/utente</url-pattern>
   </servlet-mapping>
 </web-app>

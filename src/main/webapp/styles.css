@@ -161,5 +161,29 @@ body {
 }
 
 
+/* stile delle card di recensione */
+
+.review-card {
+    background-color: #652c9b;
+    color: #ffffff;
+    border: 1px solid #141414;
+    margin-bottom: 20px;
+}
+
+.review-card .card-title {
+    color: #ffffff;
+    font-size: 1.2rem;
+    background-color: #141414;
+}
+
+.review-card .card-subtitle {
+    color: #ffffff;
+}
+
+.review-card .card-text {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-top: 10px;
+}
 
 

@@ -17,7 +17,7 @@
             
             <!-- il mio account e immagine utente -->
             <div class="d-flex align-items-center">
-                <a href="#" class="me-3 nav-link">My Account</a>
+                <a href="utente" class="me-3 nav-link">My Account</a>
                 <!-- immagine dell'utente-->
                 <img src="https://lh3.googleusercontent.com/BbWEstIBHVTP0Tna_AdcGTx_Rm1g9TDDNHAhETnZ8za0YCruvGw6ihuHlqL0BCOqJkq-rWoufanOwRJxm7op_H2q=s1280-w1280-h800" alt="User" class="account-icon">
             </div>
