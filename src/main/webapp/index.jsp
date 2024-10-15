@@ -32,14 +32,39 @@
         </div>
         <div class="row justify-content-center">
             <!-- introduco l'immagine principale o il possibile carosello-->
-            <div class="col-lg-8">
-            <a href="videogioco?id=<%= videogiochi.get(1).getId() %>">
-                <div class="content-box">
-                   <img src="<%= videogiochi.get(0).getFoto() %>"
-                        alt="Descrizione dell'immagine" class="img-fluid"
-                        style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+            <div class="col-lg-8 mt-3 mb-3">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <a href="videogioco?id=<%= videogiochi.get(0).getId() %>">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="<%= videogiochi.get(0).getFoto() %>"
+                                class="d-block w-100" alt="...">
+                        </div>
+                        </a>
+                        <a href="videogioco?id=<%= videogiochi.get(7).getId() %>">
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="<%= videogiochi.get(7).getFoto() %>"
+                                class="d-block w-100" alt="...">
+                        </div>
+                        </a>
+                        <a href="videogioco?id=<%= videogiochi.get(6).getId() %>">
+                        <div class="carousel-item">
+                            <img src="<%= videogiochi.get(6).getFoto() %>"
+                                class="d-block w-100" alt="...">
+                        </div>
+                        </a>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-             </a>
             </div>
         </div>
         <!-- introduco le immagini -->
