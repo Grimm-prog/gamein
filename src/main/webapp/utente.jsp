@@ -31,15 +31,20 @@
 			<div class="col mt-3 pt-5">
 			<img alt="" 
 				src="<%=((Utente) request.getAttribute("utente")).getFoto()%>" class="account-icon">
+	
+				</div>
+				<div class="col">
+					  <form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="logout" method="post"> <!-- aggiunti action e method -->
+			            <button class="btn-search" type="submit">Mostra altro...</button>
+			        </form>
+				</div>
+			</div>
+		</div>	
 			<!-- Bootstrap JS -->
 			<script
 				src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 				integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 				crossorigin="anonymous"></script>
-			</div>
-			
-		</div>	
 		
-	</div>
 </body>
 </html>
