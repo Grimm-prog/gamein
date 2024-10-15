@@ -51,8 +51,9 @@
 	-webkit-overflow-scrolling: touch;
 }
 
+
 .btn-bd-primary {
-	--bd-violet-bg: #712cf9;
+	--bd-violet-bg: rgb(0, 0, 0);
 	--bd-violet-rgb: 112.520718, 44.062154, 249.437846;
 	--bs-btn-font-weight: 600;
 	--bs-btn-color: var(--bs-white);
@@ -87,3 +88,32 @@
     background-color: white;   /* Cambia il colore di sfondo al passaggio del mouse */
     color: #ff4b5c;            /* Cambia il colore del testo al passaggio del mouse */
 }
+
+.avatar-box {
+    width: 120px;  /* Larghezza fissa */
+    height: 120px; /* Altezza fissa */
+    object-fit: cover; /* Adatta l'immagine per riempire la box senza distorcerla */
+    border-radius: 50%; /* Arrotonda i bordi per creare un effetto circolare */
+    border: 2px solid #652c9b; /* Aggiunge un bordo visibile */
+}
+.btn-search {
+    --background-color: #652c9b; /* Secondary color */
+    --color: #652c9b;
+    --border: none;
+    --border-radius: 20px;
+    --padding: 0.5rem 1.5rem;
+    --margin-left: 0.5rem;
+    --transition: background-color 0.3s ease;
+    --font-family: 'Roboto Mono', monospace;
+    --font-size: 1rem;
+}
+
+.btn-search:hover {
+    --background-color: #7851a9;
+}
+body {
+    background-color: #282c34; /* Sfondo della pagina */
+    color: white; /* Colore del testo della pagina */
+}
+
+
