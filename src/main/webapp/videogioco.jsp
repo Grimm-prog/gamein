@@ -69,59 +69,101 @@
         <!-- introduco le icone -->
         <div class="row justify-content-center mt-4">
         	<% if(!videogioco.isMultiplayer()){ %>
-            <div class="col-6 col-md-2">
-				 <div class="card">
-			        <button class="btn btn-purple d-flex flex-column align-items-center">
-			            <img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon2.svg" alt="Icon" class="img-fluid" style="width: 40%; max-width: 60px;">
-			            <span>SinglePlayer</span>
-			        </button>
-				</div>
-		    </div>
+        	
+ 			<div class="col-6 col-md-2">
+  				<div class="card">
+	        		<button class="btn btn-purple d-flex flex-column align-items-center justify-content-center mt-3">
+		            	<!-- Contenitore per l'immagine -->
+		            	<div class="d-flex justify-content-center mb-4">
+			            	<img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon2.svg" alt="Icon" class="img-fluid" style="width: 40%; max-width: 60px;">
+		            	</div>
+		            	<!-- Contenitore per il testo -->
+		            	<div class="text-center">
+			            	<span class="custom-text">SinglePlayer</span>
+		            	</div>
+	       			</button>
+    			</div>
+    		</div>
+    		
 		    <% }else{ %>
-            <div class="col-6 col-md-2">
-				<div class="card">
-					<button class="btn btn-purple d-flex flex-column align-items-center">
-						<img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon36.svg" alt="Icon" class="img-fluid" style="width: 50%; max-width: 80px;">
-						<span>Multiplayer</span>
-					</button>
-				</div>
-			</div>
-			<% }  %>
-             <div class="col-6 col-md-2">
-				<div class="card">
-			        <button class="btn btn-purple d-flex flex-column align-items-center">
-			            <img src="${pageContext.request.contextPath}/img/GENERE.png" alt="Icon" class="img-fluid" style="width: 50%; max-width: 80px;">
-			            <span><%= videogioco.getGeneri().getFirst().getGenere().getName() %></span>
-			        </button>
-		   		</div>
-		    </div>
 		    
-	        <div class="col-6 col-md-2">
-				<div class="card">
-					<button class="btn btn-purple d-flex flex-column align-items-center">
-						<img src="${pageContext.request.contextPath}/img/sviluppatore.png" alt="Icon" class="img-fluid mb-2" style="width: 60%; max-width: 220px;">	
-						<span><%= videogioco.getSviluppatori().getFirst().getSviluppatore().getName() %></span>
-					</button>
-				 </div>
-			</div>
+ 			<div class="col-6 col-md-2">
+  				<div class="card">
+	        		<button class="btn btn-purple d-flex flex-column align-items-center justify-content-center mt-3">
+		            	<!-- Contenitore per l'immagine -->
+		            	<div class="d-flex justify-content-center mt-0 mb-2">
+							<img src="https://www.instant-gaming.com/themes/igv2/modules/product/images/icon-features/feature-icon36.svg" alt="Icon" class="img-fluid" style="width: 100%; max-width: 80px;">
+		            	</div>
+		            	<!-- Contenitore per il testo -->
+		            	<div class="text-center mb-3">
+			            	<span class="custom-text ">Multiplayer</span>
+		            	</div>
+	       			</button>
+    			</div>
+    		</div>
+    		
+			<% }  %>
 			
-	        <div class="col-6 col-md-2">
-				<div class="card">
-					<button class="btn btn-purple d-flex flex-column align-items-center">
-						<img src="${pageContext.request.contextPath}/img/PEGI.png" alt="Icon" class="img-fluid" style="width: 350px;">
-						<span><%= videogioco.getClassificazionePegi() %></span>
-					</button>
-				</div>
-			</div>
+			<div class="col-6 col-md-2">
+  				<div class="card">
+	        		<button class="btn btn-purple d-flex flex-column align-items-center justify-content-center mt-3">
+		            	<!-- Contenitore per l'immagine -->
+		            	<div class="d-flex justify-content-center mb-2">
+							<img src="${pageContext.request.contextPath}/img/GENERE2.png" alt="Icon" class="img-fluid" style="width: 350px;">
+		            	</div>
+		            	<!-- Contenitore per il testo -->
+		            	<div class="text-center">
+			            	<span class="custom-text"><%= videogioco.getGeneri().getFirst().getGenere().getName() %></span>
+		            	</div>
+	       			</button>
+    			</div>
+    		</div>		    
 			
-		    <div class="col-6 col-md-2">
-				 <div class="card">
-		        <button class="btn btn-purple d-flex flex-column align-items-center">
-		            <img src="${pageContext.request.contextPath}/img/ANNOUSCITA.png" alt="Icon" class="img-fluid" style="width: 350px;">
-		            <span><%= videogioco.getAnnoUscita() %></span>
-		        </button>
-		    </div>
-		    </div>
+			<div class="col-6 col-md-2">
+  				<div class="card">
+	        		<button class="btn btn-purple d-flex flex-column align-items-center justify-content-center ">
+		            	<!-- Contenitore per l'immagine -->
+		            	<div class="d-flex justify-content-center mt-2 mb-1">
+							<img src="${pageContext.request.contextPath}/img/sviluppatore.png" alt="Icon" class="img-fluid mb-3" style="width: 60%; max-width: 220px;">	
+		            	</div>
+		            	<!-- Contenitore per il testo -->
+		            	<div class="text-center mb-3">
+		                	<span class="custom-text"><%= videogioco.getSviluppatori().getFirst().getSviluppatore().getName() %></span>
+		            	</div>
+	       			</button>
+    			</div>
+    		</div>
+			
+			<div class="col-6 col-md-2">
+  				<div class="card">
+	        		<button class="btn btn-purple d-flex flex-column align-items-center justify-content-center mt-3">
+		            	<!-- Contenitore per l'immagine -->
+		            	<div class="d-flex justify-content-center mb-2">
+		                	<img src="${pageContext.request.contextPath}/img/PEGI3.png" alt="Icon" class="img-fluid" style="width: 350px;">
+		            	</div>
+		            	<!-- Contenitore per il testo -->
+		            	<div class="text-center">
+		                	<span class="custom-text" style="font-size: 40px"><%= videogioco.getClassificazionePegi() %></span>
+		            	</div>
+	       			</button>
+    			</div>
+    		</div>
+
+			<div class="col-6 col-md-2">
+  				<div class="card">
+	        		<button class="btn btn-purple d-flex flex-column align-items-center justify-content-center mt-3">
+		            	<!-- Contenitore per l'immagine -->
+		            	<div class="d-flex justify-content-center mb-4">
+		            		<img src="${pageContext.request.contextPath}/img/ANNOUSCITA2.png" alt="Icon" class="img-fluid" style="width: 350px;">
+		            	</div>
+		            	<!-- Contenitore per il testo -->
+		            	<div class="text-center">
+		           			<span class="custom-text" ><%= videogioco.getAnnoUscita() %></span>
+		            	</div>
+	       			</button>
+    			</div>
+    		</div>
+		    
 		</div>
         <div class="row justify-content-center pt-5 mb-3">
             <h1 style="text-align: center;">RECENSIONI</h1>

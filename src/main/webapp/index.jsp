@@ -67,6 +67,10 @@
                 </div>
             </div>
         </div>
+        <!--  titolo della sezione -->
+        <div class="row justify-content-center pt-4 mb-2">
+            <h2 style="text-align: center;">LE NUOVE USCITE</h2>
+        </div>
         <!-- introduco le immagini -->
         <div class="row justify-content-center mt-4">
            <div class="col-6 col-md-2">
@@ -125,6 +129,71 @@
                 </a>
             </div>
         </div>
+        
+        <!-- NUOVA SEZIONE DI RICERCA -->
+        <!--  titolo della sezione -->
+        <div class="row justify-content-center pt-4 mb-2">
+            <h2 style="text-align: center;">RECENSIONI POSITIVE</h2>
+        </div>
+        <!-- introduco le immagini -->
+        <div class="row justify-content-center mt-4">
+           <div class="col-6 col-md-2">
+           		 <a href="videogioco?id=<%= videogiochi.get(1).getId() %>">
+                    <div class="card">
+
+                        <img src="<%= videogiochi.get(1).getFoto() %>"
+                             class="img-fluid"
+                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-2">
+           		 <a href="videogioco?id=<%= videogiochi.get(2).getId() %>">
+                    <div class="card">
+
+                        <img src="<%= videogiochi.get(2).getFoto() %>"
+                             class="img-fluid"
+                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-2">
+           		 <a href="videogioco?id=<%= videogiochi.get(3).getId() %>">
+                    <div class="card">
+
+                        <img src="<%= videogiochi.get(3).getFoto() %>"
+                             class="img-fluid"
+                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+
+                    </div>
+                </a>
+            </div>
+           <div class="col-6 col-md-2">
+           		 <a href="videogioco?id=<%= videogiochi.get(4).getId() %>">
+                    <div class="card">
+
+                        <img src="<%= videogiochi.get(4).getFoto() %>"
+                             class="img-fluid"
+                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-2">
+           		 <a href="videogioco?id=<%= videogiochi.get(5).getId() %>">
+                    <div class="card">
+
+                        <img src="<%= videogiochi.get(5).getFoto() %>"
+                             class="img-fluid"
+                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+
+                    </div>
+                </a>
+            </div>
+        </div>
+        
         <!-- bottone che fa la find all e mostra tutti i videogiochi -->
         <form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="cerca" method="get"> <!-- aggiunti action e method -->
             <button class="btn-search" name="titolo" type="submit">Mostra altro...</button>
