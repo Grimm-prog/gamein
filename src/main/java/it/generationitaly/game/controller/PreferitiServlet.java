@@ -11,6 +11,7 @@ import it.generationitaly.game.repository.VideogameRepository;
 import it.generationitaly.game.repository.impl.PreferitoRepositoryImpl;
 import it.generationitaly.game.repository.impl.UtenteRepositoryImpl;
 import it.generationitaly.game.repository.impl.VideogameRepositoryImpl;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -43,6 +44,9 @@ public class PreferitiServlet extends HttpServlet {
 		}else {
 			preferitoRepository.save(preferito);
 		}
+		request.setAttribute("id", idVideogame);
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("videogioco.jsp");
+		requestDispatcher.forward(request, response);
 	}
 
 }
