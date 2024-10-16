@@ -186,4 +186,9 @@ body {
     margin-top: 10px;
 }
 
+.custom-text {
+    font-family: 'Roboto', sans-serif; /* Imposta il font, ad esempio Roboto */
+    font-size: 24px; /* Imposta la dimensione del testo */
+    color: #fff; /* Imposta il colore del testo, ad esempio bianco */
+}
 

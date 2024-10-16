@@ -1,4 +1,6 @@
     <!-- Navbar -->
+    
+    
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
         <div class="container-fluid">
             <a class="navbar-brand d-none d-lg-block" href="index">GAME<span style="color:#652c9b;">IN</span></a>
@@ -16,6 +18,7 @@
                     <button class="btn-search" type="submit">cerca</button>
                 </form>
             </div>
+            <% if(session.getAttribute("username")==null){ %>
             
             <!-- il mio account e immagine utente -->
             <div class="d-flex align-items-center">
@@ -23,5 +26,12 @@
                 <!-- immagine dell'utente-->
                 <img src="https://lh3.googleusercontent.com/BbWEstIBHVTP0Tna_AdcGTx_Rm1g9TDDNHAhETnZ8za0YCruvGw6ihuHlqL0BCOqJkq-rWoufanOwRJxm7op_H2q=s1280-w1280-h800" alt="User" class="account-icon">
             </div>
+            <%}else{  %>
+            <div class="d-flex align-items-center">
+                <a href="utente" class="me-3 nav-link"><%= session.getAttribute("username")%></a>
+                <!-- immagine dell'utente-->
+                <img src="<%= session.getAttribute("foto") %>" alt="User" class="account-icon">
+            </div>
         </div>
+        <% } %>
     </nav>
