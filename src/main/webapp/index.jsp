@@ -217,11 +217,11 @@
                     </div>
                 </a>
             </div>
-       
+       </div>
 		        <% } %>
     	    <% } %>
         <% } %>
-       </div>
+       
        
         <!-- bottone che fa la find all e mostra tutti i videogiochi -->
       <div class="row justify-content-center pt-4 mb-2">
