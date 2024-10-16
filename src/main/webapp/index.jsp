@@ -1,3 +1,4 @@
+<%@page import="it.generationitaly.game.entity.Utente"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="it.generationitaly.game.entity.Videogame" %>
@@ -24,6 +25,8 @@
     
     <!-- Creazione lista videogame -->
 	<%List<Videogame> videogiochi = (List<Videogame>) request.getAttribute("videogames"); %>
+	<%List<Videogame> videogiochiData = (List<Videogame>) request.getAttribute("videogamesByData"); %>
+	<%List<Videogame> videogiochiAvgVoto = (List<Videogame>) request.getAttribute("videogamesByAvgVoto"); %>
 
     <!-- contenuto principale -->
     <div class="container pt-5">
@@ -74,10 +77,10 @@
         <!-- introduco le immagini -->
         <div class="row justify-content-center mt-4">
            <div class="col-6 col-md-2">
-           		 <a href="videogioco?id=<%= videogiochi.get(1).getId() %>">
+           		 <a href="videogioco?id=<%= videogiochiData.get(0).getId() %>">
                     <div class="card">
 
-                        <img src="<%= videogiochi.get(1).getFoto() %>"
+                        <img src="<%= videogiochiData.get(0).getFoto() %>"
                              class="img-fluid"
                             style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
 
@@ -85,10 +88,10 @@
                 </a>
             </div>
             <div class="col-6 col-md-2">
-           		 <a href="videogioco?id=<%= videogiochi.get(2).getId() %>">
+           		 <a href="videogioco?id=<%= videogiochiData.get(1).getId() %>">
                     <div class="card">
 
-                        <img src="<%= videogiochi.get(2).getFoto() %>"
+                        <img src="<%= videogiochiData.get(1).getFoto() %>"
                              class="img-fluid"
                             style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
 
@@ -96,10 +99,10 @@
                 </a>
             </div>
             <div class="col-6 col-md-2">
-           		 <a href="videogioco?id=<%= videogiochi.get(3).getId() %>">
+           		 <a href="videogioco?id=<%= videogiochiData.get(2).getId() %>">
                     <div class="card">
 
-                        <img src="<%= videogiochi.get(3).getFoto() %>"
+                        <img src="<%= videogiochiData.get(2).getFoto() %>"
                              class="img-fluid"
                             style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
 
@@ -107,10 +110,10 @@
                 </a>
             </div>
            <div class="col-6 col-md-2">
-           		 <a href="videogioco?id=<%= videogiochi.get(4).getId() %>">
+           		 <a href="videogioco?id=<%= videogiochiData.get(3).getId() %>">
                     <div class="card">
 
-                        <img src="<%= videogiochi.get(4).getFoto() %>"
+                        <img src="<%= videogiochiData.get(3).getFoto() %>"
                              class="img-fluid"
                             style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
 
@@ -118,10 +121,10 @@
                 </a>
             </div>
             <div class="col-6 col-md-2">
-           		 <a href="videogioco?id=<%= videogiochi.get(5).getId() %>">
+           		 <a href="videogioco?id=<%= videogiochiData.get(4).getId() %>">
                     <div class="card">
 
-                        <img src="<%= videogiochi.get(5).getFoto() %>"
+                        <img src="<%= videogiochiData.get(4).getFoto() %>"
                              class="img-fluid"
                             style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
 
@@ -138,10 +141,10 @@
         <!-- introduco le immagini -->
         <div class="row justify-content-center mt-4">
            <div class="col-6 col-md-2">
-           		 <a href="videogioco?id=<%= videogiochi.get(1).getId() %>">
+           		 <a href="videogioco?id=<%= videogiochiAvgVoto.get(0).getId() %>">
                     <div class="card">
 
-                        <img src="<%= videogiochi.get(1).getFoto() %>"
+                        <img src="<%= videogiochiAvgVoto.get(0).getFoto() %>"
                              class="img-fluid"
                             style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
 
@@ -149,10 +152,10 @@
                 </a>
             </div>
             <div class="col-6 col-md-2">
-           		 <a href="videogioco?id=<%= videogiochi.get(2).getId() %>">
+           		 <a href="videogioco?id=<%= videogiochiAvgVoto.get(1).getId() %>">
                     <div class="card">
 
-                        <img src="<%= videogiochi.get(2).getFoto() %>"
+                        <img src="<%= videogiochiAvgVoto.get(1).getFoto() %>"
                              class="img-fluid"
                             style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
 
@@ -160,10 +163,10 @@
                 </a>
             </div>
             <div class="col-6 col-md-2">
-           		 <a href="videogioco?id=<%= videogiochi.get(3).getId() %>">
+           		 <a href="videogioco?id=<%= videogiochiAvgVoto.get(2).getId() %>">
                     <div class="card">
 
-                        <img src="<%= videogiochi.get(3).getFoto() %>"
+                        <img src="<%= videogiochiAvgVoto.get(2).getFoto() %>"
                              class="img-fluid"
                             style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
 
@@ -171,10 +174,10 @@
                 </a>
             </div>
            <div class="col-6 col-md-2">
-           		 <a href="videogioco?id=<%= videogiochi.get(4).getId() %>">
+           		 <a href="videogioco?id=<%= videogiochiAvgVoto.get(3).getId() %>">
                     <div class="card">
 
-                        <img src="<%= videogiochi.get(4).getFoto() %>"
+                        <img src="<%= videogiochiAvgVoto.get(3).getFoto() %>"
                              class="img-fluid"
                             style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
 
@@ -182,10 +185,10 @@
                 </a>
             </div>
             <div class="col-6 col-md-2">
-           		 <a href="videogioco?id=<%= videogiochi.get(5).getId() %>">
+           		 <a href="videogioco?id=<%= videogiochiAvgVoto.get(4).getId() %>">
                     <div class="card">
 
-                        <img src="<%= videogiochi.get(5).getFoto() %>"
+                        <img src="<%= videogiochiAvgVoto.get(4).getFoto() %>"
                              class="img-fluid"
                             style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
 
@@ -193,13 +196,38 @@
                 </a>
             </div>
         </div>
-        
+         <% Utente utente= (Utente)session.getAttribute("utente"); %>
+         <% if(session.getAttribute("username")!=null){  %>
+		  <!--  titolo della sezione -->
+        <div class="row justify-content-center pt-4 mb-2">
+            <h2 style="text-align: center;">La MIA LISTA</h2>
+        </div>
+        <% for(int i=0;i<5;i++){ %>
+        	<% if(utente.getPreferiti().get(i)!=null){ %>
+        <!-- introduco le immagini -->
+        <div class="row justify-content-center mt-4">
+           <div class="col-6 col-md-2">
+           		 <a href="videogioco?id=<%= utente.getPreferiti().get(i).getVideogame().getId() %>">
+                    <div class="card">
+
+                        <img src="<%= utente.getPreferiti().get(i).getVideogame().getFoto() %>"
+                             class="img-fluid"
+                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+
+                    </div>
+                </a>
+            </div>
+       
+		        <% } %>
+    	    <% } %>
+        <% } %>
         <!-- bottone che fa la find all e mostra tutti i videogiochi -->
         <form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="cerca" method="get"> <!-- aggiunti action e method -->
             <button class="btn-search" name="titolo" type="submit">Mostra altro...</button>
         </form>
     </div>
-
+    
+   
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
