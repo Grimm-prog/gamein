@@ -200,7 +200,7 @@
         
          <% Utente utente= (Utente)session.getAttribute("utente"); %>
          <div class="container-fluid">
-          <div class="container pt-5">
+          <div class="container">
          <% if(session.getAttribute("username")!=null){  %>
          <div class="row justify-content-center pt-4 mb-2">
             <h2 style="text-align: center;">La MIA LISTA</h2>

@@ -22,7 +22,7 @@
 	rel="stylesheet">
 
 <!-- il mio CSS -->
-<link rel="stylesheet" href="stileUtente.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <!-- Creazione lista videogame -->
