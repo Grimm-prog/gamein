@@ -4,12 +4,15 @@
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
         <div class="container-fluid">
             <a class="navbar-brand d-none d-lg-block" href="index">GAME<span style="color:#652c9b;">IN</span></a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
             <!-- Contenuto della navbar -->
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <!-- link che porta alla home -->
+             <a class="navbar-brand d-lg-none mb-3" href="index">GAME<span style="color:#652c9b;">IN</span></a>
                 <!-- searchbar -->
                 <form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="cerca" method="get"> <!-- aggiunti action e method -->
                     <input class="form-control search-input" type="search" name="titolo" placeholder="Silent Hill..." aria-label="Search">
