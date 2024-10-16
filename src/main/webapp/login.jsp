@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="d-flex justify-content-center align-items-center min-vh-100 py-4 bg-dark text-light">
+<body class="d-flex justify-content-center align-items-center min-vh-100 py-4">
     <main class="form-signin w-100 m-auto" style="max-width: 400px;">
         <form action="login" method="post">
             <nav class="navbar navbar-expand-lg bg-transparent">
