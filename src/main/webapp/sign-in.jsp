@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- il mio CSS -->
-    <link rel="stylesheet" href="stiliprova.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="d-flex justify-content-center align-items-center min-vh-100 py-4 bg-dark text-light">
