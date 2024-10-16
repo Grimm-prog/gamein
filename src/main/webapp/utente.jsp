@@ -66,7 +66,6 @@
             </div>
         </div>
     </div>
-</div>
 <div  style="margin-top: 200px;" >
 
 	<div class="row justify-content-center pt-5 mb-3">
@@ -145,6 +144,7 @@
 	            <br>
 	            <br>
 	        </div>
+	        </div>
 	    <!-- qui andranno le card con le recensioni -->
 	    <div class="container-fluid" style="background-color: #652c9b;">
 	        <div class="container pt-5">
@@ -172,6 +172,8 @@
 	            </div>
 	        </div>
 	    </div>
+	    </div>
+	    </div>
 				<div class="col mt-5">
 					<form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="logout"
 						method="post">
@@ -179,6 +181,7 @@
 						<button class="btn-search" type="submit">logout</button>
 					</form>
 				</div>
+				
 				<!-- Bootstrap JS -->
 				<script
 					src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

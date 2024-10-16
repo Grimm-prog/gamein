@@ -196,8 +196,11 @@
                 </a>
             </div>
         </div>
+        </div>
         
          <% Utente utente= (Utente)session.getAttribute("utente"); %>
+         <div class="container-fluid">
+          <div class="container pt-5">
          <% if(session.getAttribute("username")!=null){  %>
          <div class="row justify-content-center pt-4 mb-2">
             <h2 style="text-align: center;">La MIA LISTA</h2>
@@ -223,6 +226,7 @@
         <% } %>
        </div>
        
+       
         <!-- bottone che fa la find all e mostra tutti i videogiochi -->
       <div class="row justify-content-center pt-4 mb-2">
         <form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="cerca" method="get"> <!-- aggiunti action e method -->
@@ -230,6 +234,7 @@
         </form>
     </div>
     </div>
+       </div>
    
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
