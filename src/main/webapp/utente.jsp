@@ -22,18 +22,30 @@
 <link rel="stylesheet" href="stileUtente.css">
 </head>
 <body>
+ <!-- Navbar -->
+    <%@ include file="nav.jsp" %>
 	<!-- 
 	<h1>Benvenuto,((Utente) request.getAttribute("utente")).getUsername()e() %>!</h1>
 	<p>Email:((Utente) request.getAttribute("utente")).getEmail()l() %>
 	 -->
-	<div class="container">
-		<div class="row">
-			<div class="col mt-3 pt-5">
-			<img alt="" 
-				src="<%=((Utente) request.getAttribute("utente")).getFoto()%>" class="account-icon">
+	<div class="container mt-5" style="max-width: 130pc;" >
 	
+		<div class="row">
+		
+			<div class="col" >
+			
+			<img alt="" 
+				src="<%=((Utente) request.getAttribute("utente")).getFoto()%>" class="profile-pic" >
 				</div>
-				<div class="col">
+				<div class="col ">
+				<div class="card text-bg-dark mb-3 " style="max-width: 222rem; margin-top: 200px; max-height: 511px;">
+  
+  <div class="card-body">
+    <h5 class="card-title"><span style="font-size: 30px;">Username:</span> </h5>
+    <p class="card-text"><span style="font-size: 80px; align-content: center; margin-bottom: 12px;"> <%= session.getAttribute("username") %></span> </p>
+  </div>
+				</div>
+				<div class="col mt-5" >
 					  <form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="logout" method="post"> <!-- aggiunti action e method -->
 			            <button class="btn-search" type="submit">logout</button>
 			        </form>

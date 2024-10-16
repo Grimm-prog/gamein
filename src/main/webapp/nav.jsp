@@ -8,8 +8,6 @@
             
             <!-- Contenuto della navbar -->
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <!-- Link GAMEIN visibile su tutti i dispositivi -->
-            <a class="navbar-brand text-center mb-3" href="index">GAME<span style="color:#652c9b;">IN</span></a>
                 <!-- searchbar -->
                 <form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="cerca" method="get"> <!-- aggiunti action e method -->
                     <input class="form-control search-input" type="search" name="titolo" placeholder="Silent Hill..." aria-label="Search">
