@@ -35,7 +35,7 @@
 	<p>Email:((Utente) request.getAttribute("utente")).getEmail()l() %>
 	 -->
 	<div class="container mt-5">
-    <div class="row align-items-center">
+    <div class="row justify-content-center">
         <div class="col-lg-4 ">
             <img alt="" src="<%=utente.getFoto()%>" class="profile-pic" style="width: 400px; height: 400px; object-fit: cover; ">
         </div>
@@ -46,7 +46,7 @@
                         <span style="font-size: 30px;">Username:</span>
                     </h5>
                     <p class="card-text">
-                        <span style="font-size: 40px; align-content: center; margin-bottom: 12px;">
+                        <span style="font-size: 30px; align-content: center; margin-bottom: 12px;">
                             <%=utente.getUsername()%>
                         </span>
                     </p>
@@ -58,7 +58,7 @@
                         <span style="font-size: 30px;">Email:</span>
                     </h5>
                     <p class="card-text">
-                        <span style="font-size: 40px; align-content: center; margin-bottom: 12px;">
+                        <span style="font-size: 30px; align-content: center; margin-bottom: 12px;">
                             <%=utente.getEmail()%>
                         </span>
                     </p>
@@ -168,7 +168,7 @@
 					<form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="logout"
 						method="post">
 						<!-- aggiunti action e method -->
-						<button class="btn-search" type="submit">logout</button>
+						<button class="btn btn-bd-primary2 py-2 fw-bold text-uppercase" type="submit">logout</button>
 					</form>
 				</div>
 				
