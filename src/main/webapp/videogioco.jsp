@@ -48,10 +48,26 @@
                 </div>
             </div>
         </div>
+        
+	      
+        
         <!-- descrizione -->
         <div class="row justify-content-center pt-5 mb-2">
             <h1 style="text-align: center;">DESCRIZIONE</h1>
         </div>
+        
+         <!--  BUTTON PREFERITO -->
+		<a class="btn btn-bd-primary2 py-2 fw-bold text-uppercase" href="index">
+		    <img src="${pageContext.request.contextPath}/img/CUOREOFF.jpg" alt="Icona" style="width: 20px; height: 20px; margin-right: 5px;">
+		    <span style="color: white;"></span>
+		    <span style="color:#652c9b;"></span>
+		</a>  
+		<a class="btn btn-bd-primary2 py-2 fw-bold text-uppercase" href="index">
+		    <img src="${pageContext.request.contextPath}/img/CUOREON.png" alt="Icona" style="width: 20px; height: 20px; margin-right: 5px;">
+		    <span style="color: white;"></span>
+		    <span style="color:#652c9b;"></span>
+		</a>   
+		  
         <div class="row justify-content-center pt-5 mb-2">
             <p
                 style="text-align: center;color: #652c9b; border: 2px solid #7851a9; padding: 50px; border-radius: 10px;">
