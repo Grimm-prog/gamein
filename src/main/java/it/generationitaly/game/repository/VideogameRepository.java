@@ -20,6 +20,10 @@ public interface VideogameRepository extends JpaRepository<Videogame, Long> {
 
 	List<Videogame> OrderByDataDesc();
 
+	List<Videogame> OrderByAvgVoto();
+
+	
+
 	List<Videogame> RicercaPerPegi(String classificazionePegi);
 
 	List<Videogame> RicercaPerMultiplayer(boolean multiplayer);
