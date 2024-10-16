@@ -78,13 +78,17 @@
         <% if(request.getParameter("erroreFoto") != null){ %>
             <div class="text-danger mb-3">Inserisci la tua foto profilo!</div>
         <% } %>
-
+		
         <button class="btn btn-bd-primary2  w-100 py-2 fw-bold text-uppercase" type="submit"><span style="color: white;">SIGN</span><span style="color:#652c9b;">IN</span></button>
         <% if(request.getParameter("errore") != null){ %>
 			<div class="alert alert-danger mt-3" role="alert">
 				<p class="text-center">Username già presente in archivio!</p>
 				</div>
 			<% } %>
+		
+		<!--  BUTTON PER TORNARE A LOGIN -->
+		<a class="btn btn-bd-primary2 py-2 fw-bold text-uppercase mt-3" href="login.jsp"><span style="color: white;">BACK</span><span style="color:#652c9b;"></span></a>
+		
     </form>
 </main>
  

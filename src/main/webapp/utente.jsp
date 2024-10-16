@@ -137,7 +137,7 @@
 				<form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="cerca"
 					method="post">
 					<!-- aggiunti action e method -->
-					<button class="btn-search" type="submit">lista completa</button>
+					<button class="btn btn-bd-primary2 py-2 fw-bold text-uppercase" type="submit">lista completa</button>
 				</form>
 			</div>
 	 <div class="row justify-content-center pt-5 mb-3">

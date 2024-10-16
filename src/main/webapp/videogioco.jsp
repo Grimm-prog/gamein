@@ -1,3 +1,6 @@
+<%@page import="it.generationitaly.game.entity.Preferito"%>
+<%@page import="it.generationitaly.game.controller.PreferitiServlet"%>
+<%@page import="it.generationitaly.game.entity.Utente"%>
 <%@page import="it.generationitaly.game.entity.Recensione"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -31,6 +34,16 @@
 	<!-- Creazione lista videogame -->
 	<%Videogame videogioco = (Videogame) request.getAttribute("videogame"); %>
 	
+	<% Utente utente= (Utente)session.getAttribute("utente"); 
+		boolean statopreferito=false;
+		List<Preferito> preferiti=utente.getPreferiti();
+		for(Preferito preferito:preferiti){
+			if(preferito.getVideogame().getId()==videogioco.getId()){
+				statopreferito=true;
+			}
+		}
+	%>
+	
 
     <!-- contenuto principale -->
     <div class="container pt-5">
@@ -56,18 +69,26 @@
             <h1 style="text-align: center;">DESCRIZIONE</h1>
         </div>
         
+        
+        <% if(session.getAttribute("username")!=null){ %>
          <!--  BUTTON PREFERITO -->
+         <% if(!statopreferito) {%>
 		<a class="btn btn-bd-primary2 py-2 fw-bold text-uppercase" href="index">
 		    <img src="${pageContext.request.contextPath}/img/CUOREOFF.jpg" alt="Icona" style="width: 20px; height: 20px; margin-right: 5px;">
 		    <span style="color: white;"></span>
 		    <span style="color:#652c9b;"></span>
 		</a>  
+		<% }else{ %>
 		<a class="btn btn-bd-primary2 py-2 fw-bold text-uppercase" href="index">
 		    <img src="${pageContext.request.contextPath}/img/CUOREON.png" alt="Icona" style="width: 20px; height: 20px; margin-right: 5px;">
 		    <span style="color: white;"></span>
 		    <span style="color:#652c9b;"></span>
-		</a>   
-		  
+		</a>
+		<%} %>   
+		 <% } %>
+		 
+		 
+		 
         <div class="row justify-content-center pt-5 mb-2">
             <p
                 style="text-align: center;color: #652c9b; border: 2px solid #7851a9; padding: 50px; border-radius: 10px;">

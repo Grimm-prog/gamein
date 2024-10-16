@@ -196,17 +196,18 @@
                 </a>
             </div>
         </div>
+        
          <% Utente utente= (Utente)session.getAttribute("utente"); %>
          <% if(session.getAttribute("username")!=null){  %>
-		  <!--  titolo della sezione -->
-        <div class="row justify-content-center pt-4 mb-2">
+         <div class="row justify-content-center pt-4 mb-2">
             <h2 style="text-align: center;">La MIA LISTA</h2>
-        </div>
+        	</div>
+          <div class="row justify-content-center mt-4">
+		  <!--  titolo della sezione -->
         <% for(int i=0;i<5;i++){ %>
         	<% if(utente.getPreferiti().get(i)!=null){ %>
         <!-- introduco le immagini -->
-        <div class="row justify-content-center mt-4">
-           <div class="col-6 col-md-2">
+                 <div class="col-6 col-md-2">
            		 <a href="videogioco?id=<%= utente.getPreferiti().get(i).getVideogame().getId() %>">
                     <div class="card">
 
@@ -217,16 +218,15 @@
                     </div>
                 </a>
             </div>
-       </div>
 		        <% } %>
     	    <% } %>
         <% } %>
-       
+       </div>
        
         <!-- bottone che fa la find all e mostra tutti i videogiochi -->
       <div class="row justify-content-center pt-4 mb-2">
         <form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="cerca" method="get"> <!-- aggiunti action e method -->
-            <button class="btn-search" name="titolo" type="submit">Mostra altro...</button>
+            <button class="btn btn-bd-primary2 py-2 fw-bold" name="titolo" type="submit">Mostra altro...</button>
         </form>
     </div>
     </div>

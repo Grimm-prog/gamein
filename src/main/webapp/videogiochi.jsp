@@ -61,7 +61,7 @@
 		<!-- aggiungere un bottone sulla sinistra con il selettore alle categorie-->
         <div class="pt-5 mb-2">
             <div class="dropdown">
-			  <button class="btn btn-search dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+			  <button class="btn btn-bd-primary2 py-2 fw-bold dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 			    categoria
 			  </button>
 			  <ul class="dropdown-menu">
