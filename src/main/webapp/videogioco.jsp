@@ -67,7 +67,7 @@
 		    <span style="color: white;"></span>
 		    <span style="color:#652c9b;"></span>
 		</a>   
-		  
+		 
         <div class="row justify-content-center pt-5 mb-2">
             <p
                 style="text-align: center;color: #652c9b; border: 2px solid #7851a9; padding: 50px; border-radius: 10px;">
