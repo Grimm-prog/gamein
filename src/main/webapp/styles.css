@@ -220,14 +220,14 @@ body {
     --bs-btn-font-weight: 600;
     --bs-btn-color: var(--bs-white); /* Colore del testo */
     --bs-btn-bg: transparent; /* Sfondo trasparente */
-    --bs-btn-border-color: #5a23c8; /* Colore del bordo viola */
+    --bs-btn-border-color: #652c9b; /* Colore del bordo viola */
     --bs-btn-hover-color: var(--bs-white);
-    --bs-btn-hover-bg: #6528e0; /* Colore di sfondo al passaggio del mouse */
-    --bs-btn-hover-border-color: #6528e0; /* Colore del bordo al passaggio del mouse */
+    --bs-btn-hover-bg: #652c9b; /* Colore di sfondo al passaggio del mouse */
+    --bs-btn-hover-border-color: #652c9b; /* Colore del bordo al passaggio del mouse */
     --bs-btn-focus-shadow-rgb: 112.520718, 44.062154, 249.437846; /* RGB per il focus */
     --bs-btn-active-color: var(--bs-btn-hover-color);
-    --bs-btn-active-bg: #5a23c8; /* Colore di sfondo attivo */
-    --bs-btn-active-border-color: #5a23c8; /* Colore del bordo attivo */
+    --bs-btn-active-bg: #652c9b; /* Colore di sfondo attivo */
+    --bs-btn-active-border-color: #652c9b; /* Colore del bordo attivo */
     
     background-color: var(--bs-btn-bg); /* Usa lo sfondo trasparente */
     color: var(--bs-btn-color); /* Colore del testo bianco */
