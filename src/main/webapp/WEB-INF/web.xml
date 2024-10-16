@@ -74,4 +74,14 @@
     <servlet-name>IndexServlet</servlet-name>
     <url-pattern>/index</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ModificaProfiloServlet</display-name>
+    <servlet-name>ModificaProfiloServlet</servlet-name>
+    <servlet-class>it.generationitaly.game.controller.ModificaProfiloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ModificaProfiloServlet</servlet-name>
+    <url-pattern>/ModificaProfiloServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
