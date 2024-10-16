@@ -35,13 +35,15 @@
 	<%Videogame videogioco = (Videogame) request.getAttribute("videogame"); %>
 	
 	<% Utente utente= (Utente)session.getAttribute("utente"); 
-		boolean statopreferito=false;
+	if(utente!=null){	
+	boolean statopreferito=false;
 		List<Preferito> preferiti=utente.getPreferiti();
 		for(Preferito preferito:preferiti){
 			if(preferito.getVideogame().getId()==videogioco.getId()){
 				statopreferito=true;
 			}
 		}
+	}
 	%>
 	
 
