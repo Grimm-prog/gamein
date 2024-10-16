@@ -78,68 +78,58 @@
            <div class="col-6 col-md-2">
            		 <a href="#">
                     <div class="card">
-
                         <img src="#"
                              class="img-fluid"
                             style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
-
                     </div>
                 </a>
             </div>
             <div class="col-6 col-md-2">
            		 <a href="#">
                     <div class="card">
-
                         <img src="#"
                              class="img-fluid"
                             style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
-
                     </div>
                 </a>
             </div>
             <div class="col-6 col-md-2">
            		 <a href="#">
                     <div class="card">
-
                         <img src="#"
                              class="img-fluid"
                             style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
-
                     </div>
                 </a>
             </div>
            <div class="col-6 col-md-2">
            		 <a href="#">
                     <div class="card">
-
                         <img src="#"
                              class="img-fluid"
                             style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
-
                     </div>
                 </a>
             </div>
             <div class="col-6 col-md-2">
            		 <a href="#">
                     <div class="card">
-
                         <img src="#"
                              class="img-fluid"
                             style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
-
                     </div>
                 </a>
             </div>
-        </div>
-	</div>
-	<div class="col mt-5">
+            <div class="col mt-5">
 				<form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="cerca"
 					method="post">
 					<!-- aggiunti action e method -->
 					<button class="btn btn-bd-primary2 py-2 fw-bold text-uppercase" type="submit">lista completa</button>
 				</form>
 			</div>
-	 <div class="row justify-content-center pt-5 mb-3">
+        </div>
+		</div>
+	 	<div class="row justify-content-center pt-5 mb-3">
 	            <h1 style="text-align: center;">LE MIE RECENSIONI</h1>
 	            <br>
 	            <br>
@@ -183,9 +173,9 @@
 				</div>
 				
 				<!-- Bootstrap JS -->
-				<script
-					src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-					integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-					crossorigin="anonymous"></script>
+		<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
 </body>
 </html>
