@@ -196,17 +196,18 @@
                 </a>
             </div>
         </div>
-         <% Utente utente= (Utente)session.getAttribute("utente"); %>
-         <% if(session.getAttribute("username")!=null){  %>
-		  <!--  titolo della sezione -->
         <div class="row justify-content-center pt-4 mb-2">
             <h2 style="text-align: center;">La MIA LISTA</h2>
         </div>
+          <div class="row justify-content-center mt-4">
+        
+         <% Utente utente= (Utente)session.getAttribute("utente"); %>
+         <% if(session.getAttribute("username")!=null){  %>
+		  <!--  titolo della sezione -->
         <% for(int i=0;i<5;i++){ %>
         	<% if(utente.getPreferiti().get(i)!=null){ %>
         <!-- introduco le immagini -->
-        <div class="row justify-content-center mt-4">
-           <div class="col-6 col-md-2">
+                 <div class="col-6 col-md-2">
            		 <a href="videogioco?id=<%= utente.getPreferiti().get(i).getVideogame().getId() %>">
                     <div class="card">
 
@@ -217,11 +218,10 @@
                     </div>
                 </a>
             </div>
-       </div>
 		        <% } %>
     	    <% } %>
         <% } %>
-       
+       </div>
        
         <!-- bottone che fa la find all e mostra tutti i videogiochi -->
       <div class="row justify-content-center pt-4 mb-2">
