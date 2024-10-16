@@ -14,10 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- il mio CSS -->
-    <link rel="stylesheet" href="stiliprova.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="d-flex justify-content-center align-items-center min-vh-100 py-4 bg-dark text-light">
+<body class="d-flex justify-content-center align-items-center min-vh-100 py-4">
 <main class="form-signin w-100 m-auto" style="max-width: 400px;">
     <form action="sign-in" method="post">
         <nav class="navbar navbar-expand-lg bg-transparent">
@@ -79,7 +79,7 @@
             <div class="text-danger mb-3">Inserisci la tua foto profilo!</div>
         <% } %>
 
-        <button class="btn btn-bd-primary2  w-100 py-2 fw-bold text-uppercase" type="submit">Sign in</button>
+        <button class="btn btn-bd-primary2  w-100 py-2 fw-bold text-uppercase" type="submit"><span style="color: white;">SIGN</span><span style="color:#652c9b;">IN</span></button>
         <% if(request.getParameter("errore") != null){ %>
 			<div class="alert alert-danger mt-3" role="alert">
 				<p class="text-center">Username già presente in archivio!</p>

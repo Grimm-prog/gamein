@@ -308,3 +308,95 @@ INSERT INTO recensione VALUES (40, 19, 2, 'Un picchiaduro che combina accessibil
 INSERT INTO recensione VALUES (41, 20, 1, 'Dead Island 2 offre un’ottima esperienza di zombi, con azione frenetica e ambienti dettagliati.', 4, 3, 42);
 INSERT INTO recensione VALUES (42, 20, 2, 'Un buon gioco di zombi, anche se non rivoluziona il genere.', 4, 3, 42); 
 -- Dead Island 
+
+
+
+INSERT INTO recensione VALUES (43, 21, 1, 'Horizon Forbidden West è una vera meraviglia visiva con un mondo vasto e dettagliato.', 5, 3, 42);
+INSERT INTO recensione VALUES (44, 21, 2, 'Un gioco eccezionale, ma a volte la trama sembra rallentare il ritmo dell’avventura.', 4, 3, 52);
+
+INSERT INTO recensione VALUES (45, 22, 1, 'A Plague Tale: Requiem è un sequel emozionante con una narrazione potente.', 5, 4, 42);
+INSERT INTO recensione VALUES (46, 22, 2, 'Un gioco emozionante con un gameplay profondo, anche se un po’ ripetitivo a tratti.', 4, 4, 60);
+
+INSERT INTO recensione VALUES (47, 23, 1, 'Kena: Bridge of Spirits è una delizia visiva, con un gameplay accessibile e piacevole.', 5, 2, 38);
+INSERT INTO recensione VALUES (48, 23, 2, 'Un’avventura incantevole, ma la difficoltà del gioco è leggermente sottotono.', 4, 3, 42);
+
+INSERT INTO recensione VALUES (49, 24, 1, 'The Pathless è un gioco artisticamente affascinante con una narrazione evocativa.', 4, 3, 42);
+INSERT INTO recensione VALUES (50, 24, 2, 'Un’esperienza unica e rilassante, anche se non per tutti i gusti.', 4, 3, 39);
+
+INSERT INTO recensione VALUES (51, 25, 1, 'It Takes Two è una cooperativa brillante, con idee creative in ogni livello.', 5, 4, 42);
+INSERT INTO recensione VALUES (52, 25, 2, 'Un capolavoro di design cooperativo, ma richiede un partner di gioco per apprezzarlo appieno.', 5, 3, 48);
+
+INSERT INTO recensione VALUES (53, 26, 1, 'Ratchet & Clank: Rift Apart è un’esplosione di divertimento e azione, con un gameplay fluido.', 5, 3, 42);
+INSERT INTO recensione VALUES (54, 26, 2, 'Un ottimo capitolo della serie, ma potrebbe offrire più innovazioni.', 4, 3, 44);
+
+INSERT INTO recensione VALUES (55, 27, 1, 'Stray offre un’esperienza unica, con un’ambientazione cyberpunk affascinante e un gameplay emozionante.', 5, 4, 42);
+INSERT INTO recensione VALUES (56, 27, 2, 'Un’avventura emozionante e unica, ma a volte un po’ lineare.', 4, 3, 48);
+
+INSERT INTO recensione VALUES (57, 28, 1, 'Immortals Fenyx Rising è un open world divertente, con un umorismo vivace e un gameplay fluido.', 5, 3, 42);
+INSERT INTO recensione VALUES (58, 28, 2, 'Un ottimo gioco di avventura, anche se chiaramente ispirato a Zelda.', 4, 3, 48);
+
+INSERT INTO recensione VALUES (59, 29, 1, 'Tchia è un’avventura affascinante e rilassante, con un mondo esotico da esplorare.', 5, 4, 42);
+INSERT INTO recensione VALUES (60, 29, 2, 'Un gioco artistico con un gameplay semplice, perfetto per chi cerca un’avventura leggera.', 4, 3, 40);
+
+INSERT INTO recensione VALUES (61, 30, 1, 'Little Nightmares II è un capolavoro dell’horror, con un’atmosfera inquietante e un design geniale.', 5, 4, 42);
+INSERT INTO recensione VALUES (62, 30, 2, 'Un’esperienza inquietante e coinvolgente, anche se la durata è piuttosto breve.', 4, 3, 36);
+
+INSERT INTO recensione VALUES (63, 31, 1, 'The Witcher 3: Wild Hunt è un gioco di ruolo incredibilmente dettagliato, con una storia avvincente.', 5, 4, 42);
+INSERT INTO recensione VALUES (64, 31, 2, 'Un RPG epico, anche se alcuni aspetti tecnici mostrano segni del tempo.', 4, 3, 48);
+
+INSERT INTO recensione VALUES (65, 32, 1, 'Persona 5 è un JRPG brillante, con uno stile unico e un gameplay profondo.', 5, 4, 42);
+INSERT INTO recensione VALUES (66, 32, 2, 'Un’esperienza unica nel suo genere, anche se a volte il ritmo rallenta.', 4, 3, 56);
+
+INSERT INTO recensione VALUES (67, 33, 1, 'Mass Effect Legendary Edition è un ritorno glorioso, con una trilogia indimenticabile migliorata tecnicamente.', 5, 4, 42);
+INSERT INTO recensione VALUES (68, 33, 2, 'Un classico rimasterizzato con cura, ma le meccaniche di gioco mostrano un po’ la loro età.', 4, 3, 52);
+
+INSERT INTO recensione VALUES (69, 34, 1, 'Divinity: Original Sin 2 è un capolavoro del genere RPG, con una profondità tattica incredibile.', 5, 4, 42);
+INSERT INTO recensione VALUES (70, 34, 2, 'Un RPG strategico incredibilmente complesso e gratificante, ma richiede un grande impegno.', 5, 4, 60);
+
+INSERT INTO recensione VALUES (71, 35, 1, 'Final Fantasy VII Remake è una reimmaginazione epica di un classico senza tempo.', 5, 3, 42);
+INSERT INTO recensione VALUES (72, 35, 2, 'Un remake ambizioso, ma che a volte si allontana troppo dall’originale.', 4, 3, 48);
+
+INSERT INTO recensione VALUES (73, 36, 1, 'DRAGON BALL: Sparking! ZERO è un gioco di combattimento dinamico e fedele alla serie.', 5, 3, 42);
+INSERT INTO recensione VALUES (74, 36, 2, 'Un ottimo gioco di Dragon Ball, ma la formula non è molto innovativa.', 4, 3, 42);
+
+INSERT INTO recensione VALUES (75, 37, 1, 'Monster Hunter: World è un capolavoro cooperativo, con un gameplay di caccia intenso e soddisfacente.', 5, 3, 42);
+INSERT INTO recensione VALUES (76, 37, 2, 'Un’esperienza incredibile per i fan del genere, ma il gioco può essere impegnativo per i neofiti.', 4, 3, 50);
+
+INSERT INTO recensione VALUES (77, 38, 1, 'Cyberpunk 2077 è un gioco ambizioso con una narrazione profonda, ma afflitto da problemi tecnici.', 4, 3, 42);
+INSERT INTO recensione VALUES (78, 38, 2, 'Un gioco che ha raggiunto il suo potenziale con le patch successive, ma il lancio è stato deludente.', 3, 3, 56);
+
+INSERT INTO recensione VALUES (79, 39, 1, 'Star Wars Jedi: Fallen Order è un mix perfetto di azione, esplorazione e narrazione.', 5, 3, 42);
+INSERT INTO recensione VALUES (80, 39, 2, 'Un grande gioco di Star Wars con meccaniche solide, anche se con qualche problema di performance.', 4, 3, 58);
+
+INSERT INTO recensione VALUES (81, 40, 1, 'Genshin Impact è un mondo aperto straordinariamente vasto, con un sistema di combattimento fluido e avvincente.', 5, 4, 42);
+INSERT INTO recensione VALUES (82, 40, 2, 'Un gioco free-to-play incredibilmente ricco di contenuti, ma la monetizzazione è piuttosto aggressiva.', 4, 4, 56);
+
+INSERT INTO recensione VALUES (83, 41, 1, 'FIFA 24 è un altro passo avanti nel realismo del calcio, con movimenti dei giocatori sempre più naturali.', 5, 3, 42);
+INSERT INTO recensione VALUES (84, 41, 2, 'Una buona evoluzione della serie, ma la modalità Ultimate Team continua a essere troppo focalizzata sulle microtransazioni.', 4, 3, 45);
+
+INSERT INTO recensione VALUES (85, 42, 1, 'NBA 2K24 offre una simulazione di basket praticamente perfetta, con un gameplay coinvolgente.', 5, 3, 42);
+INSERT INTO recensione VALUES (86, 42, 2, 'Un gioco eccellente, ma le microtransazioni restano un problema significativo.', 4, 3, 48);
+
+INSERT INTO recensione VALUES (87, 43, 1, 'F1 2024 è una simulazione impeccabile per gli amanti delle corse, con una fisica realistica e una grafica mozzafiato.', 5, 4, 42);
+INSERT INTO recensione VALUES (88, 43, 2, 'Ottima simulazione di Formula 1, anche se alcuni aspetti della modalità carriera potrebbero essere migliorati.', 4, 3, 50);
+
+INSERT INTO recensione VALUES (89, 44, 1, 'Madden NFL 24 continua a migliorare con una fisica dei giocatori più realistica e movimenti raffinati.', 5, 4, 42);
+INSERT INTO recensione VALUES (90, 44, 2, 'Un buon gioco di football americano, ma manca ancora un po’ di innovazione rispetto ai titoli precedenti.', 4, 3, 48);
+
+INSERT INTO recensione VALUES (91, 45, 1, 'EA Sports UFC 5 offre combattimenti realistici e dinamici, con un sistema di grappling migliorato.', 5, 3, 42);
+INSERT INTO recensione VALUES (92, 45, 2, 'Un ottimo gioco per gli amanti delle arti marziali miste, ma la modalità carriera è un po’ superficiale.', 4, 3, 45);
+
+INSERT INTO recensione VALUES (93, 46, 1, 'eFootball 2024 ha migliorato molto rispetto alle versioni precedenti, con un gameplay più fluido e realistico.', 4, 3, 42);
+INSERT INTO recensione VALUES (94, 46, 2, 'Un passo avanti nella serie, ma manca ancora qualcosa rispetto alla concorrenza.', 3, 3, 48);
+
+INSERT INTO recensione VALUES (95, 47, 1, 'MLB The Show 24 è il miglior gioco di baseball sul mercato, con una simulazione quasi perfetta.', 5, 3, 42);
+INSERT INTO recensione VALUES (96, 47, 2, 'Un titolo eccellente per i fan del baseball, ma potrebbe fare di più per attrarre nuovi giocatori.', 4, 3, 45);
+
+INSERT INTO recensione VALUES (97, 48, 1, 'NHL 24 offre una simulazione di hockey sul ghiaccio precisa e divertente, con miglioramenti significativi rispetto all’edizione precedente.', 5, 4, 42);
+INSERT INTO recensione VALUES (98, 48, 2, 'Un buon gioco di hockey, ma la modalità carriera ha ancora margini di miglioramento.', 4, 3, 50);
+
+INSERT INTO recensione VALUES (99, 49, 1, 'Riders Republic è pura adrenalina, con una varietà di sport estremi che terrà i giocatori incollati allo schermo.', 5, 4, 42);
+INSERT INTO recensione VALUES (100, 49, 2, 'Un gioco pieno di energia e divertimento, ma a volte le modalità di gioco possono sembrare un po’ dispersive.', 4, 3, 46);
+
+INSERT INTO recensione VALUES (101, 50, 1, 'MotoGP 24 porta il realismo a un nuovo livello, con una simulazione impeccabile delle moto e delle corse.', 5, 4, 42);
+INSERT INTO recensione VALUES (102, 50, 2, 'Un gioco eccezionale per gli appassionati di corse su due ruote, ma potrebbe essere più accessibile ai nuovi giocatori.', 4, 3, 48);
