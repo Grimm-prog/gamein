@@ -90,14 +90,15 @@
                     </p>
                 </div>
             </div>
-            
-            
+            <!-- bottone per modificare utente -->
+            <div style="text-align: center;">
+        <button id="toggleButton" class="btn btn-bd-primary2 py-2 fw-bold mt-3" >Modifica utente</button>
+        </div>
             
         </div>
     </div>
-<div  style="margin-top: 200px;" >
 
-	<div class="row justify-content-center pt-5 mb-3">
+	<div class="row justify-content-center pt-5 mb-3" style="margin-top: 100px;">
             <h1 style="text-align: center;">LA MIA LISTA</h1>
             <br>
             <br>
@@ -166,7 +167,6 @@
 			</div>
 			<%} %>
         </div>
-		</div>
 	 	<div class="row justify-content-center pt-5 mb-3">
 	            <h1 style="text-align: center;">LE MIE RECENSIONI</h1>
 	            <br>
