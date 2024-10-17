@@ -70,6 +70,13 @@ body {
     transform: scale(1.05); /* Effetto zoom al passaggio del mouse */
 }
 
+.card-text {
+    white-space: normal; /* Gestisce correttamente la spaziatura del testo */
+    overflow: hidden; /* Nasconde l'eventuale testo in eccesso */
+    text-overflow: ellipsis; /* Aggiunge "..." per il testo troppo lungo */
+    word-wrap: break-word; /* Permette di andare a capo quando necessario */
+    max-height: 120px; /* Limita l'altezza massima del testo */
+}
 
 .account-icon {
     border-radius: 50%;
