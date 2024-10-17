@@ -91,10 +91,11 @@
                 </div>
             </div>
             <!-- bottone per modificare utente -->
+            <form action="updateUtente.jsp" method="post">
             <div style="text-align: center;">
-        <button id="toggleButton" class="btn btn-bd-primary2 py-2 fw-bold mt-3" >Modifica utente</button>
+        <button id="toggleButton" class="btn btn-bd-primary2 py-2 fw-bold mt-3" type="submit" >Modifica utente</button>
         </div>
-            
+            </form>
         </div>
     </div>
 

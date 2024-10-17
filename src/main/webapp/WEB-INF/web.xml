@@ -82,7 +82,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>ModificaProfiloServlet</servlet-name>
-    <url-pattern>/ModificaProfiloServlet</url-pattern>
+    <url-pattern>/update</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
