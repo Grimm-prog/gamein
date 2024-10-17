@@ -144,11 +144,12 @@
 	            <br>
 	        </div>
 	        </div>
+	        <% List<Recensione> recensioni = utente.getRecensioni(); %>
 	    <!-- qui andranno le card con le recensioni -->
 	    <div class="container-fluid" style="background-color: #652c9b;">
 	        <div class="container pt-5">
 	            <div class="row">
-	            <% /* for(Recensione recensione: recensioni){ %>
+	            <%  for(Recensione recensione: recensioni){ %>
 	            	<% String stelle="";
 	            	for(int i=0;i<5;i++){
 	            		if(i<recensione.getVoto()){
@@ -160,13 +161,13 @@
 	                <div class="col-md-4">
 	                    <div class="card review-card">
 	                        <div class="card-body" style="text-align: center;">
-	                            <h5 class="card-title"><%= recensione.getUtente().getUsername() %></h5>
+	                            <h5 class="card-title"><%= recensione.getVideogame().getTitolo() %></h5>
 	                            <h6 class="card-subtitle mb-2 "><%= stelle %></h6>
 	                            <p class="card-text pb-2"><%= recensione.getCommento() %></p>
 	                        </div>
 	                    </div>
 	                </div>
-	                <% } */%>
+	                <% } %>
 	               
 	            </div>
 	        </div>
