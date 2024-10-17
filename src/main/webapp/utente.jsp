@@ -35,15 +35,17 @@
 	<p>Email:((Utente) request.getAttribute("utente")).getEmail()l() %>
 	 -->
 	<div class="container mt-5">
+	<!-- immagine di profilo dell'utente -->
     <div class="row justify-content-center">
         <div class="col-lg-4 ">
             <img alt="" src="<%=utente.getFoto()%>" class="profile-pic" style="width: 400px; height: 400px; object-fit: cover; ">
         </div>
-        <div class="col-lg-8 " style="padding-left: 50px;">
-            <div class="card review-card mb-3" style="margin-top: 200px; max-height: 300px; ">
+        <!-- card di dettagli sull'utente -->
+        <div class="col-lg-8" style="padding-left: 50px; text-align: center">
+            <div class="card review-card mb-3" style="margin-top: 200px; height: 100px; ">
                 <div class="card-body">
                     <h5 class="card-title">
-                        <span style="font-size: 30px;">Username:</span>
+                        <span style="font-size: 20px;">Nome:</span>
                     </h5>
                     <p class="card-text">
                         <span style="font-size: 30px; align-content: center; margin-bottom: 12px;">
@@ -52,10 +54,34 @@
                     </p>
                 </div>
             </div>
-            <div class="card review-card mb-3" style="margin-top: 20px; max-height: 300px;">
+            <div class="card review-card mb-3" style="margin-top: 20px; height: 100px;">
                 <div class="card-body">
                     <h5 class="card-title">
-                        <span style="font-size: 30px;">Email:</span>
+                        <span style="font-size: 20px;">Cognome:</span>
+                    </h5>
+                    <p class="card-text">
+                        <span style="font-size: 30px; align-content: center; margin-bottom: 12px;">
+                            <%=utente.getEmail()%>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="card review-card mb-3" style="margin-top: 20px; height: 100px;">
+               <div class="card-body">
+                    <h5 class="card-title">
+                        <span style="font-size: 20px;">Username:</span>
+                    </h5>
+                    <p class="card-text">
+                        <span style="font-size: 30px; align-content: center; margin-bottom: 12px;">
+                            <%=utente.getUsername()%>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="card review-card mb-3" style="margin-top: 20px; height: 100px;">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <span style="font-size: 20px;">Email:</span>
                     </h5>
                     <p class="card-text">
                         <span style="font-size: 30px; align-content: center; margin-bottom: 12px;">

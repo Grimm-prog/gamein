@@ -72,11 +72,31 @@ body {
 
 .card-text {
     white-space: normal; /* Gestisce correttamente la spaziatura del testo */
-    overflow: hidden; /* Nasconde l'eventuale testo in eccesso */
+    overflow: auto; /* Nasconde l'eventuale testo in eccesso */
     text-overflow: ellipsis; /* Aggiunge "..." per il testo troppo lungo */
     word-wrap: break-word; /* Permette di andare a capo quando necessario */
-    max-height: 120px; /* Limita l'altezza massima del testo */
+    max-height: 100px; /* Limita l'altezza massima del testo */
 }
+
+
+/* Stile per la barra di scorrimento del testo */
+.card-text::-webkit-scrollbar {
+    width: 8px; /* Larghezza della barra di scorrimento */
+}
+
+.card-text::-webkit-scrollbar-track {
+    background-color: #141414; /* Colore dello sfondo della track */
+}
+
+.card-text::-webkit-scrollbar-thumb {
+    background-color: #FFFFFF; /* Colore della barra di scorrimento */
+    border-radius: 10px; /* Arrotonda gli angoli della scrollbar */
+}
+
+.card-text::-webkit-scrollbar-thumb:hover {
+    background-color: #7851a9; /* Cambia colore al passaggio del mouse */
+}
+
 
 .account-icon {
     border-radius: 50%;
