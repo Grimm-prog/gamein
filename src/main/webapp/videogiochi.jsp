@@ -1,3 +1,4 @@
+<%@page import="it.generationitaly.game.entity.Sviluppatore"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="it.generationitaly.game.entity.Videogame" %>
@@ -29,6 +30,7 @@
 	<!-- Creazione lista videogame -->
 	<%List<Videogame> videogiochi = (List<Videogame>) request.getAttribute("videogames"); %>
 	<% List<Genere> generi = (List<Genere>) request.getAttribute("generi"); %>
+	<% List<Sviluppatore> sviluppatori =(List<Sviluppatore>)request.getAttribute("sviluppatori"); %>
 	
     <!-- contenuto principale -->
     <div class="container pt-5">
@@ -82,8 +84,8 @@
 			  </button>
 			  <ul class="dropdown-menu">
 			  <!--  qui inizio a iterare la lista di generi e al posto di fantasy passerò il nome del genere -->
-			  <% for(Genere genere : generi){ %>
-			    <li><a class="dropdown-item" href="cerca?titolo=<%= request.getParameter("titolo") %>&genere=<%= genere.getName() %>"><%= genere.getName() %></a></li>
+			  <% for(int i=0;i<20;i++){ %>
+			    <li><a class="dropdown-item" href="cerca?annoUscita=<%= 2024-i %>"><%= 2024-i %></a></li>
 				<% } %>
 			  </ul>
 			</div>
@@ -97,8 +99,8 @@
 			  </button>
 			  <ul class="dropdown-menu">
 			  <!--  qui inizio a iterare la lista di generi e al posto di fantasy passerò il nome del genere -->
-			  <% for(Genere genere : generi){ %>
-			    <li><a class="dropdown-item" href="cerca?titolo=<%= request.getParameter("titolo") %>&genere=<%= genere.getName() %>"><%= genere.getName() %></a></li>
+			  <% for(Sviluppatore sviluppatore: sviluppatori ){ %>
+			    <li><a class="dropdown-item" href="cerca?sviluppatore=<%= request.getParameter("titolo") %>&genere=<%= sviluppatore.getName() %>"><%= sviluppatore.getName() %></a></li>
 				<% } %>
 			  </ul>
 			</div>
@@ -112,9 +114,12 @@
 			  </button>
 			  <ul class="dropdown-menu">
 			  <!--  qui inizio a iterare la lista di generi e al posto di fantasy passerò il nome del genere -->
-			  <% for(Genere genere : generi){ %>
-			    <li><a class="dropdown-item" href="cerca?titolo=<%= request.getParameter("titolo") %>&genere=<%= genere.getName() %>"><%= genere.getName() %></a></li>
-				<% } %>
+			  
+			    <li><a class="dropdown-item" href="cerca?choice=VotoAsc">Voto gioco:più alto</a></li>
+			    <li><a class="dropdown-item" href="cerca?choice=VotoDesc">Voto gioco:più basso</a></li>
+			    <li><a class="dropdown-item" href="cerca?choice=DataDesc">Data:discendente</a></li>
+			    <li><a class="dropdown-item" href="cerca?choice=DataAsc">Data:ascendente</a></li>
+				
 			  </ul>
 			</div>
         </div>

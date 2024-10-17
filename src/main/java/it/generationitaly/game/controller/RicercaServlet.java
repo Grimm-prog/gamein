@@ -9,11 +9,15 @@ import java.util.Date;
 import java.util.List;
 
 import it.generationitaly.game.entity.Genere;
+import it.generationitaly.game.entity.Sviluppatore;
 import it.generationitaly.game.entity.Videogame;
 import it.generationitaly.game.entity.VideogameGenere;
+import it.generationitaly.game.entity.VideogameSviluppatore;
 import it.generationitaly.game.repository.GenereRepository;
+import it.generationitaly.game.repository.SviluppatoreRepository;
 import it.generationitaly.game.repository.VideogameRepository;
 import it.generationitaly.game.repository.impl.GenereRepositoryImpl;
+import it.generationitaly.game.repository.impl.SviluppatoreRepositoryImpl;
 import it.generationitaly.game.repository.impl.VideogameRepositoryImpl;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -25,18 +29,22 @@ public class RicercaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private VideogameRepository videogameRepository = new VideogameRepositoryImpl();
 	private GenereRepository genereRepository  = new  GenereRepositoryImpl();
+	private SviluppatoreRepository sviluppatoreRepository = new SviluppatoreRepositoryImpl();
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String titolo = request.getParameter("titolo");
 		String genere = request.getParameter("genere");
+		String sviluppatore = request.getParameter("sviluppatore");
 		String annoUscita = request.getParameter("annoUscita");
+		String choice = request.getParameter("choice");
 		List<Videogame> videogames=null;
 		if(titolo!=null) {
 		videogames = videogameRepository.RicercaPerTitolo(titolo);
 		}
 		
 		List<Genere> generi = genereRepository.findAll(); 
+		List<Sviluppatore> sviluppatori = sviluppatoreRepository.findAll();
 		
 		if(titolo==null) {
 			videogames = videogameRepository.findAll();
@@ -48,8 +56,27 @@ public class RicercaServlet extends HttpServlet {
 		if(videogames!=null && annoUscita!=null) {
 			videogames =RicercaPerData(annoUscita, videogames);
 		}
+		if(videogames!=null && annoUscita!=null) {
+			videogames =RicercaPerData(annoUscita, videogames);
+		}
+		if(videogames!=null && sviluppatore!=null) {
+			videogames =RicercaSviluppatore(sviluppatore, videogames);
+		}
+		if(videogames!=null && choice!=null && choice=="VotoAsc") {
+			videogames = videogameRepository.OrderByAvgVoto();
+		}
+		if(videogames!=null && choice!=null && choice=="VotoDesc") {
+			videogames = videogameRepository.OrderByAvgVotoDesc();
+		}
+		if(videogames!=null && choice!=null && choice=="DataAsc") {
+			videogames = videogameRepository.OrderByDataAsc();
+		}
+		if(videogames!=null && choice!=null && choice=="DataDesc") {
+			videogames = videogameRepository.OrderByDataDesc();
+		}
 		
 		
+		request.setAttribute("sviluppatori", sviluppatori);
 		request.setAttribute("generi", generi);
 		request.setAttribute("videogames", videogames);
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("videogiochi.jsp");
@@ -64,6 +91,20 @@ public class RicercaServlet extends HttpServlet {
 			for (VideogameGenere collegamentogenere : generi) {
 				Genere generegioco = collegamentogenere.getGenere();
 				if(generegioco.getName().equals(genere)) {
+					tmp.add(videogame);
+				}
+			}
+		}
+		
+		return tmp;
+	}
+	private List<Videogame> RicercaSviluppatore(String sviluppatore,List<Videogame> videogames){
+		List<Videogame> tmp=new ArrayList<Videogame>();
+		for (Videogame videogame : videogames) {
+			List<VideogameSviluppatore> sviluppatori = videogame.getSviluppatori();
+			for (VideogameSviluppatore collegamentosviluppatore:sviluppatori) {
+				 Sviluppatore sviluppatoregioco = collegamentosviluppatore.getSviluppatore();
+				if(sviluppatoregioco.getName().equals(sviluppatore)) {
 					tmp.add(videogame);
 				}
 			}

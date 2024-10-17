@@ -20,7 +20,11 @@ public interface VideogameRepository extends JpaRepository<Videogame, Long> {
 
 	List<Videogame> OrderByDataDesc();
 
+	List<Videogame> OrderByDataAsc();
+
 	List<Videogame> OrderByAvgVoto();
+
+	List<Videogame> OrderByAvgVotoDesc();
 
 	
 

@@ -331,4 +331,52 @@ public class VideogameRepositoryImpl extends JpaRepositoryImpl<Videogame, Long> 
 		return videogames;
 	}
 
+	@Override
+	public List<Videogame> OrderByDataAsc() {
+		List<Videogame> videogames = null;
+		EntityManager em = null;
+		EntityTransaction tx = null;
+		try {
+			em = emf.createEntityManager();
+			tx = em.getTransaction();
+			tx.begin();
+			TypedQuery<Videogame> query = em.createQuery("SELECT v FROM Videogame v ORDER BY v.annoUscita ASC",
+					Videogame.class);
+			videogames = query.getResultList();
+			tx.commit();
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+			if (tx != null && tx.isActive())
+				tx.rollback();
+		} finally {
+			if (em != null)
+				em.close();
+		}
+		return videogames;
+	}
+
+	@Override
+	public List<Videogame> OrderByAvgVotoDesc() {
+		List<Videogame> videogames = null;
+		EntityManager em = null;
+		EntityTransaction tx = null;
+		try {
+			em = emf.createEntityManager();
+			tx = em.getTransaction();
+			tx.begin();
+			TypedQuery<Videogame> query = em.createQuery("SELECT v FROM Videogame v JOIN v.recensioni r GROUP BY v.id ORDER BY AVG(r.voto) ASC ",
+					Videogame.class);
+			videogames = query.getResultList();
+			tx.commit();
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+			if (tx != null && tx.isActive())
+				tx.rollback();
+		} finally {
+			if (em != null)
+				em.close();
+		}
+		return videogames;
+	}
+
 }
