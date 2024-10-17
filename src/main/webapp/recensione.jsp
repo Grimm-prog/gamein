@@ -30,7 +30,7 @@
         
 <div class="container mt-5">
   
-   <form action="Recensione" method="post">
+   <form action="recensione" method="post">
         <div class="range-wrap mb-3">
             <label for="voto" class="form-label">Voto</label>
             <input type="range" class="range form-range" id="voto" name="voto" min="1" max="5" required>
