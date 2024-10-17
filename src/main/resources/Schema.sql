@@ -12,8 +12,11 @@ CREATE TABLE videogame (
     multiplayer BOOL NOT NULL
 );
 
+
 CREATE TABLE utente (
     id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	nome VARCHAR (50)  NOT NULL,
+	cognome VARCHAR (50)  NOT NULL,
     username VARCHAR(50) UNIQUE NOT NULL, 
     password VARCHAR(255) NOT NULL, 
     email VARCHAR(255) UNIQUE NOT NULL, 
@@ -69,7 +72,3 @@ CREATE TABLE preferito (
     FOREIGN KEY (videogame_id) REFERENCES videogame(id)
 );
 
-
-INSERT INTO utente VALUES (1,'utente1', 'password1', 'utente1@example.com', '');
-INSERT INTO utente VALUES (2,'utente2', 'password2', 'utente2@example.com', '');
-INSERT INTO utente VALUES (3,'utente3', 'password3', 'utente3@example.com', '');
