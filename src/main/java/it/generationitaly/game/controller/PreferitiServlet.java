@@ -36,18 +36,18 @@ public class PreferitiServlet extends HttpServlet {
 		Utente utente = utenteRepository.findByUsername(username);
 		Videogame videogame = videogameRepository.findById(idVideogame);
 		
-		Preferito preferito = new Preferito();
-		preferito.setUtente(utente);
-		preferito.setVideogame(videogame);
+		Preferito preferito =preferitoRepository.findByUsernameAndVideogame(utente, videogame);
+		 
+		
 		if(preferitoRepository.findByUsernameAndVideogame(utente, videogame) != null) {
+			
 			preferitoRepository.delete(preferito);
 		}else {
 			preferitoRepository.save(preferito);
 		}
-		/*
+		
 		utente = utenteRepository.findByUsername(username);
 		session.setAttribute("utente", utente);
-		*/
 		request.setAttribute("videogame", videogame);
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("videogioco.jsp");
 		requestDispatcher.forward(request, response);
