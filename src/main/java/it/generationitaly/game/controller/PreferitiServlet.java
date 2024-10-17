@@ -1,6 +1,8 @@
 package it.generationitaly.game.controller;
 
 import java.io.IOException;
+import java.util.Iterator;
+import java.util.List;
 
 import it.generationitaly.game.entity.Preferito;
 import it.generationitaly.game.entity.Utente;
@@ -35,17 +37,26 @@ public class PreferitiServlet extends HttpServlet {
 		Long idVideogame = Long.parseLong(request.getParameter("id"));
 		Utente utente = utenteRepository.findByUsername(username);
 		Videogame videogame = videogameRepository.findById(idVideogame);
-		
-		Preferito preferito =preferitoRepository.findByUsernameAndVideogame(utente, videogame);
+		Preferito preferito=null;
+		List<Preferito> preferiti = utente.getPreferiti();
+		for (Preferito preferito2 : preferiti) {
+			if(preferito2.getUtente().getId()==utente.getId() && preferito2.getVideogame().getId()==idVideogame) {
+				preferito=preferito2;
+				break;
+			}
+		}
+	
 		 
 		
-		if(preferitoRepository.findByUsernameAndVideogame(utente, videogame) != null) {
-			
+		if(preferito!= null) {	
 			preferitoRepository.delete(preferito);
 		}else {
+			preferito=new Preferito();
+			preferito.setUtente(utente);
+			preferito.setVideogame(videogame);
 			preferitoRepository.save(preferito);
 		}
-		
+		System.out.println(preferito);
 		utente = utenteRepository.findByUsername(username);
 		session.setAttribute("utente", utente);
 		request.setAttribute("videogame", videogame);
