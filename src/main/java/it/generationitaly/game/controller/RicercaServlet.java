@@ -39,14 +39,10 @@ public class RicercaServlet extends HttpServlet {
 		String annoUscita = request.getParameter("annoUscita");
 		String choice = request.getParameter("choice");
 		List<Videogame> videogames=null;
+		System.out.println(choice);
 		if(titolo!=null) {
 		videogames = videogameRepository.RicercaPerTitolo(titolo);
-		}
-		
-		List<Genere> generi = genereRepository.findAll(); 
-		List<Sviluppatore> sviluppatori = sviluppatoreRepository.findAll();
-		
-		if(titolo==null) {
+		}else {
 			videogames = videogameRepository.findAll();
 		}
 		
@@ -62,20 +58,21 @@ public class RicercaServlet extends HttpServlet {
 		if(videogames!=null && sviluppatore!=null) {
 			videogames =RicercaSviluppatore(sviluppatore, videogames);
 		}
-		if(videogames!=null && choice!=null && choice=="VotoAsc") {
+		if(videogames!=null &&  choice.equals("VotoAsc")) {
 			videogames = videogameRepository.OrderByAvgVoto();
 		}
-		if(videogames!=null && choice!=null && choice=="VotoDesc") {
+		if(videogames!=null && choice!=null && choice.equals("VotoDesc")) {
 			videogames = videogameRepository.OrderByAvgVotoDesc();
 		}
-		if(videogames!=null && choice!=null && choice=="DataAsc") {
+		if(videogames!=null && choice!=null && choice.equals("DataAsc")) {
 			videogames = videogameRepository.OrderByDataAsc();
 		}
-		if(videogames!=null && choice!=null && choice=="DataDesc") {
+		if(videogames!=null && choice!=null && choice.equals("DataDesc")) {
 			videogames = videogameRepository.OrderByDataDesc();
 		}
 		
-		
+		List<Genere> generi = genereRepository.findAll(); 
+		List<Sviluppatore> sviluppatori = sviluppatoreRepository.findAll();
 		request.setAttribute("sviluppatori", sviluppatori);
 		request.setAttribute("generi", generi);
 		request.setAttribute("videogames", videogames);
