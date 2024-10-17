@@ -20,46 +20,52 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="d-flex justify-content-center align-items-center min-vh-100 py-4">
-<main class="form-signin w-100 m-auto" style="max-width: 400px;">
-<form action="sign-in" method="post">
-        <nav class="navbar navbar-expand-lg bg-transparent">
-            <div class="container-fluid d-flex justify-content-center">
-                <h1 class="navbar-brand fs-1" style="font-size: 3rem;"> <span style="color: white;">AGGIUNGI LA TUA </span><span style="color:#652c9b;">RECENSIONE</span> </h1>
-            </div>
-        </nav>
-        
-<div class="container mt-5">
-  
-   <form action="recensione" method="post">
-        <div class="range-wrap mb-3">
-            <label for="voto" class="form-label">Voto</label>
-            <input type="range" class="range form-range" id="voto" name="voto" min="1" max="5" required>
-            <output class="bubble"></output>
-        </div>
 
-        <div class="range-wrap mb-3">
-            <label for="difficolta" class="form-label">Difficoltà </label>
-            <input type="range" class="range form-range" id="difficolta" name="difficolta" min="1" max="5" required>
-            <output class="bubble"></output>
-        </div>
+		<% String id = request.getParameter("id"); %>
 
-        <div class="range-wrap mb-3">
-            <label for="tempoDiGioco" class="form-label">Tempo di gioco (ore)</label>
-            <input type="range" class="range form-range" id="tempoDiGioco" name="tempoDiGioco" min="1" max ="120" required>
-            <output class="bubble"></output>
-        </div>
-        
-        <div class="mb-3">
-            <label for="testo" class="form-label">Testo recensione</label>
-            <textarea class="form-control" id="testo" name="testo" required></textarea>
-        </div>
-        
-
-        <button type="submit" class="btn btn-bd-primary2  w-100 py-2 fw-bold text-uppercase">PUBBLICA</button>
-    </form>
-</div>
-</form>
-</main>
+			<main class="form-signin w-100 m-auto" style="max-width: 400px;">
+			<form action="sign-in" method="post">
+			        <nav class="navbar navbar-expand-lg bg-transparent">
+			            <div class="container-fluid d-flex justify-content-center">
+			                <h1 class="navbar-brand fs-1" style="font-size: 3rem;"> <span style="color: white;">AGGIUNGI LA TUA </span><span style="color:#652c9b;">RECENSIONE</span> </h1>
+			            </div>
+			        </nav>
+			        
+			<div class="container mt-5">
+			  
+		   <form action="recensione" method="post">
+		   
+		   <input id="id" type="hidden" name="id" value="<%= id %>">
+		   
+		        <div class="range-wrap mb-3">
+		            <label for="voto" class="form-label">Voto</label>
+		            <input type="range" class="range form-range" id="voto" name="voto" min="1" max="5" required>
+		            <output class="bubble"></output>
+		        </div>
+		
+		        <div class="range-wrap mb-3">
+		            <label for="difficolta" class="form-label">Difficoltà </label>
+		            <input type="range" class="range form-range" id="difficolta" name="difficolta" min="1" max="5" required>
+		            <output class="bubble"></output>
+		        </div>
+		
+		        <div class="range-wrap mb-3">
+		            <label for="tempoDiGioco" class="form-label">Tempo di gioco (ore)</label>
+		            <input type="range" class="range form-range" id="tempoDiGioco" name="tempoDiGioco" min="1" max ="120" required>
+		            <output class="bubble"></output>
+		        </div>
+		        
+		        <div class="mb-3">
+		            <label for="testo" class="form-label">Testo recensione</label>
+		            <textarea class="form-control" id="testo" name="testo" required></textarea>
+		        </div>
+		        
+		
+		        <button type="submit" class="btn btn-bd-primary2  w-100 py-2 fw-bold text-uppercase">PUBBLICA</button>
+		    </form>
+		</div>
+		</form>
+		</main>
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
