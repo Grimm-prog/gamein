@@ -89,6 +89,36 @@
 			</div>
         </div>
         </div>
+        <div class="col">
+        <div class="pt-5 mb-2">
+            <div class="dropdown">
+			  <button class="btn btn-bd-primary2 py-2 fw-bold dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+			    sviluppatore
+			  </button>
+			  <ul class="dropdown-menu">
+			  <!--  qui inizio a iterare la lista di generi e al posto di fantasy passerò il nome del genere -->
+			  <% for(Genere genere : generi){ %>
+			    <li><a class="dropdown-item" href="cerca?titolo=<%= request.getParameter("titolo") %>&genere=<%= genere.getName() %>"><%= genere.getName() %></a></li>
+				<% } %>
+			  </ul>
+			</div>
+        </div>
+        </div>
+        <div class="col">
+        <div class="pt-5 mb-2">
+            <div class="dropdown">
+			  <button class="btn btn-bd-primary2 py-2 fw-bold dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+			    ordina: 
+			  </button>
+			  <ul class="dropdown-menu">
+			  <!--  qui inizio a iterare la lista di generi e al posto di fantasy passerò il nome del genere -->
+			  <% for(Genere genere : generi){ %>
+			    <li><a class="dropdown-item" href="cerca?titolo=<%= request.getParameter("titolo") %>&genere=<%= genere.getName() %>"><%= genere.getName() %></a></li>
+				<% } %>
+			  </ul>
+			</div>
+        </div>
+        </div>
         
 		
 		<div class="row justify-content-center mt-3">
