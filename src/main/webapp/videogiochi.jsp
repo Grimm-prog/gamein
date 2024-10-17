@@ -100,7 +100,7 @@
 			  <ul class="dropdown-menu">
 			  <!--  qui inizio a iterare la lista di generi e al posto di fantasy passerò il nome del genere -->
 			  <% for(Sviluppatore sviluppatore: sviluppatori ){ %>
-			    <li><a class="dropdown-item" href="cerca?sviluppatore=<%= request.getParameter("titolo") %>&genere=<%= sviluppatore.getName() %>"><%= sviluppatore.getName() %></a></li>
+			    <li><a class="dropdown-item" href="cerca?titolo=<%= request.getParameter("titolo") %>&sviluppatore=<%= sviluppatore.getName() %>"><%= sviluppatore.getName() %></a></li>
 				<% } %>
 			  </ul>
 			</div>
@@ -115,10 +115,10 @@
 			  <ul class="dropdown-menu">
 			  <!--  qui inizio a iterare la lista di generi e al posto di fantasy passerò il nome del genere -->
 			  
-			    <li><a class="dropdown-item" href="cerca?choice=VotoAsc">Voto gioco:più alto</a></li>
-			    <li><a class="dropdown-item" href="cerca?choice=VotoDesc">Voto gioco:più basso</a></li>
-			    <li><a class="dropdown-item" href="cerca?choice=DataDesc">Data:discendente</a></li>
-			    <li><a class="dropdown-item" href="cerca?choice=DataAsc">Data:ascendente</a></li>
+			    <li><a class="dropdown-item" href="cerca?titolo=<%=request.getParameter("titolo")  %>&choice=VotoAsc">Voto gioco:più alto</a></li>
+			    <li><a class="dropdown-item" href="cerca?titolo=<%=request.getParameter("titolo")  %>&choice=VotoDesc">Voto gioco:più basso</a></li>
+			    <li><a class="dropdown-item" href="cerca?titolo=<%=request.getParameter("titolo")  %>&choice=DataDesc">Data:discendente</a></li>
+			    <li><a class="dropdown-item" href="cerca?titolo=<%=request.getParameter("titolo")  %>&choice=DataAsc">Data:ascendente</a></li>
 				
 			  </ul>
 			</div>
