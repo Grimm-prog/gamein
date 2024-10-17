@@ -9,8 +9,15 @@
 <head>
     <meta charset="UTF-8">
     <title>INSERISCI RECENSIONE</title>
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- il mio CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -33,14 +40,16 @@
         </div>
         
         <div class="mb-3">
-            <label for="commento" class="form-label">Commento</label>
-            <textarea class="form-control" id="commento" name="commento" required></textarea>
+            <label for="testo" class="form-label">Testo recensione</label>
+            <textarea class="form-control" id="testo" name="testo" required></textarea>
         </div>
         
 
-        <button type="submit" class="btn btn-primary">Inserisci Recensione</button>
+        <button type="submit" class="btn btn-bd-primary2  w-100 py-2 fw-bold text-uppercase">Inserisci recensione</button>
     </form>
 </div>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
 </html>
