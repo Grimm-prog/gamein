@@ -40,12 +40,12 @@
         </div>
         
         <div class="mb-3">
-            <label for="commento" class="form-label">Commento</label>
-            <textarea class="form-control" id="commento" name="commento" required></textarea>
+            <label for="testo" class="form-label">Testo recensione</label>
+            <textarea class="form-control" id="testo" name="testo" required></textarea>
         </div>
         
 
-        <button type="submit" class="btn btn-primary">Inserisci Recensione</button>
+        <button type="submit" class="btn btn-bd-primary2  w-100 py-2 fw-bold text-uppercase">Inserisci recensione</button>
     </form>
 </div>
 <!-- Bootstrap JS -->
