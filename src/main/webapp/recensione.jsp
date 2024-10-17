@@ -31,19 +31,22 @@
 <div class="container mt-5">
   
    <form action="Recensione" method="post">
-        <div class="mb-3">
+        <div class="range-wrap mb-3">
             <label for="voto" class="form-label">Voto</label>
-            <input type="range" class="form-range" id="voto" name="voto" min="1" max="5" required>
+            <input type="range" class="range form-range" id="voto" name="voto" min="1" max="5" required>
+            <output class="bubble"></output>
         </div>
 
-        <div class="mb-3">
+        <div class="range-wrap mb-3">
             <label for="difficolta" class="form-label">Difficoltà </label>
-            <input type="range" class="form-range" id="difficolta" name="difficolta" min="1" max="5" required>
+            <input type="range" class="range form-range" id="difficolta" name="difficolta" min="1" max="5" required>
+            <output class="bubble"></output>
         </div>
 
-        <div class="mb-3">
+        <div class="range-wrap mb-3">
             <label for="tempoDiGioco" class="form-label">Tempo di gioco (ore)</label>
-            <input type="range" class="form-range" id="tempoDiGioco" name="tempoDiGioco" min="1" max ="120" required>
+            <input type="range" class="range form-range" id="tempoDiGioco" name="tempoDiGioco" min="1" max ="120" required>
+            <output class="bubble"></output>
         </div>
         
         <div class="mb-3">
@@ -59,6 +62,32 @@
 </main>
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script>
+
+const allRanges = document.querySelectorAll(".range-wrap");
+allRanges.forEach(wrap => {
+  const range = wrap.querySelector(".range");
+  const bubble = wrap.querySelector(".bubble");
+
+  range.addEventListener("input", () => {
+    setBubble(range, bubble);
+  });
+  setBubble(range, bubble);
+});
+
+function setBubble(range, bubble) {
+  const val = range.value;
+  const min = range.min ? range.min : 0;
+  const max = range.max ? range.max : 100;
+  const newVal = Number(((val - min) * 100) / (max - min));
+  bubble.innerHTML = val;
+
+  // Sorta magic numbers based on size of the native UI thumb
+  bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
+}
+
+</script>
 
 </body>
 </html>
