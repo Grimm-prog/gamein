@@ -22,6 +22,12 @@ public class Utente {
 	@Column(name = "id", nullable = false)
 	private long id;
 	
+	@Column(name = "nome", nullable = false, length = 50)
+    private String nome;
+
+    @Column(name = "cognome", nullable = false, length = 50)
+    private String cognome;
+	
 	@Column(name = "username", nullable = false,length=50)	
 	private String username;
 	
@@ -47,6 +53,24 @@ public class Utente {
 	public void setId(long id) {
 		this.id = id;
 	}
+	
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getCognome() {
+		return cognome;
+	}
+
+	public void setCognome(String cognome) {
+		this.cognome = cognome;
+	}
+
 
 	public String getUsername() {
 		return username;

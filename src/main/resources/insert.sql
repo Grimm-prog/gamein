@@ -121,3 +121,7 @@ INSERT INTO videogame_genere VALUES(47, 5);
 INSERT INTO videogame_genere VALUES(48, 5);
 INSERT INTO videogame_genere VALUES(49, 5);
 INSERT INTO videogame_genere VALUES(50, 5);
+
+INSERT INTO utente VALUES (1,'Nome1', 'Cognome1', 'utente1', 'password1', 'utente1@example.com', '');
+INSERT INTO utente VALUES (2, 'Nome2', 'Cognome2','utente2', 'password2', 'utente2@example.com', '');
+INSERT INTO utente VALUES ( 3,'Nome3', 'Cognome3', 'utente3', 'password3', 'utente3@example.com','');
