@@ -44,7 +44,7 @@ public class ModificaProfiloServlet extends HttpServlet {
 			 }
 		 }
 		 utenteRepository.update(utente);
-		 request.getRequestDispatcher("profilo.jsp").forward(request, response);
+		 request.getRequestDispatcher("utente.jsp").forward(request, response);
 	}
 
 }
