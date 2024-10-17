@@ -90,6 +90,9 @@
                     </p>
                 </div>
             </div>
+            
+            
+            
         </div>
     </div>
 <div  style="margin-top: 200px;" >
@@ -210,7 +213,7 @@
             <% } %>
         </div>
         <div style="text-align: center;">
-        <button id="toggleButton" class="btn btn-primary mt-3" >Mostra di più</button>
+        <button id="toggleButton" class="btn btn-bd-primary2 py-2 fw-bold" >Mostra di più</button>
         </div>
     </div>
 </div>
