@@ -27,7 +27,7 @@ public class PreferitoRepositoryImpl extends JpaRepositoryImpl<Preferito, Long> 
 			em = emf.createEntityManager();
 			tx = em.getTransaction();
 			tx.begin();
-			TypedQuery<Preferito> query = em.createQuery("SELECT p FROM Preferito p WHERE p.utente=:utente_id AND p.videogame=:videogame_id",
+			TypedQuery<Preferito> query = em.createQuery("SELECT p FROM Preferito p WHERE p.utente.id=:utente_id AND p.videogame.id=:videogame_id",
 					Preferito.class);
 			query.setParameter("username_id", utente.getId());
 			query.setParameter("videogame_id", videogame.getId());

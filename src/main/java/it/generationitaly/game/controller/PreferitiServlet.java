@@ -42,6 +42,7 @@ public class PreferitiServlet extends HttpServlet {
 		for (Preferito preferito2 : preferiti) {
 			if(preferito2.getUtente().getId()==utente.getId() && preferito2.getVideogame().getId()==idVideogame) {
 				preferito=preferito2;
+				break;
 			}
 		}
 	
