@@ -127,6 +127,7 @@
                 </a>
             </div>
             -->
+            <%if(utente.getPreferiti().size()>5){ %>
             <div class="col mt-5">
 				<form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="cerca"
 					method="post">
@@ -134,6 +135,7 @@
 					<button class="btn btn-bd-primary2 py-2 fw-bold text-uppercase" type="submit">lista completa</button>
 				</form>
 			</div>
+			<%} %>
         </div>
 		</div>
 	 	<div class="row justify-content-center pt-5 mb-3">
