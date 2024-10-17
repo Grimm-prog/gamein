@@ -27,11 +27,11 @@ public class PreferitoRepositoryImpl extends JpaRepositoryImpl<Preferito, Long> 
 			em = emf.createEntityManager();
 			tx = em.getTransaction();
 			tx.begin();
-			TypedQuery<Utente> query = em.createQuery("SELECT p FROM Preferiti u WHERE p.utente_id=:utente_id AND p.videogame_id=:videogame_id",
-					Utente.class);
+			TypedQuery<Preferito> query = em.createQuery("SELECT p FROM Preferito p WHERE p.utente=:utente_id AND p.videogame=:videogame_id",
+					Preferito.class);
 			query.setParameter("username_id", utente.getId());
 			query.setParameter("videogame_id", videogame.getId());
-			utente = query.getSingleResult();
+			preferito = query.getSingleResult();
 			tx.commit();
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
