@@ -27,7 +27,7 @@
 <body>
 <!-- Creazione lista videogame -->
 	<% Utente utente = (Utente) session.getAttribute("utente"); %>
-
+ 	<% List<Recensione> recensioni = utente.getRecensioni(); %>
 	<!-- Navbar -->
 	<%@ include file="nav.jsp"%>
 	<!-- 
@@ -144,11 +144,12 @@
 	            <br>
 	        </div>
 	        </div>
-	        <% List<Recensione> recensioni = utente.getRecensioni(); %>
+	       
 	    <!-- qui andranno le card con le recensioni -->
 	    <div class="container-fluid" style="background-color: #652c9b;">
 	        <div class="container pt-5">
 	            <div class="row">
+	              <% int count = 0; %>
 	            <%  for(Recensione recensione: recensioni){ %>
 	            	<% String stelle="";
 	            	for(int i=0;i<5;i++){
@@ -158,6 +159,7 @@
 	            			stelle+="☆";
 	            		}
 	            	} %>
+	            	<% if (count < 6) { %>
 	                <div class="col-md-4">
 	                    <div class="card review-card">
 	                        <div class="card-body" style="text-align: center;">
@@ -167,13 +169,29 @@
 	                        </div>
 	                    </div>
 	                </div>
-	                <% } %>
+	                <% } else { %>
+	                 <div class="col-md-4 hidden-review" style="display: none;">
+                        <div class="card review-card">
+                            <div class="card-body" style="text-align: center;">
+                                <h5 class="card-title"><%= recensione.getVideogame().getTitolo() %></h5>
+                                <h6 class="card-subtitle mb-2 "><%= stelle %></h6>
+                                <p class="card-text pb-2"><%= recensione.getCommento() %></p>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+                <% count++; %>
+            <% } %>
+        </div>
+        <div style="text-align: center;">
+        <button id="toggleButton" class="btn btn-primary mt-3" >Mostra di più</button>
+        </div>
+    </div>
+</div>
+	                
+	             
 	               
-	            </div>
-	        </div>
-	    </div>
-	    </div>
-	    </div>
+	            
 				<div class="col mt-5">
 					<form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="logout"
 						method="post">
@@ -187,5 +205,16 @@
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		crossorigin="anonymous"></script>
+		<script>
+    const toggleButton = document.getElementById('toggleButton');
+    const hiddenReviews = document.querySelectorAll('.hidden-review');
+
+    toggleButton.addEventListener('click', () => {
+        hiddenReviews.forEach(review => {
+            review.style.display = review.style.display === 'none' ? 'block' : 'none';
+        });
+        toggleButton.textContent = hiddenReviews[0].style.display === 'none' ? 'Mostra di più' : 'Nascondi';
+    });
+</script>
 </body>
 </html>
