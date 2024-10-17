@@ -39,14 +39,10 @@ public class RicercaServlet extends HttpServlet {
 		String annoUscita = request.getParameter("annoUscita");
 		String choice = request.getParameter("choice");
 		List<Videogame> videogames=null;
+		System.out.println(choice);
 		if(titolo!=null) {
 		videogames = videogameRepository.RicercaPerTitolo(titolo);
-		}
-		
-		List<Genere> generi = genereRepository.findAll(); 
-		List<Sviluppatore> sviluppatori = sviluppatoreRepository.findAll();
-		
-		if(titolo==null) {
+		}else {
 			videogames = videogameRepository.findAll();
 		}
 		
@@ -62,7 +58,7 @@ public class RicercaServlet extends HttpServlet {
 		if(videogames!=null && sviluppatore!=null) {
 			videogames =RicercaSviluppatore(sviluppatore, videogames);
 		}
-		if(videogames!=null && choice!=null && choice.equals("VotoAsc")) {
+		if(videogames!=null &&  choice.equals("VotoAsc")) {
 			videogames = videogameRepository.OrderByAvgVoto();
 		}
 		if(videogames!=null && choice!=null && choice.equals("VotoDesc")) {
@@ -75,7 +71,8 @@ public class RicercaServlet extends HttpServlet {
 			videogames = videogameRepository.OrderByDataDesc();
 		}
 		
-		
+		List<Genere> generi = genereRepository.findAll(); 
+		List<Sviluppatore> sviluppatori = sviluppatoreRepository.findAll();
 		request.setAttribute("sviluppatori", sviluppatori);
 		request.setAttribute("generi", generi);
 		request.setAttribute("videogames", videogames);
