@@ -45,6 +45,23 @@
         <% } */%>
 		
 		-->
+		<div class="input-group mb-3"> 
+            <span class="input-group-text" id="basic-addon1">Nome</span>
+            <input type="text" class="form-control" placeholder="Nome" aria-label="Nome" aria-describedby="basic-addon1" id="nome" name="nome" required>
+        </div>
+        <% if(request.getParameter("erroreNome") != null){ %>
+            <div class="text-danger mb-3">Inserisci il tuo nome!</div>
+        <% } %>
+        
+		
+		<div class="input-group mb-3"> 
+            <span class="input-group-text" id="basic-addon1">Cognome</span>
+            <input type="text" class="form-control" placeholder="Cognome" aria-label="Cognome" aria-describedby="basic-addon1" id="cognome" name="cognome" required>
+        </div>
+        <% if(request.getParameter("erroreCognome") != null){ %>
+            <div class="text-danger mb-3">Inserisci il tuo cognome!</div>
+        <% } %>
+        
 		
         <div class="input-group mb-3"> 
             <span class="input-group-text" id="basic-addon1">Username</span>
@@ -54,15 +71,7 @@
             <div class="text-danger mb-3">Inserisci il tuo username!</div>
         <% } %>
         
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Password</span>
-            <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" id="password" name="password" required>
-        </div>
-        <% if(request.getParameter("errorePassword") != null){ %>
-            <div class="text-danger mb-3">Inserisci la tua password!</div>
-        <% } %>
-
-        <div class="input-group mb-3">
+         <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1">Email</span>
             <input type="email" class="form-control" placeholder="Email" aria-label="email" aria-describedby="basic-addon1" id="email" name="email" required>
         </div>
@@ -78,6 +87,16 @@
         <% if(request.getParameter("erroreFoto") != null){ %>
             <div class="text-danger mb-3">Inserisci la tua foto profilo!</div>
         <% } %>
+        
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Password</span>
+            <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" id="password" name="password" required>
+        </div>
+        <% if(request.getParameter("errorePassword") != null){ %>
+            <div class="text-danger mb-3">Inserisci la tua password!</div>
+        <% } %>
+
+      
 		
         <button class="btn btn-bd-primary2  w-100 py-2 fw-bold text-uppercase" type="submit"><span style="color: white;">SIGN</span><span style="color:#652c9b;">IN</span></button>
         <% if(request.getParameter("errore") != null){ %>
