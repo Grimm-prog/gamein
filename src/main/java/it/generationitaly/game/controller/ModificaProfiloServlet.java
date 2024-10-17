@@ -24,6 +24,10 @@ public class ModificaProfiloServlet extends HttpServlet {
 
 		String username= request.getParameter("username");
 		String foto = request.getParameter("foto");
+		String nome = request.getParameter("nome");
+		String cognome = request.getParameter("cognome");
+		String email = request.getParameter("email");
+		String password = request.getParameter("password");
 		
 		long id = Long.parseLong(request.getParameter("id"));
 		// System.out.println("id: " + id);
@@ -39,7 +43,7 @@ public class ModificaProfiloServlet extends HttpServlet {
 				 utente.setFoto(foto);
 			 }
 		 }
-		 utenteRepository.save(utente);
+		 utenteRepository.update(utente);
 		 request.getRequestDispatcher("profilo.jsp").forward(request, response);
 	}
 
