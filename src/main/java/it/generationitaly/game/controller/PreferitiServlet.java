@@ -27,12 +27,12 @@ public class PreferitiServlet extends HttpServlet {
 	private VideogameRepository videogameRepository = new VideogameRepositoryImpl();
 	private PreferitoRepository preferitoRepository = new PreferitoRepositoryImpl();
 	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
 		HttpSession session = request.getSession();
 		String username = (String) session.getAttribute("username");
-		Long idVideogame = Long.parseLong(request.getParameter("id_videogame"));
+		Long idVideogame = Long.parseLong(request.getParameter("id"));
 		Utente utente = utenteRepository.findByUsername(username);
 		Videogame videogame = videogameRepository.findById(idVideogame);
 		
@@ -44,7 +44,11 @@ public class PreferitiServlet extends HttpServlet {
 		}else {
 			preferitoRepository.save(preferito);
 		}
-		request.setAttribute("id", idVideogame);
+		/*
+		utente = utenteRepository.findByUsername(username);
+		session.setAttribute("utente", utente);
+		*/
+		request.setAttribute("videogame", videogame);
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("videogioco.jsp");
 		requestDispatcher.forward(request, response);
 	}

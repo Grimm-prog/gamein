@@ -75,6 +75,39 @@
         </div>
 <!-- introduco le immagini -->
         <div class="row justify-content-center mt-4" style="border: 2px solid #7851a9; padding: 50px; border-radius: 10px; background-color: #652c9b; ">
+          <% if(!utente.getPreferiti().isEmpty()) { %>
+          <% for(int i=0;i<5 && i<utente.getPreferiti().size();i++){ %>
+          
+           <div class="col-6 col-md-2">
+           		 <a href="videogioco?id=<%= utente.getPreferiti().get(i).getVideogame().getId() %>">
+                    <div class="card">
+                        <img src="<%= utente.getPreferiti().get(i).getVideogame().getFoto() %>"
+                             class="img-fluid"
+                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </a>
+            </div>
+             <% }%>
+            <% }%>
+            <!--  
+            <div class="col-6 col-md-2">
+           		 <a href="#">
+                    <div class="card">
+                        <img src="#"
+                             class="img-fluid"
+                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </a>
+            </div>
+            <div class="col-6 col-md-2">
+           		 <a href="#">
+                    <div class="card">
+                        <img src="#"
+                             class="img-fluid"
+                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </a>
+            </div>
            <div class="col-6 col-md-2">
            		 <a href="#">
                     <div class="card">
@@ -93,33 +126,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-6 col-md-2">
-           		 <a href="#">
-                    <div class="card">
-                        <img src="#"
-                             class="img-fluid"
-                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                </a>
-            </div>
-           <div class="col-6 col-md-2">
-           		 <a href="#">
-                    <div class="card">
-                        <img src="#"
-                             class="img-fluid"
-                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-2">
-           		 <a href="#">
-                    <div class="card">
-                        <img src="#"
-                             class="img-fluid"
-                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                </a>
-            </div>
+            -->
             <div class="col mt-5">
 				<form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="cerca"
 					method="post">

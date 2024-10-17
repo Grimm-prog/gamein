@@ -75,13 +75,13 @@
         <% if(session.getAttribute("username")!=null){ %>
          <!--  BUTTON PREFERITO -->
          <% if(!statopreferito) {%>
-		<a class="btn btn-bd-primary2 py-2 fw-bold text-uppercase" href="preferiti">
+		<a class="btn btn-bd-primary2 py-2 fw-bold text-uppercase" href="preferiti?id=<%= videogioco.getId() %>" >
 		    <img src="${pageContext.request.contextPath}/img/CUOREOFF.jpg" alt="Icona" style="width: 20px; height: 20px; margin-right: 5px;">
 		    <span style="color: white;"></span>
 		    <span style="color:#652c9b;"></span>
 		</a>  
 		<% }else{ %>
-		<a class="btn btn-bd-primary2 py-2 fw-bold text-uppercase" href="preferiti">
+		<a class="btn btn-bd-primary2 py-2 fw-bold text-uppercase" href="preferiti?id=<%= videogioco.getId() %>">
 		    <img src="${pageContext.request.contextPath}/img/CUOREON.png" alt="Icona" style="width: 20px; height: 20px; margin-right: 5px;">
 		    <span style="color: white;"></span>
 		    <span style="color:#652c9b;"></span>

@@ -207,7 +207,7 @@
         	</div>
           <div class="row justify-content-center mt-4">
 		  <!--  titolo della sezione -->
-        <% for(int i=0;i<5;i++){ %>
+        <% for(int i=0;i<5 && i<utente.getPreferiti().size();i++){ %>
         	<% if(utente.getPreferiti().get(i)!=null){ %>
         <!-- introduco le immagini -->
                  <div class="col-6 col-md-2">
