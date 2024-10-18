@@ -112,7 +112,7 @@
         <div class="row justify-content-center mt-4" style="border: 2px solid #7851a9; padding: 50px; border-radius: 10px; background-color: #652c9b; ">
           <% if(!utente.getPreferiti().isEmpty()) { %>
           <div class="col-12">
-          <div class="row">
+          <div class="row justify-content-center mt-4">
           <% for(int i=0; i<utente.getPreferiti().size();i++){ %>
           <%if (i<6){ %> <!-- Mostra solo le prime 5 card -->
            <div class="col-6 col-md-2">
