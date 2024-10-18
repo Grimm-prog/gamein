@@ -84,14 +84,4 @@
     <servlet-name>ModificaProfiloServlet</servlet-name>
     <url-pattern>/update</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>PreferitiServlet</display-name>
-    <servlet-name>PreferitiServlet</servlet-name>
-    <servlet-class>it.generationitaly.game.controller.PreferitiServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>PreferitiServlet</servlet-name>
-    <url-pattern>/preferiti</url-pattern>
-  </servlet-mapping>
 </web-app>
