@@ -64,4 +64,76 @@ public class RecensioneRepositoryImpl extends JpaRepositoryImpl<Recensione, Long
         return recensioni;
     }
 
+	@Override
+	public Double AvgDifficolta(Long idvideogioco) {
+		  Double avg=null;
+	        EntityManager em = null;
+	        EntityTransaction tx = null;
+	        try {
+	            em = emf.createEntityManager();
+	            tx = em.getTransaction();
+	            tx.begin();
+	            TypedQuery<Double> query = em.createQuery("SELECT AVG(r.difficolta) FROM Videogame v JOIN v.recensioni r WHERE v.id=:id",Double.class);
+	            query.setParameter("id", idvideogioco);
+	            avg = query.getSingleResult();
+	            tx.commit();
+	        } catch (Exception e) {
+	            System.err.println(e.getMessage());
+	            if (tx != null && tx.isActive())
+	                tx.rollback();
+	        } finally {
+	            if (em != null)
+	                em.close();
+	        }
+	        return avg;
+	}
+
+	@Override
+	public Double AvgVoto(Long idvideogioco) {
+		 Double avg=null;
+	        EntityManager em = null;
+	        EntityTransaction tx = null;
+	        try {
+	            em = emf.createEntityManager();
+	            tx = em.getTransaction();
+	            tx.begin();
+	            TypedQuery<Double> query = em.createQuery("SELECT AVG(r.voto) FROM Videogame v JOIN v.recensioni r WHERE v.id=:id",Double.class);
+	            query.setParameter("id", idvideogioco);
+	            avg = query.getSingleResult();
+	            tx.commit();
+	        } catch (Exception e) {
+	            System.err.println(e.getMessage());
+	            if (tx != null && tx.isActive())
+	                tx.rollback();
+	        } finally {
+	            if (em != null)
+	                em.close();
+	        }
+	        return avg;
+	}
+
+	@Override
+	public Double AvgTempoDiGioco(Long idvideogioco) {
+		 Double avg=null;
+	        EntityManager em = null;
+	        EntityTransaction tx = null;
+	        try {
+	            em = emf.createEntityManager();
+	            tx = em.getTransaction();
+	            tx.begin();
+	            TypedQuery<Double> query = em.createQuery("SELECT AVG(r.tempoDiGioco) FROM Videogame v JOIN v.recensioni r WHERE v.id=:id",Double.class);
+	            query.setParameter("id", idvideogioco);
+	            avg = query.getSingleResult();
+	            tx.commit();
+	        } catch (Exception e) {
+	            System.err.println(e.getMessage());
+	            if (tx != null && tx.isActive())
+	                tx.rollback();
+	        } finally {
+	            if (em != null)
+	                em.close();
+	        }
+	        return avg;
+	}
+
 }
