@@ -24,12 +24,11 @@
 		<% String id = request.getParameter("id"); %>
 
 			<main class="form-signin w-100 m-auto" style="max-width: 400px;">
-			<form action="sign-in" method="post">
-			        <nav class="navbar navbar-expand-lg bg-transparent">
+			
 			            <div class="container-fluid d-flex justify-content-center">
 			                <h1 class="navbar-brand fs-1" style="font-size: 3rem;"> <span style="color: white;">AGGIUNGI LA TUA </span><span style="color:#652c9b;">RECENSIONE</span> </h1>
 			            </div>
-			        </nav>
+			       
 			        
 			<div class="container mt-5">
 			  
@@ -64,7 +63,6 @@
 		        <button type="submit" class="btn btn-bd-primary2  w-100 py-2 fw-bold text-uppercase">PUBBLICA</button>
 		    </form>
 		</div>
-		</form>
 		</main>
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

@@ -28,7 +28,7 @@ public class RecensioneServlet extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		Utente utente=(Utente)session.getAttribute("username");
+		Utente utente=(Utente)session.getAttribute("utente");
 		long idVideogioco = Long.parseLong(request.getParameter("id"));
 		String commento = request.getParameter("commento");
 		int voto=Integer.parseInt(request.getParameter("voto"));
