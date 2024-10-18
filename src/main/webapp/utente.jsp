@@ -49,7 +49,7 @@
                     </h5>
                     <p class="card-text">
                         <span style="font-size: 30px; align-content: center; margin-bottom: 12px;">
-                            <%=utente.getUsername()%>
+                            <%=utente.getNome()%>
                         </span>
                     </p>
                 </div>
@@ -61,7 +61,7 @@
                     </h5>
                     <p class="card-text">
                         <span style="font-size: 30px; align-content: center; margin-bottom: 12px;">
-                            <%=utente.getEmail()%>
+                            <%=utente.getCognome()%>
                         </span>
                     </p>
                 </div>
@@ -110,8 +110,10 @@
 <!-- introduco le immagini -->
         <div class="row justify-content-center mt-4" style="border: 2px solid #7851a9; padding: 50px; border-radius: 10px; background-color: #652c9b; ">
           <% if(!utente.getPreferiti().isEmpty()) { %>
-          <% for(int i=0;i<5 && i<utente.getPreferiti().size();i++){ %>
-          
+          <div class="col-12">
+          <div class="row">
+          <% for(int i=0; i<utente.getPreferiti().size();i++){ %>
+          <%if (i<6){ %> <!-- Mostra solo le prime 5 card -->
            <div class="col-6 col-md-2">
            		 <a href="videogioco?id=<%= utente.getPreferiti().get(i).getVideogame().getId() %>">
                     <div class="card">
@@ -121,56 +123,39 @@
                     </div>
                 </a>
             </div>
-             <% }%>
-            <% }%>
-            <!--  
-            <div class="col-6 col-md-2">
-           		 <a href="#">
-                    <div class="card">
-                        <img src="#"
-                             class="img-fluid"
-                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                </a>
+             <% } else {%> 
+            <div class="col-6 col-md-2 hidden-card" id="hiddenCard<%= i %>" style="display: none;"> 
+                            <a href="videogioco?id=<%= utente.getPreferiti().get(i).getVideogame().getId() %>">
+                                <div class="card">
+                                    <img src="<%= utente.getPreferiti().get(i).getVideogame().getFoto() %>"
+                                         class="img-fluid"
+                                         style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                            </a>
+                        </div>
+                    <% } %>
+                <% } %>
             </div>
-            <div class="col-6 col-md-2">
-           		 <a href="#">
-                    <div class="card">
-                        <img src="#"
-                             class="img-fluid"
-                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                </a>
-            </div>
-           <div class="col-6 col-md-2">
-           		 <a href="#">
-                    <div class="card">
-                        <img src="#"
-                             class="img-fluid"
-                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                </a>
-            </div>
-            <div class="col-6 col-md-2">
-           		 <a href="#">
-                    <div class="card">
-                        <img src="#"
-                             class="img-fluid"
-                            style="border-radius: 10px; width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                </a>
-            </div>
-            -->
+            <div class="text-center mt-3">
             <%if(utente.getPreferiti().size()>5){ %>
+            <button id="toggleButtonNew"  class="btn btn-bd-primary2 py-2 fw-bold">Mostra di più</button>
+                <% } %>
+            </div>
+            <% if (utente.getPreferiti().size() > 5) { %>
+           <!-- 
             <div class="col mt-5">
 				<form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="cerca"
 					method="post">
-					<!-- aggiunti action e method -->
+					
 					<button class="btn btn-bd-primary2 py-2 fw-bold text-uppercase" type="submit">lista completa</button>
 				</form>
 			</div>
+			 -->
 			<%} %>
+           </div>
+            <% } %>
         </div>
+        
 	 	<div class="row justify-content-center pt-5 mb-3">
 	            <h1 style="text-align: center;">LE MIE RECENSIONI</h1>
 	            <br>
@@ -238,16 +223,29 @@
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		crossorigin="anonymous"></script>
-		<script>
-    const toggleButton = document.getElementById('toggleButton');
+	<script>
+    const toggleButtonReviews = document.getElementById('toggleButton'); 
     const hiddenReviews = document.querySelectorAll('.hidden-review');
 
-    toggleButton.addEventListener('click', () => {
+    toggleButtonReviews.addEventListener('click', () => {
         hiddenReviews.forEach(review => {
             review.style.display = review.style.display === 'none' ? 'block' : 'none';
         });
-        toggleButton.textContent = hiddenReviews[0].style.display === 'none' ? 'Mostra di più' : 'Nascondi';
+        toggleButtonReviews.textContent = hiddenReviews[0].style.display === 'none' ? 'Mostra di più' : 'Nascondi';
     });
 </script>
+
+<script>
+    const toggleButtonCards = document.getElementById('toggleButtonNew');
+    const hiddenCards = document.querySelectorAll('.hidden-card');
+
+    toggleButtonCards.addEventListener('click', () => {
+        hiddenCards.forEach(card => {
+            card.style.display = card.style.display === 'none' ? 'block' : 'none';
+        });
+        toggleButtonCards.textContent = hiddenCards[0].style.display === 'none' ? 'Mostra di più' : 'Nascondi';
+    });
+</script>
+
 </body>
 </html>

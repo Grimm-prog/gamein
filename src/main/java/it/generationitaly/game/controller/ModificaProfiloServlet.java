@@ -10,6 +10,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 
 public class ModificaProfiloServlet extends HttpServlet {
@@ -29,21 +30,22 @@ public class ModificaProfiloServlet extends HttpServlet {
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		
-		long id = Long.parseLong(request.getParameter("id"));
+		HttpSession session = request.getSession();
+		Utente utente=(Utente) session.getAttribute("utente");
 		// System.out.println("id: " + id);
 
-		 Utente utente = utenteRepository.findById(id);
+		 
 		// System.out.println(automobile);
 		 
-		 if(utente != null) {
-			 if(!username.isEmpty()) {
-				 utente.setUsername(username);
-			 }
-			 if(!foto.isEmpty()) {
-				 utente.setFoto(foto);
-			 }
-		 }
+		 utente.setUsername(username);
+		 utente.setFoto(foto);
+		 utente.setNome(nome);
+		 utente.setCognome(cognome);
+		 utente.setEmail(email);
+		 utente.setPassword(password);
 		 utenteRepository.update(utente);
+		 
+		 session.setAttribute("utente", utente);
 		 request.getRequestDispatcher("utente.jsp").forward(request, response);
 	}
 
