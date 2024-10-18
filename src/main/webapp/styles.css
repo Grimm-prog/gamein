@@ -300,6 +300,7 @@ input[type="range"] {
     outline: none;
     transition: background 0.3s;
 }
+
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -309,6 +310,7 @@ input[type="range"]::-webkit-slider-thumb {
     border-radius: 50%;
     cursor: pointer;
 }
+
 input[type="range"]:hover {
     background: #652c9b; /* Colore primario al passaggio del mouse */
 }
