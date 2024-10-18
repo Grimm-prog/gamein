@@ -16,8 +16,10 @@ import it.generationitaly.game.entity.Recensione;
 import it.generationitaly.game.entity.Utente;
 import it.generationitaly.game.entity.Videogame;
 import it.generationitaly.game.repository.RecensioneRepository;
+import it.generationitaly.game.repository.UtenteRepository;
 import it.generationitaly.game.repository.VideogameRepository;
 import it.generationitaly.game.repository.impl.RecensioneRepositoryImpl;
+import it.generationitaly.game.repository.impl.UtenteRepositoryImpl;
 import it.generationitaly.game.repository.impl.VideogameRepositoryImpl;
 
 @WebServlet("/recensione")
@@ -25,6 +27,7 @@ public class RecensioneServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private RecensioneRepository recensioneRepository= new RecensioneRepositoryImpl();
 	private VideogameRepository videogameRepository= new VideogameRepositoryImpl();
+	private UtenteRepository utenteRepository =new UtenteRepositoryImpl();
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
@@ -47,7 +50,8 @@ public class RecensioneServlet extends HttpServlet {
 		// request.setAttribute("id", idVideogioco);
 		// RequestDispatcher requestDispatcher = request.getRequestDispatcher("videogioco");
 		// requestDispatcher.forward(request, response);
-		
+		utente = utenteRepository.findById(utente.getId());
+		session.setAttribute("utente", utente);
 		response.sendRedirect("videogioco?id="+idVideogioco);
 	}
 
