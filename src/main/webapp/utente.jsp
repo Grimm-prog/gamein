@@ -185,7 +185,7 @@
 	                        <div class="card-body" style="text-align: center;">
 	                            <h5 class="card-title"><%= recensione.getVideogame().getTitolo() %></h5>
 	                            <h6 class="card-subtitle mb-2 "><%= stelle %></h6>
-	                            <p class="card-text pb-2"><%= recensione.getCommento() %></p>
+	                            <p class="card-text pb-2" style="max-height: 100px;"><%= recensione.getCommento() %></p>
 	                        </div>
 	                    </div>
 	                </div>
@@ -195,7 +195,7 @@
                             <div class="card-body" style="text-align: center;">
                                 <h5 class="card-title"><%= recensione.getVideogame().getTitolo() %></h5>
                                 <h6 class="card-subtitle mb-2 "><%= stelle %></h6>
-                                <p class="card-text pb-2"><%= recensione.getCommento() %></p>
+                                <p class="card-text pb-2" style="max-height: 100px;"><%= recensione.getCommento() %></p>
                             </div>
                         </div>
                     </div>
