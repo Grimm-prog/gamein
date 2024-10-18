@@ -220,7 +220,7 @@ INSERT INTO videogame_sviluppatore VALUES(46,46, 38);
 INSERT INTO videogame_sviluppatore VALUES(47,47, 39);
 INSERT INTO videogame_sviluppatore VALUES(48,48, 35);
 INSERT INTO videogame_sviluppatore VALUES(49,49, 13);
-INSERT INTO videogame_sviluppatore VALUES(50,45, 40);
+INSERT INTO videogame_sviluppatore VALUES(50,50, 40);
 
 <<<<<<< HEAD
 
