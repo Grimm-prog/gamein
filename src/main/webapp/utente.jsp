@@ -206,17 +206,7 @@
         </div>
     </div>
 </div>
-	                
-	             
 	               
-	            
-				<div class="col mt-5">
-					<form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="logout"
-						method="post">
-						<!-- aggiunti action e method -->
-						<button class="btn btn-bd-primary2 py-2 fw-bold text-uppercase" type="submit">logout</button>
-					</form>
-				</div>
 				
 				<!-- Bootstrap JS -->
 		<script
