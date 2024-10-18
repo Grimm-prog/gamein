@@ -44,7 +44,8 @@ public class ModificaProfiloServlet extends HttpServlet {
 		 utente.setEmail(email);
 		 utente.setPassword(password);
 		 utenteRepository.update(utente);
-		 
+		
+		 session.setAttribute("username", username);
 		 session.setAttribute("utente", utente);
 		 request.getRequestDispatcher("utente.jsp").forward(request, response);
 	}

@@ -203,7 +203,7 @@
           <div class="container">
          <% if(session.getAttribute("username")!=null){  %>
          <div class="row justify-content-center pt-4 mb-2">
-            <h2 style="text-align: center;">La MIA LISTA</h2>
+            <h2 style="text-align: center;">LA MIA LISTA</h2>
         	</div>
           <div class="row justify-content-center mt-4">
 		  <!--  titolo della sezione -->

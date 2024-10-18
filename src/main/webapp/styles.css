@@ -64,6 +64,7 @@ body {
     margin-bottom: 20px;
  	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra per la card */
     transition: transform 0.3s; /* Transizione per l'hover */
+
 }
 
 .card:hover {
@@ -75,7 +76,7 @@ body {
     overflow: auto; /* Nasconde l'eventuale testo in eccesso */
     text-overflow: ellipsis; /* Aggiunge "..." per il testo troppo lungo */
     word-wrap: break-word; /* Permette di andare a capo quando necessario */
-    max-height: 100px; /* Limita l'altezza massima del testo */
+    max-height: 60px; /* Limita l'altezza massima del testo */
 }
 
 
