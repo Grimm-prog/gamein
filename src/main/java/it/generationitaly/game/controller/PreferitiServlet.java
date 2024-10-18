@@ -37,14 +37,18 @@ public class PreferitiServlet extends HttpServlet {
 		Long idVideogame = Long.parseLong(request.getParameter("id"));
 		Utente utente = utenteRepository.findByUsername(username);
 		Videogame videogame = videogameRepository.findById(idVideogame);
-		Preferito preferito=null;
-		List<Preferito> preferiti = utente.getPreferiti();
-		for (Preferito preferito2 : preferiti) {
+		
+		
+		/*
+		 * for (Preferito preferito2 : preferiti) {
 			if(preferito2.getUtente().getId()==utente.getId() && preferito2.getVideogame().getId()==idVideogame) {
 				preferito=preferito2;
 				break;
 			}
 		}
+		 */
+		Preferito preferito = preferitoRepository.findByUsernameAndVideogame(utente, videogame);
+		
 	
 		 
 		
