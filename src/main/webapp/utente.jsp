@@ -102,6 +102,7 @@
         </div>
     </div>
 
+	<% if(!utente.getPreferiti().isEmpty()) { %>
 	<div class="row justify-content-center pt-5 mb-3" style="margin-top: 100px;">
             <h1 style="text-align: center;">LA MIA LISTA</h1>
             <br>
@@ -155,7 +156,8 @@
            </div>
             <% } %>
         </div>
-        
+        <%} %>
+        <% if(!utente.getRecensioni().isEmpty()) {%>
 	 	<div class="row justify-content-center pt-5 mb-3">
 	            <h1 style="text-align: center;">LE MIE RECENSIONI</h1>
 	            <br>
@@ -206,7 +208,7 @@
         </div>
     </div>
 </div>
-	               
+	 <%} %>              
 				
 				<!-- Bootstrap JS -->
 		<script

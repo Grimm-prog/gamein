@@ -30,7 +30,7 @@ public class RecensioneServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		Utente utente=(Utente)session.getAttribute("utente");
 		long idVideogioco = Long.parseLong(request.getParameter("id"));
-		String commento = request.getParameter("commento");
+		String commento = request.getParameter("testo");
 		int voto=Integer.parseInt(request.getParameter("voto"));
 		int difficolta=Integer.parseInt(request.getParameter("difficolta"));
 		int tempoDiGioco=Integer.parseInt(request.getParameter("tempoDiGioco"));
@@ -44,11 +44,11 @@ public class RecensioneServlet extends HttpServlet {
 		recensione.setVideogame(videogame);
 		recensioneRepository.save(recensione);
 		
-		request.setAttribute("id", idVideogioco);
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("videogioco");
-		requestDispatcher.forward(request, response);
+		// request.setAttribute("id", idVideogioco);
+		// RequestDispatcher requestDispatcher = request.getRequestDispatcher("videogioco");
+		// requestDispatcher.forward(request, response);
 		
-		
+		response.sendRedirect("videogioco?id="+idVideogioco);
 	}
 
 }
