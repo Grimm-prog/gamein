@@ -30,7 +30,8 @@
 	<!-- Creazione lista videogame -->
 	<%List<Videogame> videogiochi = (List<Videogame>) request.getAttribute("videogames"); %>
 	<% List<Genere> generi = (List<Genere>) request.getAttribute("generi"); %>
-	<% List<Sviluppatore> sviluppatori =(List<Sviluppatore>)request.getAttribute("sviluppatori"); %>
+	<% List<Sviluppatore> sviluppatori =(List<Sviluppatore>)request.getAttribute("sviluppatori"); 
+		String choice="";%>
 	
     <!-- contenuto principale -->
     <div class="container pt-5">
@@ -118,7 +119,7 @@
 			    <li><a class="dropdown-item" href="cerca?titolo=<%=request.getParameter("titolo")  %>&choice=VotoAsc">Voto gioco:più alto</a></li>
 			    <li><a class="dropdown-item" href="cerca?titolo=<%=request.getParameter("titolo")  %>&choice=VotoDesc">Voto gioco:più basso</a></li>
 			    <li><a class="dropdown-item" href="cerca?titolo=<%=request.getParameter("titolo")  %>&choice=DataDesc">Data:discendente</a></li>
-			    <li><a class="dropdown-item" href="cerca?titolo=<%=request.getParameter("titolo")  %>&choice=DataAsc">Data:ascendente</a></li>
+			    <li><a class="dropdown-item" href="cerca?titolo=<%=request.getParameter("titolo")  %>&choice='DataAsc'">Data:ascendente</a></li>
 				
 			  </ul>
 			</div>

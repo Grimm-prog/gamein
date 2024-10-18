@@ -58,7 +58,7 @@ public class RicercaServlet extends HttpServlet {
 		if(videogames!=null && sviluppatore!=null) {
 			videogames =RicercaSviluppatore(sviluppatore, videogames);
 		}
-		if(videogames!=null &&  choice.equals("VotoAsc")) {
+		if(videogames!=null &&  choice!=null && choice.equals("VotoAsc")) {
 			videogames = videogameRepository.OrderByAvgVoto();
 		}
 		if(videogames!=null && choice!=null && choice.equals("VotoDesc")) {

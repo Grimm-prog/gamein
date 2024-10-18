@@ -15,6 +15,7 @@
             </form>
         </div>
         
+        
         <% if(session.getAttribute("username") == null) { %>
         <div class="d-flex align-items-center">
            <form action="login" method="post" style="padding-right: 20px">
