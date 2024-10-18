@@ -37,7 +37,7 @@
             <form action="logout" method="post" class="m-0">
                 <button type="submit" class="dropdown-item">Logout</button>
             </form>
-        </li>
+        </li> 
         </div>
         <% } %>
     </div>
