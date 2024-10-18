@@ -198,13 +198,15 @@
         </div>
         </div>
         
-         <% Utente utente= (Utente)session.getAttribute("utente"); %>
          <div class="container-fluid">
           <div class="container">
+         <% Utente utente= (Utente)session.getAttribute("utente"); %>
          <% if(session.getAttribute("username")!=null){  %>
+         <% if(utente != null && !utente.getPreferiti().isEmpty()) {%>
          <div class="row justify-content-center pt-4 mb-2">
             <h2 style="text-align: center;">La MIA LISTA</h2>
         	</div>
+        	<%} %>
           <div class="row justify-content-center mt-4">
 		  <!--  titolo della sezione -->
         <% for(int i=0;i<5 && i<utente.getPreferiti().size();i++){ %>
