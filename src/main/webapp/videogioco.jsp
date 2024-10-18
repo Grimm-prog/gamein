@@ -202,47 +202,20 @@
     		<% double avg = (Double) request.getAttribute("avgVoto"); %>
     		 <div class="row justify-content-center pt-5 mb-3">
             <h3 style="text-align: center;">Voto</h3>
-            <% String voto="";
-        	for(int i=0;i<5;i++){
-        		if(i<avg){
-        			voto+="★";
-        		}else{
-        			voto+="☆";
-        		}
-        	} %>
         	<br>
-        	<h2 style="text-align: center;margin-top: 10px"><%= voto %></h2>
-            <br>
+        	<h2 style="text-align: center;margin-top: 10px;padding: 10px; border-radius: 10px;border: 2px solid #7851a9;width: 300px;"><%= avg %> <span style="text-align: center;color: #652c9b;">/5</span></h2>
         </div>
         <% double avgD = (Double) request.getAttribute("avgDifficolta"); %>
          <div class="row justify-content-center pt-5 mb-3">
             <h3 style="text-align: center;">Difficoltà</h3>
-            <% String difficolta="";
-        	for(int i=0;i<5;i++){
-        		if(i<avgD){
-        			difficolta+="♥";
-        		}else{
-        			difficolta+="♡";
-        		}
-        	} %>
             <br>
-        	<h2 style="text-align: center;margin-top: 10px"><%= difficolta %></h2>
-            <br>
+        	<h2 style="text-align: center;margin-top: 10px;padding: 10px; border-radius: 10px;border: 2px solid #7851a9;width: 300px;"><%= avgD %> <span style="text-align: center;color: #652c9b;">/5</span></h2>
         </div>
         <% double avgT = (Double) request.getAttribute("avgTempoDiGioco"); %>
          <div class="row justify-content-center pt-5 mb-3">
             <h3 style="text-align: center;">Ore di gioco</h3>
-           <% String tempo="";
-        	for(int i=0;i<5;i++){
-        		if(i<avgT){
-        			tempo+="♥";
-        		}else{
-        			tempo+="♡";
-        		}
-        	} %>
             <br>
-        	<h2 style="text-align: center;margin-top: 10px"><%= tempo %></h2>
-            <br>
+        	<h2 style="text-align: center;margin-top: 10px;padding: 10px; border-radius: 10px;border: 2px solid #7851a9;width: 300px;"><%= avgT %> <span style="text-align: center;color: #652c9b;">/h</span></h2>
         </div>
 		    
 		</div>
