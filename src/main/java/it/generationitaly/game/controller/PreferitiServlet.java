@@ -63,8 +63,8 @@ public class PreferitiServlet extends HttpServlet {
 		System.out.println(preferito);
 		utente = utenteRepository.findByUsername(username);
 		session.setAttribute("utente", utente);
-		request.setAttribute("videogame", videogame);
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("videogioco.jsp");
+		request.setAttribute("id", videogame.getId());
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("videogioco");
 		requestDispatcher.forward(request, response);
 	}
 
