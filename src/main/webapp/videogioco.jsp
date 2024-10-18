@@ -77,11 +77,11 @@
          <!--  BUTTON PREFERITO -->
          <% if(!statopreferito) {%>
 		<a class="btn btn-bd-primary2 py-2 fw-bold text-uppercase" href="preferiti?id=<%= videogioco.getId() %>" >
-		    <span style="color:#652c9b;">♡</span>
+		    <h1><span style="color:#652c9b;padding: 10px;width: 300px;">♡</span></h1>
 		</a>  
 		<% }else{ %>
 		<a class="btn btn-bd-primary2 py-2 fw-bold text-uppercase" href="preferiti?id=<%= videogioco.getId() %>">
-		    <span style="color:#652c9b;">♥</span>
+		    <h1><span style="color:#652c9b;padding: 10px;width: 300px;">♥</span></h1>
 		</a>
 		<%} %>   
 		 <% } %>
