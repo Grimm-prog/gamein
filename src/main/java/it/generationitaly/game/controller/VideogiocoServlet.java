@@ -26,9 +26,9 @@ public class VideogiocoServlet extends HttpServlet {
 			throws ServletException, IOException {
 		long id = Long.parseLong(request.getParameter("id"));
 		Videogame videogame = videogameRepository.findById(id);
-		Double avgDifficolta = recensioneRepository.AvgDifficolta(id);
-		Double avgVoto = recensioneRepository.AvgVoto(id);
-		Double avgTempoDiGioco = recensioneRepository.AvgTempoDiGioco(id);
+		Double avgDifficolta = Math.floor(recensioneRepository.AvgDifficolta(id)*10)/10;
+		Double avgVoto = Math.floor(recensioneRepository.AvgVoto(id)*10)/10;
+		Double avgTempoDiGioco = Math.floor(recensioneRepository.AvgTempoDiGioco(id)*10)/10;
 		request.setAttribute("avgTempoDiGioco", avgTempoDiGioco);
 		request.setAttribute("avgVoto", avgVoto);
 		request.setAttribute("avgDifficolta", avgDifficolta);
