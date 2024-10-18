@@ -204,9 +204,15 @@
             <h1 style="text-align: center;">RECENSIONI</h1>
             <br>
             <br>
-            <br>
-            <br>
         </div>
+        	<% if(session.getAttribute("username")!=null){ %>
+        	<!-- bottone per aggiungere la recensione -->
+           <a class="btn btn-bd-primary2 py-2 fw-bold" href="recensione.jsp?id=<%= videogioco.getId() %>" >
+		    <span style="color:#652c9b;">aggiungi una recensione</span>
+		</a>  
+		<%} %> 
+		<br>
+		<br>
     </div>
     <% List<Recensione> recensioni= videogioco.getRecensioni();
     %>
