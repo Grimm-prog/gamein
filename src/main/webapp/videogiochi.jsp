@@ -119,7 +119,10 @@
 			    <li><a class="dropdown-item" href="cerca?titolo=<%=request.getParameter("titolo")  %>&choice=VotoAsc">Voto gioco:più alto</a></li>
 			    <li><a class="dropdown-item" href="cerca?titolo=<%=request.getParameter("titolo")  %>&choice=VotoDesc">Voto gioco:più basso</a></li>
 			    <li><a class="dropdown-item" href="cerca?titolo=<%=request.getParameter("titolo")  %>&choice=DataDesc">Data:discendente</a></li>
-			    <li><a class="dropdown-item" href="cerca?titolo=<%=request.getParameter("titolo")  %>&choice='DataAsc'">Data:ascendente</a></li>
+			    <li><a class="dropdown-item" href="cerca?titolo=<%=request.getParameter("titolo")  %>&choice=DataAsc">Data:ascendente</a></li>
+			    <li><a class="dropdown-item" href="cerca?titolo=<%=request.getParameter("titolo")  %>&choice=DiffAsc">I meno difficili</a></li>
+			    <li><a class="dropdown-item" href="cerca?titolo=<%=request.getParameter("titolo")  %>&choice=DiffDesc">I più difficili</a></li>
+			    <li><a class="dropdown-item" href="cerca?titolo=<%=request.getParameter("titolo")  %>&choice=TempDesc">Più giocati</a></li>
 				
 			  </ul>
 			</div>

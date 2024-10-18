@@ -70,6 +70,15 @@ public class RicercaServlet extends HttpServlet {
 		if(videogames!=null && choice!=null && choice.equals("DataDesc")) {
 			videogames = videogameRepository.OrderByDataDesc();
 		}
+		if(videogames!=null && choice!=null && choice.equals("DiffAsc")) {
+			videogames = videogameRepository.OrderByAvgDifficoltaAsc();
+		}
+		if(videogames!=null && choice!=null && choice.equals("DiffDesc")) {
+			videogames = videogameRepository.OrderByAvgDifficoltaDesc();
+		}
+		if(videogames!=null && choice!=null && choice.equals("TempDesc")) {
+			videogames = videogameRepository.OrderByAvgTempoDesc();
+		}
 		
 		List<Genere> generi = genereRepository.findAll(); 
 		List<Sviluppatore> sviluppatori = sviluppatoreRepository.findAll();
