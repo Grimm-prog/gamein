@@ -19,20 +19,25 @@ public class SignInServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
+		String nome = request.getParameter("nome");
+		String cognome = request.getParameter("cognome");
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		String email = request.getParameter("email");
 		String foto = request.getParameter("foto");
 
+		
 		Utente utente = new Utente();
+		utente.setNome(nome);
+		utente.setCognome(cognome);
 		utente.setUsername(username);
 		utente.setPassword(password);
 		utente.setEmail(email);
 		utente.setFoto(foto);
-		
+		 
 		if(utenteRepository.findByUsername(username) == null) {
 			utenteRepository.save(utente);
-			response.sendRedirect("index");
+			response.sendRedirect("login.jsp");
 		}else {
 			response.sendRedirect("sign-in.jsp?errore");
 		}
