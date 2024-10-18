@@ -26,6 +26,12 @@ public interface VideogameRepository extends JpaRepository<Videogame, Long> {
 
 	List<Videogame> OrderByAvgVotoDesc();
 
+	List<Videogame> OrderByAvgDifficoltaDesc();
+	
+	List<Videogame> OrderByAvgDifficoltaAsc();
+	
+	List<Videogame> OrderByAvgTempoDesc();
+
 	
 
 	List<Videogame> RicercaPerPegi(String classificazionePegi);
