@@ -252,9 +252,11 @@
                     <div class="card review-card">
                         <div class="card-body" style="text-align: center;">
                             <h5 class="card-title"><%= recensione.getUtente().getUsername() %></h5>
+                             <img src="<%= recensione.getUtente().getFoto()  %>" class="account-icon">
                             <h6 class="card-subtitle mb-2 "><%= stelle %></h6>
                             <p class="card-text pb-2"><%= recensione.getCommento() %></p>
                         </div>
+                        
                     </div>
                 </div>
                 <% } %>
