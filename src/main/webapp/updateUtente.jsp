@@ -1,3 +1,4 @@
+<%@page import="it.generationitaly.game.entity.Utente"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -18,6 +19,10 @@
 </head>
 
 <body class="d-flex justify-content-center align-items-center min-vh-100 py-4">
+
+	<% Utente utente = (Utente) session.getAttribute("utente"); %>
+	
+	
 <main class="form-signin w-100 m-auto" style="max-width: 400px;">
     <form action="update" method="post">
         <nav class="navbar navbar-expand-lg bg-transparent">
@@ -47,7 +52,7 @@
 		-->
 		<div class="input-group mb-3"> 
             <span class="input-group-text" id="basic-addon1">Nome</span>
-            <input type="text" class="form-control" placeholder="Nome" aria-label="Nome" aria-describedby="basic-addon1" id="nome" name="nome" required>
+            <input type="text" class="form-control" placeholder="Nome" aria-label="Nome" aria-describedby="basic-addon1" id="nome" name="nome" value="<%= utente.getNome() %>" required>
         </div>
         <% if(request.getParameter("erroreNome") != null){ %>
             <div class="text-danger mb-3">Inserisci il tuo nome!</div>
@@ -56,7 +61,7 @@
 		
 		<div class="input-group mb-3"> 
             <span class="input-group-text" id="basic-addon1">Cognome</span>
-            <input type="text" class="form-control" placeholder="Cognome" aria-label="Cognome" aria-describedby="basic-addon1" id="cognome" name="cognome" required>
+            <input type="text" class="form-control" placeholder="Cognome" aria-label="Cognome" aria-describedby="basic-addon1" id="cognome" name="cognome" value="<%= utente.getCognome() %>" required>
         </div>
         <% if(request.getParameter("erroreCognome") != null){ %>
             <div class="text-danger mb-3">Inserisci il tuo cognome!</div>
@@ -65,7 +70,7 @@
 		
         <div class="input-group mb-3"> 
             <span class="input-group-text" id="basic-addon1">Username</span>
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" id="username" name="username" required>
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" id="username" name="username" value="<%= utente.getUsername() %>" required>
         </div>
         <% if(request.getParameter("erroreUsername") != null){ %>
             <div class="text-danger mb-3">Inserisci il tuo username!</div>
@@ -73,7 +78,7 @@
         
          <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1">Email</span>
-            <input type="email" class="form-control" placeholder="Email" aria-label="email" aria-describedby="basic-addon1" id="email" name="email" required>
+            <input type="email" class="form-control" placeholder="Email" aria-label="email" aria-describedby="basic-addon1" id="email" name="email" value="<%= utente.getEmail() %>" required>
         </div>
         <% if(request.getParameter("erroreEmail") != null){ %>
             <div class="text-danger mb-3">Inserisci la tua email!</div>
@@ -82,7 +87,7 @@
         <!-- Avatar selection -->
         <div class="input-group mb-3"> 
             <span class="input-group-text" id="basic-addon1">Foto</span>
-            <input type="text" class="form-control" placeholder="FotoProfilo.png" aria-label="foto profilo" aria-describedby="basic-addon1" id="username" name="foto" required>
+            <input type="text" class="form-control" placeholder="FotoProfilo.png" aria-label="foto profilo" aria-describedby="basic-addon1" id="username" name="foto" value="<%= utente.getFoto() %>" required>
         </div>
         <% if(request.getParameter("erroreFoto") != null){ %>
             <div class="text-danger mb-3">Inserisci la tua foto profilo!</div>
