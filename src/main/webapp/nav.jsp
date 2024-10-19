@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <a class="navbar-brand d-lg-none mb-3" href="index">GAME<span style="color:#652c9b;">IN</span></a>
             <form class="d-flex search-form mt-4 mb-3 mb-lg-0" action="cerca" method="get">
-                <input class="form-control search-input" type="search" name="titolo" placeholder="Silent Hill..." aria-label="Search">
+                <input class="form-control search-input" type="search" name="titolo" placeholder="Elden ring..." aria-label="Search">
                 <button class="btn-search" type="submit">cerca</button>
             </form>
         </div>
@@ -20,7 +20,7 @@
            <form action="login" method="post" style="padding-right: 20px">
            <button type="submit"  class="btn btn-bd-primary2 py-2 fw-bold">Login</button>
            </form>
-            <img src="${pageContext.request.contextPath}/img/ICONA-UTENTE.png" alt="User" class="account-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="${pageContext.request.contextPath}/img/222.png" alt="User" class="account-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             <ul class="dropdown-menu dropdown-menu-end">
                 <li><a class="dropdown-item" href="utente">Profilo</a></li>
                 
