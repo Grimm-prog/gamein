@@ -20,7 +20,7 @@
            <form action="login" method="post" style="padding-right: 20px">
            <button type="submit"  class="btn btn-bd-primary2 py-2 fw-bold">Login</button>
            </form>
-            <img src="${pageContext.request.contextPath}/img/222.png" alt="User" class="account-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="${pageContext.request.contextPath}/img/ICONA-UTENTE.png" alt="User" class="account-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             <ul class="dropdown-menu dropdown-menu-end">
                 <li><a class="dropdown-item" href="utente">Profilo</a></li>
                 
