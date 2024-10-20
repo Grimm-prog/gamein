@@ -86,7 +86,7 @@
 			  <ul class="dropdown-menu">
 			  <!--  qui inizio a iterare la lista di generi e al posto di fantasy passerò il nome del genere -->
 			  <% for(int i=0;i<20;i++){ %>
-			    <li><a class="dropdown-item" href="cerca?annoUscita=<%= 2024-i %>"><%= 2024-i %></a></li>
+			    <li><a class="dropdown-item" href="cerca?titolo=<%= request.getParameter("titolo") %>&annoUscita=<%= 2024-i %>"><%= 2024-i %></a></li>
 				<% } %>
 			  </ul>
 			</div>

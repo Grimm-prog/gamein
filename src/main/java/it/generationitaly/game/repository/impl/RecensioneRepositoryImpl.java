@@ -3,6 +3,7 @@ package it.generationitaly.game.repository.impl;
 import java.util.List;
 
 import it.generationitaly.game.entity.Recensione;
+import it.generationitaly.game.entity.Utente;
 import it.generationitaly.game.repository.RecensioneRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
@@ -134,6 +135,31 @@ public class RecensioneRepositoryImpl extends JpaRepositoryImpl<Recensione, Long
 	                em.close();
 	        }
 	        return avg;
+	}
+
+	@Override
+	public Recensione findByVidoegameId(Long idvideogioco, Utente utente) {
+		    Recensione recensione = null;
+	        EntityManager em = null;
+	        EntityTransaction tx = null;
+	        try {
+	            em = emf.createEntityManager();
+	            tx = em.getTransaction();
+	            tx.begin();
+	            TypedQuery<Recensione> query = em.createQuery("FROM Recensione r WHERE r.videogame.id=:idvideogioco AND r.utente.id=:utenteId", Recensione.class);
+	           query.setParameter("idvideogioco",idvideogioco);
+	           query.setParameter("utenteId",utente.getId());
+	            recensione = query.getSingleResult();
+	            tx.commit();
+	        } catch (Exception e) {
+	            System.err.println(e.getMessage());
+	            if (tx != null && tx.isActive())
+	                tx.rollback();
+	        } finally {
+	            if (em != null)
+	                em.close();
+	        }
+	        return recensione;
 	}
 
 }
