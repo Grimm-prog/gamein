@@ -1,5 +1,10 @@
+
 <!-- Navbar -->
+
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+
+
+
     <div class="container-fluid">
         <a class="navbar-brand d-none d-lg-block" href="index">GAME<span style="color:#652c9b;">IN</span></a>
 
@@ -29,7 +34,7 @@
         <% } else { %>
         <div class="d-flex align-items-center">
             <a class="me-3 nav-link"><%= session.getAttribute("username") %></a>
-            <img src="<%= session.getAttribute("foto") %>" alt="User" class="account-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="<%= utente.getFoto() %>" alt="User" class="account-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             <ul class="dropdown-menu dropdown-menu-end">
                 <li><a class="dropdown-item" href="utente">Profilo</a></li>
                  <li>
