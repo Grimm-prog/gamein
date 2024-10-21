@@ -62,11 +62,7 @@
 		
 		        <button type="submit" class="btn btn-bd-primary2  w-100 py-2 fw-bold text-uppercase">PUBBLICA</button>
 		    </form>
-		     <% if(request.getParameter("erroreDuplicato") != null){ %>
-			<div class="alert alert-danger mt-3" role="alert">
-				<p class="text-center">Hai una recensione  già presente in archivio!</p>
-				</div>
-			<% } %>
+		   
 		</div>
 		</main>
 <!-- Bootstrap JS -->

@@ -38,8 +38,7 @@ public class RecensioneServlet extends HttpServlet {
 		int difficolta=Integer.parseInt(request.getParameter("difficolta"));
 		int tempoDiGioco=Integer.parseInt(request.getParameter("tempoDiGioco"));
 		Videogame videogame = videogameRepository.findById(idVideogioco);
-		System.out.println(recensioneRepository.findByVidoegameId(idVideogioco, utente));
-		if (recensioneRepository.findByVidoegameId(idVideogioco, utente)==null) {
+		
 			Recensione recensione = new Recensione();
 			recensione.setCommento(commento);
 			recensione.setVoto(voto);
@@ -51,9 +50,7 @@ public class RecensioneServlet extends HttpServlet {
 			utente = utenteRepository.findById(utente.getId());
 			session.setAttribute("utente", utente);
 			response.sendRedirect("videogioco?id="+idVideogioco);
-		}else {
-			response.sendRedirect("recensione.jsp?id="+idVideogioco+"&?erroreDuplicato");
-		}
+		
 	}
 
 }

@@ -224,7 +224,7 @@
             <br>
             <br>
         </div>
-        	<% if(session.getAttribute("username")!=null){ %>
+        	<% if(session.getAttribute("username")!=null && (Boolean)request.getAttribute("addrecensione")==true){ %>
         	<!-- bottone per aggiungere la recensione -->
            <a class="btn btn-bd-primary2 py-2 fw-bold" href="recensione.jsp?id=<%= videogioco.getId() %>" >
 		    <span>aggiungi una recensione</span>
