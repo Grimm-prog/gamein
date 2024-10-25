@@ -31,4 +31,4 @@ Questo progetto è stato sviluppato in collaborazione con altri membri del team.
 ### Come eseguire il progetto
 1. Clona il repository:
    ```bash
-   git clone https://github.com/tuo-username/gamein.git
+   git clone https://github.com/Grimm-prog/gamein.git
