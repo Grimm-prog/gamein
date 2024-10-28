@@ -34,7 +34,7 @@
         <% } else { %>
         <div class="d-flex align-items-center">
             <a class="me-3 nav-link"><%= session.getAttribute("username") %></a>
-            <img src="<%= utente.getFoto() %>" alt="User" class="account-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="<%= session.getAttribute("foto") %>" alt="User" class="account-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             <ul class="dropdown-menu dropdown-menu-end">
                 <li><a class="dropdown-item" href="utente">Profilo</a></li>
                  <li>
